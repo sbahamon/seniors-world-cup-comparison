@@ -49,7 +49,7 @@ Phase 1: validate on two known cases before touching anything else.
 
 Print both, stop, and let me eyeball before going further.
 
-Phase 3: only after I confirm Phase 1 looks right, fan out to the full set of federations and tournaments.
+Phase 2: only after I confirm Phase 1 looks right, fan out to the full set of federations and tournaments.
 
 ## Reporting honesty
 
