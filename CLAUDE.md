@@ -1,0 +1,65 @@
+# CLAUDE.md
+
+Standing context and instructions. Read on every run.
+
+## What this project is
+
+Measures how much national-team senior World Cup squads overlap with their own U-20 and U-17 World Cup squads, men's and women's, to test whether youth-tournament success actually feeds senior success or just looks like it does.
+
+The headline metric is squad overlap, not title-to-title correlation. Title-to-title is too lumpy and too contaminated by age misrepresentation to mean much. Overlap answers the mechanistic question: what share of a senior squad came up through the youth pipeline.
+
+## Operating environment
+
+- Runs in Claude Code on the web (ephemeral cloud VM). Anything not committed to git is lost when the session ends. Commit intermediate data as you produce it; do not hold it only in memory.
+- Network egress is allowlisted. The only external domain this project needs is `en.wikipedia.org` (MediaWiki API). If a request is blocked by the proxy, stop and tell me to allowlist the domain. Do not loop on retries.
+- Python runs with `uv`. Use PEP 723 inline script metadata (a `# /// script` dependency block) so scripts run with `uv run scripts/<name>.py` and no separate venv step.
+
+## Data source and the one design decision that matters
+
+Source is English Wikipedia squad-list pages via the MediaWiki action API (`action=parse`, `prop=wikitext`), for example the page `2023 FIFA Women's World Cup squads`. Parse the squad templates (`{{nat fs player}}`, `{{fs player}}`) and the section headers that name each team. Squad-page formatting varies by edition, so inspect the actual wikitext before assuming a structure.
+
+Join players on their linked Wikipedia article title, not on display name. Wikipedia has already disambiguated people (accents, transliteration, "born 1990" suffixes, nicknames), so the article title is a near-stable identifier and it collapses the false-split problem that wrecks naive name matching.
+
+Players with no linked article (redlinks) cannot be joined this way. Put them in `data/redlinks.csv` with their raw name and squad, and fall back to normalized fuzzy name matching for those only, flagged as lower confidence. Never silently merge or drop them.
+
+## Schema
+
+Persist everything as CSV under `data/` so it stays diffable and reviewable from a phone.
+
+`data/squads.csv`, one row per (tournament, team, player):
+`tournament_id, level (senior|u20|u17), gender (m|w), year, team, shirt_no, position, player_article, display_name, source_url`
+
+`data/results.csv`, one row per (senior tournament, team):
+`team, gender, year, finish` (round reached). Hand-curated is fine; this is a small set.
+
+`data/overlap.csv`, derived, one row per (senior tournament, team):
+`team, gender, year, squad_size, n_youth_alumni, share_youth_alumni, n_from_u20, n_from_u17, finish`
+
+## Overlap definition
+
+A senior-squad player counts as a youth alumnus if their `player_article` appears in any U-20 or U-17 World Cup squad for the same federation and gender, in an edition earlier than that senior tournament. Do not map a senior edition to one specific youth edition. The any-prior-edition rule is more robust and avoids brittle age-window mapping.
+
+## Build order. Do not skip.
+
+Phase 0: scaffold, confirm `uv run` works, confirm the MediaWiki API is reachable. This is where the allowlist prompt will fire.
+
+Phase 1: validate on two known cases before touching anything else.
+- High-overlap case, Spain women. Senior 2023 WWC squad against Spain's U-20 women (2018, 2022) and U-17 women (2018) squads. Expected: high overlap. If it comes back low, the parser or matcher is broken.
+- Low-overlap control, Nigeria men. U-17 champions in 2013 and 2015 against their later senior World Cup squads. Expected: low overlap. If it comes back high, the matcher is inventing joins.
+
+Print both, stop, and let me eyeball before going further.
+
+Phase 3: only after I confirm Phase 1 looks right, fan out to the full set of federations and tournaments.
+
+## Reporting honesty
+
+Do not present a single correlation coefficient as the answer. The sample is small and lumpy. Report the overlap distribution and be explicit about confounds:
+- Men's youth results are contaminated by age misrepresentation, so men's overlap and men's youth "success" both mean less than they appear to.
+- This metric counts squad membership, not minutes. A benchwarmer on a youth champion counts the same as a starter. A minutes-weighted version is a later refinement, not v1.
+- Redlink gaps understate overlap. Report how many players could not be joined.
+
+## Don'ts
+
+- Don't fabricate squad members. If a page won't parse, record it in `data/parse_failures.csv` and move on.
+- Don't fan out before Phase 1 is confirmed.
+- Don't hold results only in memory. Commit CSVs as you go.
