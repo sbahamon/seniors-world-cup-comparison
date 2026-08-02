@@ -106,6 +106,39 @@ def editions_in_window(gender: str, senior_year: int) -> list[tuple[str, str, in
     return [e for e in EDITIONS if e[1] == gender and e[2] in yrs]
 
 
+# Senior World Cup editions, for reporting window denominators.
+SENIOR = {
+    "m": [1998, 2002, 2006, 2010, 2014, 2018, 2022, 2026],
+    "w": [1991, 1995, 1999, 2003, 2007, 2011, 2015, 2019, 2023, 2027],
+}
+
+
+def window_counts(gender: str, senior_year: int) -> tuple[int, int]:
+    """(n_editions_in_window, n_editions_held_in_window) for a senior squad.
+
+    Held excludes `not_held` editions -- cancelled, or before the tournament
+    existed. Both numbers must be carried wherever an overlap share appears; a
+    squad measured against 6 held editions is not comparable to one measured
+    against 8.
+    """
+    in_window = editions_in_window(gender, senior_year)
+    return len(in_window), sum(1 for e in in_window if e[3])
+
+
+def print_windows() -> None:
+    for gender in ("w", "m"):
+        print(f"\n{'women' if gender == 'w' else 'men'}'s senior World Cups")
+        print(f"  {'year':<6}{'in window':>10}{'held':>6}{'not_held':>10}   note")
+        for y in SENIOR[gender]:
+            total, held = window_counts(gender, y)
+            note = ""
+            if held == 0:
+                note = "no eligible editions -- overlap undefined"
+            elif total != held:
+                note = "denominator differs, not comparable to an 8-edition squad"
+            print(f"  {y:<6}{total:>10}{held:>6}{total - held:>10}   {note}")
+
+
 def verify() -> int:
     """Confirm every non-null page title still resolves. Returns exit code."""
     titles = [e[3] for e in EDITIONS if e[3]]
@@ -157,4 +190,7 @@ def verify() -> int:
 
 
 if __name__ == "__main__":
+    if "--windows" in sys.argv:
+        print_windows()
+        sys.exit(0)
     sys.exit(verify())

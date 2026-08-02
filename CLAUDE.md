@@ -125,3 +125,23 @@ The men's U-20 tournament was called the **FIFA World Youth Championship** until
 Under the current rules a missed in-window edition is a correctness bug, not a coverage gap, and a page-title change is exactly how one goes missing without raising an error. Resolve edition page titles from an explicit lookup table of known editions and their page names. Do not construct titles by string-formatting a year into a template. If a resolved page 404s, that is a hard failure to record in `window_coverage.csv` as `failed`, never a silent skip.
 
 Check for equivalent renames on the women's side and for U-17 before relying on any constructed title.
+
+## Edition status enum (extends amendment 1)
+
+`window_coverage.csv` status is one of: `ingested | not_qualified | not_held | failed`.
+
+`not_held` means the edition was never played and there is no squad to miss. Causes: the 2021 men's and 2020 women's tournaments cancelled for COVID; women's U-17 not existing before 2008; women's U-19/U-20 not existing before 2002; any in-window year before a tournament's inception.
+
+`not_held` is categorically different from the other three. `ingested` and `not_qualified` both mean the edition happened and the federation's relationship to it is known. `failed` means it happened and could not be retrieved. Recording a never-played edition as `failed` would mark squads provisional for a data problem that does not exist, and the provisional flag is load-bearing — if it fires on non-problems it stops meaning anything at fan-out.
+
+**Denominator rule.** `not_held` editions are removed from the window denominator entirely. A squad is comparable if every in-window edition is `ingested`, `not_qualified`, or `not_held`. Only `failed` makes a squad provisional.
+
+**Both counts must be carried.** Add to `overlap.csv`: `n_editions_in_window` and `n_editions_held_in_window`. A squad measured against 6 held editions must not be silently compared to one measured against 8. This is the same failure as the original unequal-edition-set problem arriving through a different door, and the guard is reporting both numbers wherever an overlap share appears.
+
+## Era comparability. Women's side especially.
+
+`not_held` is not a neutral status. Senior squads whose windows reach back before the youth tournaments existed are structurally capped below what a modern squad can reach — a 2003 women's senior team could not have youth alumni from tournaments not yet invented. Women's U-17 began 2008 and women's U-19/U-20 began 2002, so women's senior tournaments through roughly 2014 have windows that are partly or wholly pre-inception.
+
+This is a real feature of the era, not measurement error, but it means **overlap shares are not comparable across time on the women's side.** Any trend line over women's senior tournaments will show a rise that is substantially an artifact of youth tournaments coming into existence and the pipeline filling, not of federations getting better at development.
+
+Do not report a women's overlap time series without stating this. Do not fit or describe a trend across women's editions whose windows differ in how much pre-inception territory they cover. Cross-federation comparison *within* a single senior edition is unaffected and remains the safer comparison to make.
