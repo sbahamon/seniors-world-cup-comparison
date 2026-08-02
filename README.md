@@ -8,17 +8,45 @@ Youth-tournament results are a weak predictor of senior strength, and weaker on 
 
 ## Approach
 
-Pull senior, U-20, and U-17 World Cup squad lists from Wikipedia. For each senior squad, compute the share of players who previously appeared in a U-20 or U-17 World Cup squad for the same federation. Relate that share to how far the senior team went.
+Pull senior, U-20, and U-17 World Cup squad lists from Wikipedia. For each senior squad, compute the share of players who previously appeared in a U-20 or U-17 World Cup squad for the same federation, within a fixed age window of 4 to 12 years before the senior tournament. Relate that share to how far the senior team went.
 
-The join key is each player's Wikipedia article title, not their name. That sidesteps most of the transliteration and disambiguation problems that break name matching. The full design and the reasoning behind that choice are in CLAUDE.md.
+The join key is each player's **Wikidata QID**, not their name and not their Wikipedia article title. Names split on accents, transliteration and nicknames; article titles get renamed out from under a saved dataset. QIDs never change. The full design and the reasoning are in CLAUDE.md.
+
+## Scope, and why it is narrow
+
+v1 covers six senior tournaments: **women's 2019 and 2023, men's 2010, 2014, 2018 and 2022.**
+
+That looks arbitrarily small. It isn't — it is every senior edition whose overlap share is comparable to the others without a caveat. Each senior squad is measured against the youth editions held 4 to 12 years earlier, which is normally 8 tournaments. Two things knock that denominator down:
+
+**Pre-inception windows.** The women's youth tournaments are young. The U-19/U-20 began in 2002 and the U-17 in 2008, so senior squads before roughly 2015 have windows reaching back into years when the tournaments did not exist. A 2003 women's squad had *zero* youth World Cups it could possibly have drawn from. Women's 2007, 2011 and 2015 get 1, 3 and 6 of the usual 8. The men's side has the same defect at its left edge, shorter: 1998 has zero and 2002 has two.
+
+**The COVID cancellations.** The 2021 men's and 2020 women's youth tournaments were never played. That puts both men's 2026 and women's 2027 at 6 held editions out of 8 — so on each side, the next World Cup cannot be cleanly compared to its own predecessor.
+
+Mixing those denominators together would manufacture a finding. Squads measured against 8 tournaments will show higher overlap than squads measured against 3, for a reason that has nothing to do with football. Plotted over time it reads as a steady rise in youth-to-senior conversion — federations apparently getting better at developing players — when it is really just the youth tournaments coming into existence and the pipeline filling up. Restricting v1 to the six full-denominator editions removes that artifact rather than annotating it.
+
+Narrowing costs little, because ingestion is bounded by youth editions rather than by squads. The same U-17 2013 squad list serves every federation that played in it. The six in-scope senior editions need 32 youth editions between them and yield about 184 senior squads — so the scope restriction throws away far less data than the short edition list suggests.
 
 ## Data
 
 Everything derived lives in `data/` as CSV so it can be reviewed and diffed without running anything:
-- `squads.csv`, raw extracted squad memberships
-- `results.csv`, senior tournament finishes
-- `overlap.csv`, the computed per-squad overlap
-- `redlinks.csv`, `parse_failures.csv`, coverage gaps
+
+- `squads.csv` — raw extracted squad memberships, one row per player per tournament, keyed by `player_qid`
+- `results.csv` — senior tournament finishes
+- `overlap.csv` — the computed per-squad overlap, carrying its coverage rate and both edition counts alongside every share
+- `editions.csv` — the edition-to-page-title lookup. Tournaments were renamed mid-history (the men's U-20 was the *FIFA World Youth Championship* until 2005, the men's U-17 the *U-17 World Championship*, and the women's U-20 changed name twice), so page titles are resolved from an explicit table rather than built by formatting a year into a string. A renamed page would otherwise go missing with no error.
+- `window_coverage.csv` — one row per (senior squad, in-window youth edition), recording what happened to each
+- `redlinks.csv`, `parse_failures.csv` — everything that could not be joined or parsed. Nothing is dropped silently.
+
+Each in-window edition carries one of four statuses:
+
+| status | meaning |
+| --- | --- |
+| `ingested` | edition happened, squad retrieved |
+| `not_qualified` | edition happened, federation did not play in it — real signal, not missing data |
+| `not_held` | edition was never played (cancelled, or before the tournament existed) |
+| `failed` | edition happened but could not be retrieved |
+
+The distinction matters for the denominator. `not_held` editions are removed from it entirely, since there is no squad to miss. Only `failed` makes a squad's number provisional — which keeps the provisional flag meaningful instead of firing on non-problems.
 
 ## Running
 
@@ -32,6 +60,14 @@ No venv setup needed. Network access is limited to `en.wikipedia.org`. In Claude
 
 ## Known limitations
 
-- Counts squad membership, not minutes. A youth-team benchwarmer counts as overlap.
-- Men's youth data is contaminated by age misrepresentation, so treat men's youth success and overlap with more suspicion than women's.
-- Small, lumpy sample. Read the distribution, not a single correlation number.
+**Coverage bias is the dominant error source, and it is not fixed.** A player with no English Wikipedia article has no QID and is structurally unjoinable. During validation this was 20 of 42 players in Nigeria's youth pool — nearly half the pool simply cannot be matched. The gap is not random: English Wikipedia coverage of youth footballers tracks national wealth, league profile and European club presence, which is uncomfortably close to the variable this project is trying to measure. An under-covered federation and a federation with genuinely poor youth-to-senior conversion produce the same low number, and the pipeline cannot currently tell them apart. Men's cross-federation results are therefore **provisional** until the gap is closed for the under-covered federations in them (RSSSF is the realistic supplementary source). Note that the scope restriction above does *not* help here — it equalizes denominators, nothing more.
+
+The gap is reported, never modelled away. Scaling overlap up by the inverse of the coverage rate would assume redlinked players convert at the same rate as covered ones, which is precisely the question at issue.
+
+Other limitations:
+
+- **Age misrepresentation** contaminates men's youth football, so men's youth "success" and men's overlap both mean less than they appear to. No data source fixes this: the officially registered dates of birth are themselves the contaminated ones.
+- **Membership, not minutes.** A youth-team benchwarmer counts exactly as much as a starter. A minutes-weighted version is a later refinement.
+- **The window truncates.** Measuring over 4 to 12 years slightly undercounts unusually long senior careers — a 33-year-old who played a U-17 at 17 falls outside it. The truncation is uniform across teams, so comparisons stay valid; only the absolute level is affected.
+- **No trend lines.** Overlap shares are not comparable across time on either side, for the denominator reasons above. Cross-federation comparison within a single senior edition is the safer comparison and is unaffected.
+- **Small, lumpy sample.** Read the distribution, not a single correlation number.
