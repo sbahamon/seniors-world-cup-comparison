@@ -12,9 +12,11 @@ The headline metric is squad overlap, not title-to-title correlation. Title-to-t
 
 **Phase 0 — done.** Scaffold runs, `uv run` works, the MediaWiki API is reachable.
 
-**Phase 1 — passed, not formally closed out.** The parser handles every template dialect encountered, QIDs resolve, and the join produced high overlap for Spain women and low for Nigeria men, which is what it was built to test. It has not been signed off yet, so treat it as passed-pending-confirmation.
+**Phase 1 — passed and confirmed closed (2026-08-02).** The parser handles every template dialect encountered, QIDs resolve, and the join produced high overlap for Spain women and low for Nigeria men, which is what it was built to test. Signed off; the approval gate on Phase 2 is satisfied.
 
-**Phase 2 — not started.** Ingest the v1 scope (see "Scope for v1"). Runs in its own session. The gate on starting it is a hard rule, in Don'ts — this section only describes state.
+**Phase 2 — cleared to begin, not started.** Ingest the v1 scope (see "Scope for v1"): 32 youth editions, ~184 senior squads across women's 2019/2023 and men's 2010/2014/2018/2022. Runs in its own session.
+
+Two things Phase 2 must build that do not exist yet: `data/window_coverage.csv`, and the five columns `overlap.csv` carries beyond the Phase 1 set (`n_youth_pool`, `n_youth_pool_linked`, `youth_coverage_rate`, `n_editions_in_window`, `n_editions_held_in_window`). Both are specified in Schema; neither is implemented. `scripts/editions.py` already supplies the edition lookup and `window_counts()`.
 
 Phase 1 is a parser and join test, **not a measurement**, and is deliberately exempt from the age window. Its cases are Spain women's 2023 senior squad against U-20 women 2018/2022 and U-17 women 2018, and Nigeria men's 2014 and 2018 senior squads against U-17 men 2013/2015. Several of those pairings fall outside the window. This is intentional. Do not amend Phase 1 into window compliance; that would cost a cheap regression check and buy nothing.
 
@@ -171,7 +173,7 @@ Do not present a single correlation coefficient as the answer. The sample is sma
 
 - Don't fabricate squad members. If a page won't parse, record it in `data/parse_failures.csv` and move on.
 - Don't ingest or report anything outside the v1 scope. (the better standing rule — the fan-out gate was one-time, this is permanent)
-- Don't begin ingestion until Phase 1 is explicitly confirmed closed. Currently unconfirmed.
+- Don't begin ingestion until Phase 1 is explicitly confirmed closed. Confirmed 2026-08-02 — this gate is satisfied and spent. It is kept only as a record that it was met; it is not a live constraint.
 - Don't hold results only in memory. Commit CSVs as you go.
 - Don't emit 0.0% for a squad with a zero denominator. Emit null.
 - Don't present an overlap share without its coverage rate and edition counts.
