@@ -145,3 +145,25 @@ Check for equivalent renames on the women's side and for U-17 before relying on 
 This is a real feature of the era, not measurement error, but it means **overlap shares are not comparable across time on the women's side.** Any trend line over women's senior tournaments will show a rise that is substantially an artifact of youth tournaments coming into existence and the pipeline filling, not of federations getting better at development.
 
 Do not report a women's overlap time series without stating this. Do not fit or describe a trend across women's editions whose windows differ in how much pre-inception territory they cover. Cross-federation comparison *within* a single senior edition is unaffected and remains the safer comparison to make.
+
+## Scope for v1
+
+v1 is scoped to senior editions with a full 8 held in-window editions: **women's 2019 and 2023, men's 2010, 2014, 2018, 2022.** Everything else is out of scope for v1 — do not ingest or report it.
+
+Rationale: these are the only editions whose shares are comparable without a denominator caveat. Ingestion is bounded by youth editions, not squads, so the core costs 32 youth editions (the verified union across the six windows) and yields ~184 senior squads. Nigeria men 2010/2014/2018 and Spain women 2023 are all inside it.
+
+Excluded: women's 1991–2003 (zero eligible editions), women's 2007/2011/2015 (partial, 1/3/6 held), men's 1998 (zero) and 2002 (two), men's 2026 and women's 2027 (6 of 8, COVID cancellations).
+
+## Zero and partial denominators
+
+A squad with zero held in-window editions has an **undefined** overlap, not zero. Emit null for the share, never 0.0% — 0/0 rendering as 0.0% in a table would be the most misleading number this project could emit, and it is the same failure as the withdrawn Nigeria 2014 figure.
+
+A squad with a partial denominator may be computed, but its share must never appear without `n_editions_held_in_window` beside it.
+
+## Correction to the era-comparability rule
+
+The era-comparability warning was scoped to the women's side. That was right about severity, wrong about scope — men's 1998 and 2002 have the identical defect at the left edge, with a shorter ramp. **It applies to both genders.**
+
+## Scope does not fix coverage bias
+
+Scoping equalizes denominators only. The redlink gap remains the dominant men's error source and is unresolved. Men's cross-federation results stay provisional and labeled provisional regardless of how clean the window arithmetic looks.
