@@ -43,10 +43,6 @@ Persist everything as CSV under `data/` so it stays diffable and reviewable from
 `data/overlap.csv`, derived, one row per (senior tournament, team):
 `team, gender, year, squad_size, n_youth_alumni, share_youth_alumni, n_from_u20, n_from_u17, finish`
 
-## Overlap definition
-
-A senior-squad player counts as a youth alumnus if their `player_article` appears in any U-20 or U-17 World Cup squad for the same federation and gender, in an edition earlier than that senior tournament. Do not map a senior edition to one specific youth edition. The any-prior-edition rule is more robust and avoids brittle age-window mapping.
-
 ## Build order. Do not skip.
 
 Phase 0: scaffold, confirm `uv run` works, confirm the MediaWiki API is reachable. This is where the allowlist prompt will fire.
@@ -71,3 +67,35 @@ Do not present a single correlation coefficient as the answer. The sample is sma
 - Don't fabricate squad members. If a page won't parse, record it in `data/parse_failures.csv` and move on.
 - Don't fan out before Phase 1 is confirmed.
 - Don't hold results only in memory. Commit CSVs as you go.
+
+## Overlap definition (replaces the earlier version)
+
+A senior-squad player counts as a youth alumnus if their `player_qid` appears in any U-20 or U-17 World Cup squad for the same federation and gender, in an edition inside the age window defined below.
+
+Fixed age window. This is not optional and not per-team. For a senior tournament in year `Y`, the eligible youth editions are every U-20 and U-17 World Cup held in years `Y-15` through `Y-4` inclusive. Both bounds are inclusive. Apply the identical window to every federation and both genders.
+
+The earlier "any prior edition" rule is retired. It made each team's overlap number depend on how many youth editions happened to have been scraped for that team, which is not a property of the football. Under that rule Spain women was measured against three editions and Nigeria men against two, so their overlap shares were not comparable to each other. Any comparison across teams requires that every team be evaluated against the same window.
+
+Consequences you must honor:
+
+- Before computing overlap for any senior squad, you must have ingested every U-20 and U-17 edition in that squad's window for that federation and gender. A missing edition is a correctness bug, not a coverage gap.
+- If an edition in the window cannot be ingested (page missing, parse failure, team did not qualify), record it in `data/window_coverage.csv` as `team, gender, senior_year, youth_level, youth_year, status (ingested|not_qualified|failed)`. A team is only comparable if every in-window edition is `ingested` or `not_qualified`. Any `failed` makes that squad's number provisional and it must be labeled as such in output.
+- Note that a federation not qualifying for a youth edition is real signal, not missing data. Do not impute anything for it.
+
+## Coverage bias. Read before reporting any men's number.
+
+The dominant error source in this project is not identity matching. It is that players with no English Wikipedia article have no QID and are structurally unjoinable. In Phase 1 this was 20 of 42 in Nigeria's youth pool.
+
+This gap is not random. English Wikipedia coverage of youth footballers correlates with national wealth, league profile, and European club presence — which is close to the exact variable the project is trying to measure. Low measured overlap for an under-covered federation and genuinely poor youth-to-senior conversion produce the same number. The pipeline cannot currently distinguish them.
+
+Therefore:
+
+- Never report a cross-federation men's comparison as a finding until the redlink gap is closed for the under-covered federations in it. RSSSF is the realistic supplementary source for youth squad lists. Until then, men's cross-federation numbers are provisional and must be labeled provisional wherever they appear.
+- Compute and carry a coverage rate alongside every overlap number. Add to `overlap.csv`: `n_youth_pool, n_youth_pool_linked, youth_coverage_rate`. An overlap share without its coverage rate next to it is not interpretable and must not be presented alone.
+- A 0.0% overlap on a squad with a low coverage rate is a coverage floor showing through, not a result. Say so explicitly rather than reporting the zero.
+- The women's side has better article coverage and is not distorted by age misrepresentation the way the men's side is. When the two disagree, weight the women's result and say why.
+- Do not "correct" for coverage by scaling overlap up by the inverse coverage rate. That assumes redlinked players convert at the same rate as covered ones, which is precisely the thing in question. Report the gap; do not model it away.
+
+## Output labeling
+
+Every table, summary, or writeup produced by this project must carry, per row: the coverage rate, and a provisional flag where the window is incomplete or coverage is low. Do not produce a clean-looking ranked table of federations by overlap share. That format implies a precision the data does not have and invites exactly the misreading these rules exist to prevent.
