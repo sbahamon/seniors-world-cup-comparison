@@ -72,7 +72,7 @@ Do not present a single correlation coefficient as the answer. The sample is sma
 
 A senior-squad player counts as a youth alumnus if their `player_qid` appears in any U-20 or U-17 World Cup squad for the same federation and gender, in an edition inside the age window defined below.
 
-Fixed age window. This is not optional and not per-team. For a senior tournament in year `Y`, the eligible youth editions are every U-20 and U-17 World Cup held in years `Y-15` through `Y-4` inclusive. Both bounds are inclusive. Apply the identical window to every federation and both genders.
+Fixed age window. This is not optional and not per-team. For a senior tournament in year `Y`, the eligible youth editions are every U-20 and U-17 World Cup held in years `Y-12` through `Y-4` inclusive. Both bounds are inclusive. Apply the identical window to every federation and both genders. See "Age window" below for why the lower bound is Y-12.
 
 The earlier "any prior edition" rule is retired. It made each team's overlap number depend on how many youth editions happened to have been scraped for that team, which is not a property of the football. Under that rule Spain women was measured against three editions and Nigeria men against two, so their overlap shares were not comparable to each other. Any comparison across teams requires that every team be evaluated against the same window.
 
@@ -99,3 +99,29 @@ Therefore:
 ## Output labeling
 
 Every table, summary, or writeup produced by this project must carry, per row: the coverage rate, and a provisional flag where the window is incomplete or coverage is low. Do not produce a clean-looking ranked table of federations by overlap share. That format implies a precision the data does not have and invites exactly the misreading these rules exist to prevent.
+
+## Age window (supersedes the Y-15..Y-4 rule)
+
+For a senior tournament in year `Y`, the eligible youth editions are every U-20 and U-17 World Cup held in years `Y-12` through `Y-4` inclusive. Both bounds inclusive. Identical for every federation and both genders.
+
+The earlier Y-15 lower bound was too wide. The binding constraint is player age, not edition count: a U-17 player is ~17 and a U-20 is ~20, so a Y-15 bound implies a senior squad member aged ~32 who played a U-17 at 17. That happens, but it is rare, and paying ~12 editions per squad to catch it made every single squad a fan-out. Y-12 covers players up to roughly 29 (U-17 route) and 32 (U-20 route) at the senior tournament, and costs about 8 editions.
+
+This is a deliberate truncation, not a claim that no such players exist. State it wherever results are reported: overlap is measured over a Y-4..Y-12 window and will slightly undercount unusually long senior careers. The truncation is uniform across teams, so cross-team comparisons remain valid; only the absolute level is affected.
+
+Everything else from amendment 1 stands unchanged — `window_coverage.csv`, the requirement that every in-window edition be ingested or explicitly `not_qualified`, and the coverage-bias rules.
+
+## Phase 1 is exempt from the window
+
+The Build order section specifies Phase 1 as Spain vs U-20 2018/2022 + U-17 2018, and Nigeria vs U-17 2013/2015. Several of those pairings fall outside the window. **This is intentional and Phase 1 is not to be amended into compliance.**
+
+Phase 1 is a parser and join test, not a measurement. Its purpose is confirming that squad pages parse, that QIDs resolve, and that the join produces high overlap for Spain and low for Nigeria. It did that. Retrofitting it into a window-compliant measurement would cost the cheap regression check and buy nothing.
+
+Phase 1 outputs are therefore **not results** and must never be reported as overlap figures. Specifically: Spain women 2023 at 26.1%, Nigeria men 2018 at 8.7%, and Nigeria men 2014 at 0.0% are all withdrawn. The Nigeria 2014 figure is void in a stronger sense — its only youth input was U-17 2013, which falls after the Y-4 boundary for a 2014 senior squad, so it was computed against zero eligible editions. Zero eligible editions is an empty comparison, not a low overlap.
+
+## Tournament naming trap. Handle deliberately.
+
+The men's U-20 tournament was called the **FIFA World Youth Championship** until 2005, and became the FIFA U-20 World Cup from 2007. In-window pages for older editions are therefore titled e.g. `1999 FIFA World Youth Championship squads`, `2001 FIFA World Youth Championship squads`, `2003 ...`, `2005 ...`, not `... FIFA U-20 World Cup squads`.
+
+Under the current rules a missed in-window edition is a correctness bug, not a coverage gap, and a page-title change is exactly how one goes missing without raising an error. Resolve edition page titles from an explicit lookup table of known editions and their page names. Do not construct titles by string-formatting a year into a template. If a resolved page 404s, that is a hard failure to record in `window_coverage.csv` as `failed`, never a silent skip.
+
+Check for equivalent renames on the women's side and for U-17 before relying on any constructed title.
