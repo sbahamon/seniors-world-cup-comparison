@@ -7,7 +7,18 @@
   Spain women  -- expected HIGH overlap (2023 senior vs U-20 2018/2022, U-17 2018)
   Nigeria men  -- expected LOW  overlap (2014/2018 senior vs U-17 2013/2015)
 
-Writes data/squads.csv, data/results.csv, data/overlap.csv, data/redlinks.csv,
+THIS IS NOT A MEASUREMENT. Phase 1 is a parser and join test, deliberately
+exempt from the Y-4..Y-12 age window -- several of the pairings above fall
+outside it. Its outputs are validation artifacts, not results.
+
+Consequently this writes data/phase1_validation.csv, NOT data/overlap.csv.
+That path is reserved by the schema for window-compliant Phase 2 output, and a
+file named overlap.csv carrying a share column would be reporting withdrawn
+figures. Squad-size and alumni COUNTS are kept -- they are the regression
+signal on a re-run -- but the shares themselves are withdrawn and are not
+computed here.
+
+Also writes data/squads.csv, data/results.csv, data/redlinks.csv and
 data/parse_failures.csv, then prints a report.
 
     uv run scripts/phase1.py
@@ -140,9 +151,9 @@ def main() -> None:
     overlap_rows, redlink_rows, report = compute(rows)
 
     write_csv(
-        DATA / "overlap.csv",
-        ["team", "gender", "year", "squad_size", "n_youth_alumni",
-         "share_youth_alumni", "n_from_u20", "n_from_u17", "finish"],
+        DATA / "phase1_validation.csv",
+        ["team", "gender", "year", "squad_size", "n_youth_alumni", "n_from_u20",
+         "n_from_u17", "youth_editions_used", "finish", "note"],
         overlap_rows,
     )
     write_csv(
@@ -236,9 +247,11 @@ def compute(rows: list[dict]) -> tuple[list[dict], list[dict], str]:
             {
                 "team": team, "gender": gender, "year": year, "squad_size": size,
                 "n_youth_alumni": len(matched),
-                "share_youth_alumni": round(len(matched) / size, 4) if size else "",
                 "n_from_u20": n_u20, "n_from_u17": n_u17,
+                "youth_editions_used": " ".join(
+                    f"{lv}{yr}" for lv, yr in editions) or "none",
                 "finish": finishes.get((team, gender, year), ""),
+                "note": "validation only, window-exempt; share withheld",
             }
         )
 
@@ -251,7 +264,8 @@ def compute(rows: list[dict]) -> tuple[list[dict], list[dict], str]:
         )
         out.append(f"  youth alumni           {len(matched)}")
         out.append(
-            f"  share                  {len(matched) / size:.1%}" if size else "  share  n/a"
+            f"  ratio                  {len(matched)}/{size}"
+            "   (validation signal, NOT an overlap result)"
         )
         out.append(f"  ...from U-20           {n_u20}")
         out.append(f"  ...from U-17           {n_u17}")

@@ -59,10 +59,16 @@ Persist everything as CSV under `data/` so it stays diffable and reviewable from
 `data/overlap.csv`, derived, one row per (senior tournament, team):
 `team, gender, year, squad_size, n_youth_alumni, share_youth_alumni, n_from_u20, n_from_u17, finish, n_youth_pool, n_youth_pool_linked, youth_coverage_rate, n_editions_in_window, n_editions_held_in_window`
 
+`overlap.csv` is produced by Phase 2 only and does not exist yet. Nothing window-exempt may be written to that path — see `phase1_validation.csv` below.
+
 `data/window_coverage.csv`, one row per (senior squad, in-window youth edition):
 `team, gender, senior_year, youth_level, youth_year, status`
 
 `data/editions.csv`, the edition-to-page-title lookup: `level, gender, year, page_title, status`.
+
+**Two different `status` columns exist, with different value sets. Do not conflate them.** `editions.csv.status` is `exists | not_held | failed` and describes the *page*: whether a squad-list article is retrievable for that edition at all, independent of any federation. `window_coverage.csv.status` is `ingested | not_qualified | not_held | failed` and describes one *federation's relationship* to one edition. Only the latter feeds the denominator rule.
+
+`data/phase1_validation.csv` holds the Phase 1 parser/join test output. It is not a results file and carries no share column — Phase 1 is window-exempt, so its shares are withdrawn (see "Where the project is now"). Squad-size and alumni counts are kept because they are the regression signal if the parser changes.
 
 `data/redlinks.csv` and `data/parse_failures.csv` capture everything that could not be joined or could not be parsed. Nothing is ever dropped silently.
 

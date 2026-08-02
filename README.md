@@ -32,12 +32,13 @@ Everything derived lives in `data/` as CSV so it can be reviewed and diffed with
 
 - `squads.csv` — raw extracted squad memberships, one row per player per tournament, keyed by `player_qid`
 - `results.csv` — senior tournament finishes
-- `overlap.csv` — the computed per-squad overlap, carrying its coverage rate and both edition counts alongside every share
+- `overlap.csv` — the computed per-squad overlap, carrying its coverage rate and both edition counts alongside every share. **Produced by the main ingestion run; it does not exist yet.**
+- `phase1_validation.csv` — output of the parser/join validation run. Deliberately *not* a results file: that test is exempt from the age window, so it reports squad sizes and alumni counts but no overlap shares.
 - `editions.csv` — the edition-to-page-title lookup. Tournaments were renamed mid-history (the men's U-20 was the *FIFA World Youth Championship* until 2005, the men's U-17 the *U-17 World Championship*, and the women's U-20 changed name twice), so page titles are resolved from an explicit table rather than built by formatting a year into a string. A renamed page would otherwise go missing with no error.
 - `window_coverage.csv` — one row per (senior squad, in-window youth edition), recording what happened to each
 - `redlinks.csv`, `parse_failures.csv` — everything that could not be joined or parsed. Nothing is dropped silently.
 
-Each in-window edition carries one of four statuses:
+Two files carry a `status` column and they mean different things. In `editions.csv`, status is `exists`, `not_held` or `failed`, and describes whether a squad-list page can be retrieved for that edition at all — a property of the page, independent of any country. In `window_coverage.csv` it describes one federation's relationship to one edition, and is the one that feeds the denominator:
 
 | status | meaning |
 | --- | --- |
@@ -55,6 +56,13 @@ Scripts use `uv` with inline dependencies. Run any script with:
 ```
 uv run scripts/<name>.py
 ```
+
+The scripts:
+
+- `fetch_page.py` — fetch raw wikitext for one page from the MediaWiki API
+- `squad_parser.py` — parse a squads page into (team, player) rows; resolves redirects and Wikidata QIDs. Run it directly against a page title to inspect what it extracts.
+- `editions.py` — the edition-to-page-title lookup. Run with no arguments to re-verify every title still resolves; `--windows` prints the in-window edition counts per senior tournament.
+- `phase1.py` — the parser/join validation run
 
 No venv setup needed. Network access is limited to `en.wikipedia.org`. In Claude Code on the web you will be prompted to allow it on the first request.
 
