@@ -14,7 +14,7 @@ The headline metric is squad overlap, not title-to-title correlation. Title-to-t
 
 **Phase 1 — passed, not formally closed out.** The parser handles every template dialect encountered, QIDs resolve, and the join produced high overlap for Spain women and low for Nigeria men, which is what it was built to test. It has not been signed off yet, so treat it as passed-pending-confirmation.
 
-**Phase 2 — not started.** Ingest the v1 scope (see "Scope for v1"). Runs in its own session. Do not begin it without an explicit go-ahead.
+**Phase 2 — not started.** Ingest the v1 scope (see "Scope for v1"). Runs in its own session. The gate on starting it is a hard rule, in Don'ts — this section only describes state.
 
 Phase 1 is a parser and join test, **not a measurement**, and is deliberately exempt from the age window. Its cases are Spain women's 2023 senior squad against U-20 women 2018/2022 and U-17 women 2018, and Nigeria men's 2014 and 2018 senior squads against U-17 men 2013/2015. Several of those pairings fall outside the window. This is intentional. Do not amend Phase 1 into window compliance; that would cost a cheap regression check and buy nothing.
 
@@ -164,7 +164,8 @@ Do not present a single correlation coefficient as the answer. The sample is sma
 ## Don'ts
 
 - Don't fabricate squad members. If a page won't parse, record it in `data/parse_failures.csv` and move on.
-- Don't ingest or report anything outside the v1 scope.
+- Don't ingest or report anything outside the v1 scope. (the better standing rule — the fan-out gate was one-time, this is permanent)
+- Don't begin ingestion until Phase 1 is explicitly confirmed closed. Currently unconfirmed.
 - Don't hold results only in memory. Commit CSVs as you go.
 - Don't emit 0.0% for a squad with a zero denominator. Emit null.
 - Don't present an overlap share without its coverage rate and edition counts.
