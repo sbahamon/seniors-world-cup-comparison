@@ -18,7 +18,13 @@ The headline metric is squad overlap, not title-to-title correlation. Title-to-t
 
 Source is English Wikipedia squad-list pages via the MediaWiki action API (`action=parse`, `prop=wikitext`), for example the page `2023 FIFA Women's World Cup squads`. Parse the squad templates (`{{nat fs player}}`, `{{fs player}}`) and the section headers that name each team. Squad-page formatting varies by edition, so inspect the actual wikitext before assuming a structure.
 
-Join players on their linked Wikipedia article title, not on display name. Wikipedia has already disambiguated people (accents, transliteration, "born 1990" suffixes, nicknames), so the article title is a near-stable identifier and it collapses the false-split problem that wrecks naive name matching.
+Join players on their **Wikidata QID**, not on display name and not on the article title. Wikipedia has already disambiguated people (accents, transliteration, "born 1990" suffixes, nicknames), so the linked article is the right identity anchor — but the *title* of that article is not stable. Pages get moved: rename `Eva Navarro (footballer)` to `Eva Navarro (footballer, born 2001)` and a title-keyed join silently drops the match on the next run, with no error and a quietly lower overlap number. QIDs never change.
+
+Get the QID from the already-allowlisted en.wikipedia.org API, not from wikidata.org: `action=query&prop=pageprops&ppprop=wikibase_item&redirects=1`. One request returns the redirect-resolved title and the QID together, so this costs nothing over plain redirect resolution. Fall back to the canonical article title for the rare page carrying no Wikidata item (in Phase 1 this was 0 of 148).
+
+Resolve redirects regardless. `María Isabel Rodríguez` and `Misa Rodríguez` are one player, as are `Catalina Coll`/`Cata Coll` and `Paula Sancho`/`Pauleta (footballer, born 1998)`. Display-name matching splits all three.
+
+A bluelink pointing at a page that does not exist is a redlink for our purposes. Treat it as one.
 
 Players with no linked article (redlinks) cannot be joined this way. Put them in `data/redlinks.csv` with their raw name and squad, and fall back to normalized fuzzy name matching for those only, flagged as lower confidence. Never silently merge or drop them.
 
@@ -27,7 +33,9 @@ Players with no linked article (redlinks) cannot be joined this way. Put them in
 Persist everything as CSV under `data/` so it stays diffable and reviewable from a phone.
 
 `data/squads.csv`, one row per (tournament, team, player):
-`tournament_id, level (senior|u20|u17), gender (m|w), year, team, shirt_no, position, player_article, display_name, source_url`
+`tournament_id, level (senior|u20|u17), gender (m|w), year, team, shirt_no, position, player_article, player_qid, display_name, source_url, birth_year`
+
+`player_qid` is the join key; `player_article` is the redirect-resolved title it came from, kept for review and as the fallback key. `birth_year` is parsed from the squad template and is a diagnostic only — it says whether a senior player was even age-eligible for the youth editions in scope, so a low overlap share can be read correctly. Never join on it.
 
 `data/results.csv`, one row per (senior tournament, team):
 `team, gender, year, finish` (round reached). Hand-curated is fine; this is a small set.

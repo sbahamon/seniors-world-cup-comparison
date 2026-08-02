@@ -345,28 +345,39 @@ def parse_page(wikitext: str) -> tuple[list[Player], list[str]]:
 # redirect resolution
 # --------------------------------------------------------------------------
 
-def resolve_titles(titles: list[str]) -> tuple[dict[str, str], set[str]]:
-    """Map each title to its canonical (post-redirect) title.
+@dataclass
+class PageInfo:
+    canonical: str  # title after normalization + redirects
+    qid: str = ""  # Wikidata item, "" if the page has none
+    missing: bool = False  # linked but no such article == effectively a redlink
 
-    Returns (mapping, missing). `missing` holds titles whose article does not
-    exist -- those are effectively redlinks even though they were written as
-    links, so they cannot be used as a join key.
 
-    Without this step the same player can appear under a redirect on one page
-    and the canonical title on another, and the join silently misses them.
+def resolve_pages(titles: list[str]) -> dict[str, PageInfo]:
+    """Resolve raw link targets to canonical title + Wikidata QID.
+
+    One request gets both, from the already-allowlisted en.wikipedia.org API --
+    prop=pageprops carries the wikibase_item, so no wikidata.org egress is
+    needed.
+
+    The QID is the join key we actually want. Article titles get moved: rename
+    "Eva Navarro (footballer)" to "...(footballer, born 2001)" and a title-keyed
+    join silently drops the match on the next run, with no error and a quietly
+    lower overlap. QIDs never change. Redirect resolution is kept anyway as the
+    fallback for the handful of pages that carry no Wikidata item.
     """
-    mapping: dict[str, str] = {}
-    missing: set[str] = set()
+    out: dict[str, PageInfo] = {}
     uniq = sorted({t for t in titles if t})
     session = requests.Session()
 
-    for i in range(0, len(uniq), 50):
+    for i in range(0, len(uniq), 50):  # API caps titles at 50 per request
         batch = uniq[i : i + 50]
         resp = session.get(
             API,
             params={
                 "action": "query",
                 "titles": "|".join(batch),
+                "prop": "pageprops",
+                "ppprop": "wikibase_item",
                 "redirects": "1",
                 "format": "json",
                 "formatversion": "2",
@@ -383,21 +394,22 @@ def resolve_titles(titles: list[str]) -> tuple[dict[str, str], set[str]]:
         for redir in data.get("redirects", []):
             chain[redir["from"]] = redir["to"]
 
-        missing_titles = {
-            p["title"] for p in data.get("pages", []) if p.get("missing")
-        }
+        pages = {p["title"]: p for p in data.get("pages", [])}
 
         for title in batch:
-            seen = set()
+            seen: set[str] = set()
             cur = title
             while cur in chain and cur not in seen:
                 seen.add(cur)
                 cur = chain[cur]
-            mapping[title] = cur
-            if cur in missing_titles:
-                missing.add(title)
+            page = pages.get(cur, {})
+            out[title] = PageInfo(
+                canonical=cur,
+                qid=page.get("pageprops", {}).get("wikibase_item", ""),
+                missing=bool(page.get("missing")),
+            )
 
-    return mapping, missing
+    return out
 
 
 if __name__ == "__main__":

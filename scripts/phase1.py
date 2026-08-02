@@ -21,7 +21,7 @@ from collections import defaultdict
 from pathlib import Path
 
 from fetch_page import fetch_wikitext
-from squad_parser import parse_page, resolve_titles
+from squad_parser import parse_page, resolve_pages
 
 DATA = Path(__file__).resolve().parent.parent / "data"
 
@@ -101,25 +101,36 @@ def main() -> None:
                     }
                 )
 
-    # Resolve redirects so the same player linked under a redirect on one page
-    # and the canonical title on another still joins.
+    # Resolve every link target to canonical title + Wikidata QID in one pass.
     linked = [r["player_article"] for r in rows if r["player_article"]]
-    canonical, missing = resolve_titles(linked)
+    resolved = resolve_pages(linked)
     for r in rows:
         raw = r["player_article"]
-        if raw and raw in missing:
-            r["player_article"] = ""  # bluelink to a non-existent page == redlink
+        info = resolved.get(raw) if raw else None
+        if not raw:
+            r["player_qid"], r["join_key"], r["join_note"] = "", "", "no linked article"
+        elif info is None or info.missing:
+            # a bluelink pointing at a non-existent page is still a redlink
+            r["player_article"] = ""
+            r["player_qid"], r["join_key"] = "", ""
             r["join_note"] = "linked article does not exist"
-        elif raw:
-            r["player_article"] = canonical.get(raw, raw)
-            r["join_note"] = "" if r["player_article"] == raw else f"redirect from {raw}"
         else:
-            r["join_note"] = "no linked article"
+            r["player_article"] = info.canonical
+            r["player_qid"] = info.qid
+            # QID when there is one, canonical title as the fallback
+            r["join_key"] = info.qid or f"title:{info.canonical}"
+            notes = []
+            if info.canonical != raw:
+                notes.append(f"redirect from {raw}")
+            if not info.qid:
+                notes.append("no wikidata item, joined on title")
+            r["join_note"] = "; ".join(notes)
 
     write_csv(
         DATA / "squads.csv",
         ["tournament_id", "level", "gender", "year", "team", "shirt_no",
-         "position", "player_article", "display_name", "source_url", "birth_year"],
+         "position", "player_article", "player_qid", "display_name", "source_url",
+         "birth_year"],
         rows,
     )
     write_csv(DATA / "results.csv", ["team", "gender", "year", "finish"],
@@ -186,17 +197,17 @@ def compute(rows: list[dict]) -> tuple[list[dict], list[dict], str]:
         prior = [y for y in youth[(team, gender)] if y["year"] < year]
         editions = sorted({(y["level"], y["year"]) for y in prior})
 
-        by_article: dict[str, list[dict]] = defaultdict(list)
+        by_key: dict[str, list[dict]] = defaultdict(list)
         for y in prior:
-            if y["player_article"]:
-                by_article[y["player_article"]].append(y)
+            if y["join_key"]:
+                by_key[y["join_key"]].append(y)
 
         matched, unjoinable = [], []
         for p in squad:
-            if not p["player_article"]:
+            if not p["join_key"]:
                 unjoinable.append(p)
                 continue
-            hits = by_article.get(p["player_article"])
+            hits = by_key.get(p["join_key"])
             if hits:
                 matched.append((p, hits))
 
@@ -208,12 +219,12 @@ def compute(rows: list[dict]) -> tuple[list[dict], list[dict], str]:
         unlinked_youth = {
             fold(y["display_name"]): y for y in prior if not y["player_article"]
         }
-        matched_articles = {p["player_article"] for p, _ in matched}
+        matched_keys = {p["join_key"] for p, _ in matched}
         fuzzy_extra = [
             (p, unlinked_youth[fold(p["display_name"])])
             for p in squad
-            if p["player_article"]
-            and p["player_article"] not in matched_articles
+            if p["join_key"]
+            and p["join_key"] not in matched_keys
             and fold(p["display_name"]) in unlinked_youth
         ]
 
