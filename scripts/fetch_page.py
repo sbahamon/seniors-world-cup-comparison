@@ -12,7 +12,8 @@ import time
 
 import requests
 
-API = "https://en.wikipedia.org/w/api.php"
+HOST = "en.wikipedia.org"
+API = f"https://{HOST}/w/api.php"
 USER_AGENT = (
     "seniors-world-cup-comparison/0.1 "
     "(youth-to-senior squad overlap research; "
@@ -37,15 +38,22 @@ _session = requests.Session()
 _last_request = 0.0
 
 
-def api_get(params: dict, timeout: int = 30) -> requests.Response:
-    """GET the MediaWiki API, throttled, with a bounded 429 backoff."""
+def api_get_host(host: str, params: dict, timeout: int = 30) -> requests.Response:
+    """GET a MediaWiki API on `host`, throttled, with a bounded 429 backoff.
+
+    `host` is a bare wiki hostname such as "es.wikipedia.org". The throttle is
+    deliberately global rather than per-host: it exists to keep us inside
+    Wikimedia's rate expectations, and every language wiki sits behind the same
+    infrastructure, so spreading requests across hosts does not buy extra rate.
+    """
     global _last_request
+    url = f"https://{host}/w/api.php"
     for attempt in range(MAX_RETRIES + 1):
         pause = MIN_REQUEST_INTERVAL - (time.monotonic() - _last_request)
         if pause > 0:
             time.sleep(pause)
         resp = _session.get(
-            API, params=params, headers={"User-Agent": USER_AGENT}, timeout=timeout
+            url, params=params, headers={"User-Agent": USER_AGENT}, timeout=timeout
         )
         _last_request = time.monotonic()
         if resp.status_code == 429 and attempt < MAX_RETRIES:
@@ -61,8 +69,44 @@ def api_get(params: dict, timeout: int = 30) -> requests.Response:
     return resp
 
 
-def fetch_wikitext(title: str) -> str:
-    resp = api_get({
+def api_get(params: dict, timeout: int = 30) -> requests.Response:
+    """GET the English Wikipedia API. Unchanged behaviour; see api_get_host."""
+    return api_get_host(HOST, params, timeout)
+
+
+def api_post_host(host: str, params: dict, timeout: int = 30) -> requests.Response:
+    """POST a MediaWiki API query on `host`, throttled, with the same backoff.
+
+    Needed for title batches on non-Latin wikis: fifty Cyrillic or Arabic
+    titles percent-encode to well over the 8 KiB URL limit and the request
+    comes back 414 rather than 200. The API accepts the identical parameters by
+    POST for read queries, so this is a transport change and nothing else.
+    """
+    global _last_request
+    url = f"https://{host}/w/api.php"
+    for attempt in range(MAX_RETRIES + 1):
+        pause = MIN_REQUEST_INTERVAL - (time.monotonic() - _last_request)
+        if pause > 0:
+            time.sleep(pause)
+        resp = _session.post(
+            url, data=params, headers={"User-Agent": USER_AGENT}, timeout=timeout
+        )
+        _last_request = time.monotonic()
+        if resp.status_code == 429 and attempt < MAX_RETRIES:
+            header = resp.headers.get("Retry-After", "")
+            delay = float(header) if header.isdigit() else 5.0 * 2**attempt
+            print(f"    API returned 429; waiting {delay:.0f}s "
+                  f"(attempt {attempt + 1} of {MAX_RETRIES})", flush=True)
+            time.sleep(delay)
+            continue
+        resp.raise_for_status()
+        return resp
+    resp.raise_for_status()
+    return resp
+
+
+def fetch_wikitext(title: str, host: str = HOST) -> str:
+    resp = api_get_host(host, {
         "action": "parse",
         "page": title,
         "prop": "wikitext",
