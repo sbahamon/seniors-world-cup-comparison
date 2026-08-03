@@ -6,6 +6,14 @@ Does senior national-team success actually track U-20 / U-17 success in football
 
 Youth-tournament results are a weak predictor of senior strength, and weaker on the men's side than most people expect. Nigeria has won the U-17 World Cup five times and never passed the senior round of 16. The cleaner way to ask the question is not "do youth champions become senior champions" but "how much of a senior squad actually came up through the youth pipeline." That is squad overlap, and it is what this repo computes.
 
+## Results
+
+- **[reports/findings.md](reports/findings.md)** — the writeup: what the data says about football, and exactly where it stops.
+- **[The project page](https://sbahamon.github.io/seniors-world-cup-comparison/)** — four charts, built from the CSVs in this repo (`docs/`, rebuilt by `uv run scripts/build_site.py`).
+- [reports/coverage_diagnostic.md](reports/coverage_diagnostic.md) and [reports/intersection.md](reports/intersection.md) — the correlation and filter tables the writeup draws on.
+
+Short version: youth World Cup *participation* is far more unequally distributed than the sport's development rhetoric suggests — nearly one senior squad in six comes from a federation that reached none of its eight eligible youth World Cups. Youth-to-senior *conversion* can be measured honestly for only 14 federations, and those 14 are close to a list of well-resourced football nations, because both filters that make the measurement trustworthy select on approximately the variable being measured. The general question is not answered here, and more scraping would not answer it.
+
 ## Approach
 
 Pull senior, U-20, and U-17 World Cup squad lists from Wikipedia. For each senior squad, compute the share of players who previously appeared in a U-20 or U-17 World Cup squad for the same federation, within a fixed age window of 4 to 12 years before the senior tournament. Relate that share to how far the senior team went.
@@ -32,7 +40,7 @@ Everything derived lives in `data/` as CSV so it can be reviewed and diffed with
 
 - `squads.csv` — raw extracted squad memberships, one row per player per tournament, keyed by `player_qid`
 - `results.csv` — senior tournament finishes
-- `overlap.csv` — the computed per-squad overlap, carrying its coverage rate and both edition counts alongside every share. **Produced by the main ingestion run; it does not exist yet.**
+- `overlap.csv` — the computed per-squad overlap, carrying its coverage rate and both edition counts alongside every share. Written by `scripts/overlap.py`, which reads only what is already on disk.
 - `window_coverage_rates.csv` — per senior squad, the redlink rate over its whole in-window youth pool. The coverage half of `overlap.csv`, computed without computing overlap, so the joinability gap can be read before any share exists. Carries no alumni count and no share column.
 - `integrity_flags.csv` — deviations found by the ingestion's own checks: team counts and squad sizes that do not match expectation. It catches the pages that parse cleanly while returning partial data, which raise no error and would otherwise shrink the youth pool invisibly.
 - `format_variants.csv` — every wikitext format variant the parser had to accommodate, logged rather than absorbed. All 32 youth editions needed at least one, so a page parsing without complaint is not evidence that the corpus is uniform.

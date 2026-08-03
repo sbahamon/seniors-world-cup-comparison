@@ -1,0 +1,363 @@
+/* Youth-to-senior squad overlap — project page.
+   Same house pattern as bus-check: vanilla CSS, no build step, no framework. */
+
+:root {
+  --bg: #FAFAF8;
+  --bg-alt: #F1EFE9;
+  --ink: #16150F;
+  --ink-light: #55534A;
+  --ink-faint: #8A887D;
+  --rule: #D8D5CB;
+
+  --men: #2E4E7E;
+  --women: #8C3A62;
+  --accent: #1F6F5C;
+  --dropped: #B4B1A5;
+
+  --max-w: 960px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.65;
+  font-size: 17px;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+a { color: var(--accent); }
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  background: var(--ink);
+  color: var(--bg);
+  padding: 10px 16px;
+  z-index: 200;
+}
+.skip-link:focus { left: 8px; top: 8px; }
+
+/* ── Navigation ── */
+.site-nav {
+  border-bottom: 1px solid var(--rule);
+  padding: 14px 0;
+  position: sticky;
+  top: 0;
+  background: var(--bg);
+  z-index: 100;
+}
+.site-nav .container {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.site-nav a {
+  color: var(--ink-faint);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  transition: color 0.15s;
+}
+.site-nav a:hover { color: var(--ink); }
+.site-nav a.nav-active { color: var(--ink); font-weight: 600; }
+.site-nav .nav-spacer { margin-left: auto; }
+
+/* ── Hero ── */
+.hero {
+  padding: 80px 0 44px;
+  border-bottom: 3px solid var(--ink);
+}
+.hero-eyebrow,
+.section-eyebrow {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  margin-bottom: 16px;
+}
+.hero h1 {
+  font-family: 'DM Serif Display', Georgia, serif;
+  font-weight: 400;
+  font-size: clamp(36px, 6vw, 62px);
+  line-height: 1.06;
+  letter-spacing: -0.02em;
+  margin-bottom: 22px;
+  max-width: 15em;
+}
+.hero-subtitle {
+  font-size: 20px;
+  line-height: 1.5;
+  color: var(--ink-light);
+  max-width: 38em;
+}
+
+.hero-scale {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 40px;
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid var(--rule);
+}
+.hero-scale div { padding: 6px 0; }
+.hero-scale dt {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+.hero-scale dd {
+  font-family: 'DM Serif Display', Georgia, serif;
+  font-size: 30px;
+  line-height: 1.2;
+}
+
+/* ── Callout ── */
+.callout {
+  background: var(--bg-alt);
+  border-bottom: 1px solid var(--rule);
+  padding: 44px 0;
+}
+.callout-label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+.callout h2 {
+  font-family: 'DM Serif Display', Georgia, serif;
+  font-weight: 400;
+  font-size: clamp(24px, 3.6vw, 34px);
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  margin-bottom: 14px;
+  max-width: 20em;
+}
+.callout p { color: var(--ink-light); max-width: 46em; }
+
+/* ── Sections ── */
+section { padding: 60px 0; border-bottom: 1px solid var(--rule); }
+section:last-of-type { border-bottom: none; }
+
+section h2 {
+  font-family: 'DM Serif Display', Georgia, serif;
+  font-weight: 400;
+  font-size: clamp(26px, 3.8vw, 38px);
+  line-height: 1.15;
+  letter-spacing: -0.015em;
+  margin-bottom: 14px;
+  max-width: 20em;
+}
+section h3 {
+  font-size: 19px;
+  font-weight: 600;
+  margin: 32px 0 8px;
+}
+.section-lead {
+  font-size: 18px;
+  color: var(--ink-light);
+  max-width: 42em;
+  margin-bottom: 12px;
+}
+section p + p { margin-top: 14px; }
+section p { max-width: 42em; }
+
+ul.tight { margin: 14px 0 0 20px; max-width: 42em; }
+ul.tight li { margin-bottom: 8px; }
+
+strong { font-weight: 600; }
+.num {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.94em;
+  font-weight: 500;
+}
+
+/* ── Figures ── */
+figure { margin: 28px 0 26px; }
+.chart-wrap {
+  background: #fff;
+  border: 1px solid var(--rule);
+  padding: 12px 8px 8px;
+  overflow-x: auto;
+}
+figcaption {
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--ink-light);
+  margin-top: 12px;
+  max-width: 46em;
+}
+figcaption b { color: var(--ink); font-weight: 600; }
+
+/* ── The recurring limit marker: a hatched edge on every claim that stops. ── */
+.guard {
+  position: relative;
+  margin-top: 22px;
+  padding: 16px 20px 16px 32px;
+  background: #fff;
+  border: 1px solid var(--rule);
+  max-width: 46em;
+}
+.guard::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 10px;
+  background: repeating-linear-gradient(
+    -45deg, var(--ink) 0 2px, #fff 2px 6px
+  );
+}
+.guard-label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  margin-bottom: 6px;
+}
+.guard p { font-size: 16px; max-width: none; }
+
+/* ── Nigeria portrait ── */
+.portrait {
+  margin-top: 28px;
+  border-top: 3px solid var(--ink);
+  padding-top: 22px;
+}
+.table-wrap { overflow-x: auto; }
+.portrait-rows {
+  width: 100%;
+  min-width: 620px;
+  border-collapse: collapse;
+  margin-top: 16px;
+  font-size: 15px;
+}
+.portrait-rows caption {
+  text-align: left;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  padding-bottom: 8px;
+}
+.portrait-rows th,
+.portrait-rows td {
+  text-align: left;
+  padding: 9px 12px 9px 0;
+  border-bottom: 1px solid var(--rule);
+  vertical-align: top;
+}
+.portrait-rows thead th {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+.portrait-rows td.figure {
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 500;
+  white-space: nowrap;
+}
+.portrait-rows tr.out td { color: var(--ink-faint); }
+.portrait-rows .flag {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px;
+  color: var(--ink-faint);
+}
+
+/* ── Legend pills ── */
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+  margin: 14px 0 4px;
+}
+.legend span {
+  font-size: 13px;
+  color: var(--ink-light);
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+.legend i {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+}
+.legend i.hatched {
+  border-radius: 0;
+  background: repeating-linear-gradient(
+    -45deg, var(--dropped) 0 2px, #fff 2px 5px
+  );
+  border: 1px solid var(--dropped);
+}
+
+/* ── Footer ── */
+footer {
+  border-top: 3px solid var(--ink);
+  padding: 40px 0 56px;
+  font-size: 15px;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 28px;
+}
+.footer-sources dt {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  margin-top: 12px;
+}
+.footer-sources dt:first-child { margin-top: 0; }
+.footer-sources dd { color: var(--ink-light); }
+footer a { color: var(--accent); }
+.footer-right { text-align: right; }
+.footer-right p { margin-bottom: 8px; }
+
+@media (max-width: 720px) {
+  body { font-size: 16px; }
+  .hero { padding: 56px 0 36px; }
+  .hero-scale { gap: 0 28px; }
+  .hero-scale dd { font-size: 24px; }
+  .footer-grid { grid-template-columns: 1fr; }
+  .footer-right { text-align: left; }
+  .site-nav .nav-spacer { margin-left: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition: none !important; animation: none !important; }
+}

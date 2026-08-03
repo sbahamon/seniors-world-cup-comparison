@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <rect width="32" height="32" rx="4" fill="#FAFAF8"/>
+  <!-- three youth cohorts feeding one senior squad: two arrive, one does not -->
+  <circle cx="8" cy="7" r="3.2" fill="#2E4E7E"/>
+  <circle cx="8" cy="16" r="3.2" fill="#8C3A62"/>
+  <circle cx="8" cy="25" r="3.2" fill="none" stroke="#B4B1A5" stroke-width="1.6" stroke-dasharray="2 2"/>
+  <path d="M12 7 H20 a4 4 0 0 1 4 4 V15" fill="none" stroke="#2E4E7E" stroke-width="1.8"/>
+  <path d="M12 16 H24" fill="none" stroke="#8C3A62" stroke-width="1.8"/>
+  <circle cx="25.5" cy="16" r="4" fill="#1F6F5C"/>
+</svg>

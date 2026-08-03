@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Youth to Senior: Do Youth World Cups Feed the Senior Team?</title>
+<meta name="description" content="Squad overlap between senior World Cup teams and their own U-20 and U-17 World Cup squads, across six senior tournaments, 32 youth tournaments and 17,481 players.">
+
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<a href="#main" class="skip-link">Skip to content</a>
+
+<!-- ═══ NAV ═══ -->
+<nav class="site-nav" aria-label="Sections">
+  <div class="container">
+    <a href="#question">The question</a>
+    <a href="#qualification">Qualifying</a>
+    <a href="#measurable">Converting</a>
+    <a href="#coverage">Where it stops</a>
+    <a href="#method" class="nav-spacer">Method</a>
+    <a href="https://github.com/sbahamon/seniors-world-cup-comparison">Source</a>
+  </div>
+</nav>
+
+<main id="main">
+
+<!-- ═══ HERO ═══ -->
+<header class="hero">
+  <div class="container">
+    <div class="hero-eyebrow">Youth-to-senior squad overlap &middot; 2010&ndash;2023</div>
+    <h1>Do youth World Cups actually feed the senior team?</h1>
+    <p class="hero-subtitle">Nigeria has won the men's U-17 World Cup five times and never passed the senior round of 16. That gap is the whole question. Instead of comparing trophies, this project counts players: how much of each senior World Cup squad came up through that federation's own U-20 and U-17 World Cup teams.</p>
+    <dl class="hero-scale">
+      <div><dt>Senior World Cups</dt><dd>6</dd></div>
+      <div><dt>Youth World Cups</dt><dd>32</dd></div>
+      <div><dt>Squad entries</dt><dd>17,481</dd></div>
+      <div><dt>Senior squads</dt><dd>184</dd></div>
+    </dl>
+  </div>
+</header>
+
+<!-- ═══ CALLOUT ═══ -->
+<div class="callout">
+  <div class="container">
+    <div class="callout-label">What the data actually shows</div>
+    <h2>Most federations don't have a youth pipeline to convert. They have a youth pipeline they rarely reach.</h2>
+    <p>Across the 184 senior squads, the single strongest driver of youth-alumni share is not how well a federation develops the players it sends to youth tournaments &mdash; it is how often it gets there at all. Within each senior edition, the number of in-window youth World Cups a federation actually appeared in correlates <span class="num">+0.58</span> to <span class="num">+0.87</span> with its measured overlap, several times the size of any other effect measured here. Thirty-two of the 184 squads appeared in <em>none</em> of their eight eligible youth tournaments.</p>
+  </div>
+</div>
+
+<!-- ═══ THE QUESTION ═══ -->
+<section id="question">
+  <div class="container">
+    <div class="section-eyebrow">01 &middot; Why squad overlap</div>
+    <h2>Trophies are the wrong unit</h2>
+    <p class="section-lead">Youth World Cup results are lumpy, rare, and &mdash; on the men's side &mdash; contaminated by age misrepresentation. Title-to-title correlation over a handful of tournaments cannot carry weight.</p>
+    <p>Squad overlap asks the mechanistic question instead: of the 23 players a federation takes to a senior World Cup, how many were in one of its own U-20 or U-17 World Cup squads? A player counts as a youth alumnus if the same person &mdash; matched on Wikidata identity, not on name &mdash; appears in a U-20 or U-17 squad for that federation and gender, in a tournament held four to twelve years before the senior one. That window covers a player who was 17 at a U-17 through to about 29 at the senior tournament, and 20 at a U-20 through to about 32.</p>
+    <p>Six senior editions are in scope: <strong>men's 2010, 2014, 2018 and 2022, and women's 2019 and 2023.</strong> They are the only ones where all eight in-window youth tournaments were actually held. Earlier editions reach back before the women's U-17 existed (it began in 2008) or before the women's U-19/U-20 did (2002); the next World Cups on each side lose two editions to the COVID cancellations. Comparing a squad measured against eight tournaments to one measured against three would manufacture a trend out of the youth tournaments simply coming into existence.</p>
+  </div>
+</section>
+
+<!-- ═══ QUALIFICATION ═══ -->
+<section id="qualification">
+  <div class="container">
+    <div class="section-eyebrow">02 &middot; The finding that survives cleanly</div>
+    <h2>Getting to the youth World Cup is the scarce thing</h2>
+    <p class="section-lead">This is the one measure here that owes nothing to the coverage problem described further down. Whether a federation played in a youth World Cup is recorded on the tournament's own squad page &mdash; it does not depend on whether its players have Wikipedia articles.</p>
+
+    <figure>
+      <div class="chart-wrap"><div id="chart-qualification" role="img" aria-label="Distribution of how many of their eight eligible youth World Cups each of the 184 senior squads' federations appeared in. Men's squads peak at one edition; 17 appeared in none. Women's squads are spread more thinly still, with 15 of 56 at none."></div></div>
+      <figcaption>Each of the 184 senior squads has eight youth World Cups in its window &mdash; four U-20 and four U-17, held four to twelve years earlier. This is how many of them the federation actually turned up to. <b>The modal men's squad reached one.</b></figcaption>
+    </figure>
+
+    <p>The distribution is the football finding. Youth World Cup participation is not broadly shared: it is concentrated in a small group of federations that are essentially always there, with a long tail of squads whose federation reached the youth tournament once or never in a twelve-year window. Only 11 of the 184 squads come from a federation present at all eight &mdash; Brazil and the United States on the men's side in both 2010 and 2014, Australia in 2010, Mexico in 2022, Germany and New Zealand in both women's editions, and Nigeria's women in 2019.</p>
+    <p>Two of those names matter. New Zealand and Nigeria are ever-present in women's youth World Cups while being nowhere near the senior top tier, which is what a shallower qualifying field looks like from the inside: the women's youth tournaments have had fewer serious contenders per continent, so a mid-tier federation can be permanently in the draw. Conversely, 15 of 56 women's senior squads &mdash; better than one in four &mdash; came from a federation that had never once reached a youth World Cup in the previous twelve years. Whatever produced those senior teams, it was not a youth World Cup pipeline.</p>
+
+    <div class="guard">
+      <div class="guard-label">Where this stops</div>
+      <p>Qualification frequency is youth-programme reach, not youth-programme quality. It says a federation gets its age-group teams to the tournament; it says nothing about what happens to those players afterwards. That second step is the one the rest of this page struggles to measure.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ MEASURABLE ═══ -->
+<section id="measurable">
+  <div class="container">
+    <div class="section-eyebrow">03 &middot; Conversion, where it can be seen at all</div>
+    <h2>Fourteen federations, and what they look like</h2>
+    <p class="section-lead">Overlap can be measured honestly only where two conditions hold: most of the federation's youth players are identifiable, and the federation appeared in enough youth editions that the pool is not a handful of players. Forty senior squads across 14 federations clear both.</p>
+
+    <figure>
+      <div class="chart-wrap"><div id="chart-overlap" role="img" aria-label="Youth-alumni share for 40 senior squads across 14 federations, each shown with a 95 percent Wilson interval. Shares range from about 4 percent for Germany's 2022 men's squad to about 74 percent for Germany's 2019 women's squad. Federations are ordered alphabetically."></div></div>
+      <figcaption><b>Ordered alphabetically, not by share.</b> Each dot is one senior squad; the bar is a 95% Wilson interval on a squad of 23&ndash;26 players. On a squad that size the whole scale is coarse &mdash; 26% and 39% are three players apart &mdash; so the intervals are wide and they overlap almost everywhere. Reading a rank order off this chart is exactly the mistake it is drawn to prevent.</figcaption>
+    </figure>
+
+    <p>Read down the rows rather than across them and the chart gets more useful, because a federation compared against itself is not affected by any of the selection problems below. <strong>Germany's men are the clearest case:</strong> three measurable squads (2010, 2014, 2022) all sit at the bottom of the set, at <span class="num">8.7%</span>, <span class="num">17.4%</span> and <span class="num">3.9%</span>. Germany is among the best-covered federations in the corpus &mdash; its 2022 windowed redlink rate is <span class="num">10.5%</span> &mdash; so this is not the pipeline going unseen. A senior Germany squad is largely assembled from players who were not at a youth World Cup, whether because they were not selected then, or because Germany's age-group teams did not qualify in the years those players were eligible. The same federation's 2019 women's squad is at <span class="num">73.9%</span>, the highest figure in the set. One country, two programmes, opposite answers.</p>
+    <p>At the other end, South Korea's 2014 men's squad is <span class="num">65.2%</span> youth-World-Cup alumni &mdash; 15 of 23 &mdash; and Uruguay's 2018 and the United States' 2010 squads both sit above half. These are federations whose senior teams are, quite literally, their youth teams grown up.</p>
+
+    <div class="portrait">
+      <div class="section-eyebrow">The worked case &middot; Nigeria</div>
+      <h3>Qualify constantly, convert variably</h3>
+      <p>Nigeria is the federation the project was built around, and it behaves the way the callout above predicts. Its youth teams are almost always at the tournament; what changes from cycle to cycle is how many of those players are still there when the senior squad is picked.</p>
+      <div class="table-wrap">
+      <table class="portrait-rows">
+        <caption>Nigeria, all five senior squads in scope</caption>
+        <thead>
+          <tr><th scope="col">Senior squad</th><th scope="col">Youth editions reached</th><th scope="col">Redlink rate</th><th scope="col">Youth alumni</th><th scope="col">Share</th><th scope="col">Measurable?</th></tr>
+        </thead>
+        <tbody>
+          <tr class="out"><td>Men's 2010</td><td class="figure">4 of 8</td><td class="figure">36.4%</td><td class="figure">6 of 23</td><td class="figure">26.1%</td><td class="flag">No &mdash; fails both filters</td></tr>
+          <tr><td>Men's 2014</td><td class="figure">6 of 8</td><td class="figure">27.2%</td><td class="figure">5 of 23</td><td class="figure">21.7%</td><td class="flag">Yes</td></tr>
+          <tr><td>Men's 2018</td><td class="figure">7 of 8</td><td class="figure">25.8%</td><td class="figure">10 of 23</td><td class="figure">43.5%</td><td class="flag">Yes</td></tr>
+          <tr class="out"><td>Women's 2019</td><td class="figure">8 of 8</td><td class="figure">54.2%</td><td class="figure">14 of 23</td><td class="figure">60.9%</td><td class="flag">No &mdash; coverage</td></tr>
+          <tr class="out"><td>Women's 2023</td><td class="figure">7 of 8</td><td class="figure">60.5%</td><td class="figure">10 of 23</td><td class="figure">43.5%</td><td class="flag">No &mdash; coverage</td></tr>
+        </tbody>
+      </table>
+      </div>
+      <p>Between 2014 and 2018 Nigeria's measured overlap doubled, from <span class="num">21.7%</span> to <span class="num">43.5%</span>, while its youth qualification barely moved (6 of 8, then 7 of 8) and its coverage barely moved either (27.2%, then 25.8%). Whatever changed, it changed in the conversion step rather than in the pipeline's width or in what we can see of it. Those two squads are four years apart with the two intervals overlapping at the edges, so this is one federation's story, not a trend &mdash; but it is the shape the whole project was built to look for, and it is visible.</p>
+      <p>Nigeria's women are the counterexample that shows the limit: 8 of 8 and 7 of 8 youth editions, the most complete pipeline in the corpus, and shares of <span class="num">60.9%</span> and <span class="num">43.5%</span> that <em>cannot be reported</em>, because more than half of the players in that youth pool have no article to match against. The best-connected pipeline here is one of the least measurable.</p>
+    </div>
+
+    <div class="guard">
+      <div class="guard-label">Where this stops</div>
+      <p>The intervals cover sampling error on a small squad &mdash; nothing else. They do not cover the redlink gap, they do not cover age misrepresentation in men's youth football, and they do not cover the fact that this metric counts squad membership rather than minutes: a youth-tournament benchwarmer counts exactly as much as a starter.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ COVERAGE ═══ -->
+<section id="coverage">
+  <div class="container">
+    <div class="section-eyebrow">04 &middot; The reason there are only fourteen</div>
+    <h2>A player with no article cannot be counted</h2>
+    <p class="section-lead">Every match in this project runs through a player's Wikidata identity. A youth player with no English Wikipedia article has no identity to match, so they can never be counted as a senior alumnus &mdash; no matter how many youth tournaments they actually played in. Across the corpus that is <span class="num">4,490</span> of <span class="num">17,481</span> squad entries.</p>
+    <p>This gap is not noise, because it is not random. English Wikipedia's coverage of youth footballers tracks national wealth, league profile and European club presence &mdash; which is uncomfortably close to the thing being measured. A federation with a genuinely poor youth-to-senior conversion rate and a federation whose youth players simply have no articles produce the same low number, and nothing in the pipeline distinguishes them.</p>
+
+    <figure>
+      <div class="chart-wrap"><div id="chart-dispersion" role="img" aria-label="Windowed redlink rate for each of the 152 senior squads with a defined rate, split by gender. Men's squads average about 20 percent but range from 0 to 71 percent. Women's squads average about 45 percent and cluster tightly in a band from roughly 11 to 78 percent with most between 30 and 60."></div></div>
+      <div class="legend">
+        <span><i style="background:var(--men)"></i>Men's squads (111)</span>
+        <span><i style="background:var(--women)"></i>Women's squads (41)</span>
+      </div>
+      <figcaption>Share of each senior squad's whole in-window youth pool that carries no joinable article. Squads whose federation reached no youth edition are excluded &mdash; an empty pool has an undefined rate, not a rate of zero.</figcaption>
+    </figure>
+
+    <p>The two sides fail differently, and neither is simply better. <strong>On level, the women's data is about 2.3× worse:</strong> a pooled mean redlink rate of <span class="num">44.8%</span> against <span class="num">20.4%</span> for the men. The mechanism is structural rather than an accident of one tournament &mdash; women's U-17 is the worst-covered family in the corpus at 53&ndash;63%, and it supplies four of the eight editions in <em>every</em> women's window.</p>
+    <p><strong>On dispersion, the men's data is the worse of the two.</strong> Women's coverage is a uniformly bad blanket: coefficient of variation <span class="num">0.41&ndash;0.43</span> within each edition. Men's coverage is bimodal, CV <span class="num">0.85&ndash;0.99</span>, running from 0% to 71% inside a single senior edition. Dispersion is what wrecks a cross-federation comparison, because it means two men's federations in the same table are being measured through wildly different lenses. England's 2014 men's youth pool is 0% redlinked; Honduras's, in the same tournament, is 58%.</p>
+
+    <h3>The relationship is a cliff, not a gradient</h3>
+    <p>Below roughly a 30% redlink rate, coverage and measured overlap are close to unrelated (rank correlation <span class="num">&minus;0.05</span> for men, <span class="num">&minus;0.16</span> for women). Above it, the relationship bites (<span class="num">&minus;0.27</span> and <span class="num">&minus;0.43</span>). That is what makes a threshold defensible rather than arbitrary: there is a region where coverage does not visibly distort the answer, and a region where it does. Jackknifing federation by federation and trimming the extremes both leave the pattern in place, so it is broad rather than the work of two or three outliers.</p>
+
+    <div class="guard">
+      <div class="guard-label">The number not to quote</div>
+      <p>Pool all six senior editions together and the correlation between redlink rate and overlap share comes out at <span class="num">+0.012</span> &mdash; apparently no problem at all. That figure is a Simpson's-paradox artifact: women's squads have both higher redlink rates and higher overlap shares, so pooling across genders cancels a real within-edition effect and flips its sign. With edition fixed effects the correlation is <span class="num">&minus;0.296</span>. That is the number.</p>
+    </div>
+
+    <h3>And the metric measures the wrong thing anyway</h3>
+    <p>Even with perfect coverage, <em>share of senior squad who are youth alumni</em> is substantially a measure of how often a federation reached youth World Cups. A federation that reached one edition has a 21-player pool to draw from and mechanically almost no chance of a high share; a federation that reached all eight has around 170. That is the <span class="num">+0.58</span> to <span class="num">+0.87</span> correlation in the callout at the top, and it is a definitional problem with the metric, not a data problem. No additional source fixes it.</p>
+    <p>The obvious repair &mdash; dividing alumni by the size of the joinable youth pool instead of by the senior squad &mdash; inverts the bias rather than removing it. Senior squads cap at 23 (26 in 2022), so a 147-player pool has a ceiling near 16% while a 21-player pool can reach 100%. Swapping one mechanical artifact for its mirror image is not progress.</p>
+  </div>
+</section>
+
+<!-- ═══ FUNNEL ═══ -->
+<section id="limit">
+  <div class="container">
+    <div class="section-eyebrow">05 &middot; The conclusion</div>
+    <h2>184 squads in, 14 federations out</h2>
+    <p class="section-lead">Applying both filters at once is what settles the shape of the project. This is not a sample that got smaller; it is a sample that got <em>selected</em>.</p>
+
+    <figure>
+      <div class="chart-wrap"><div id="chart-funnel" role="img" aria-label="Funnel from 184 senior squads to 40. 184 squads across 63 federations enter; 152 squads across 52 federations have a defined overlap; 94 squads across 33 federations pass the coverage filter; 40 squads across 14 federations also pass the precision filter."></div></div>
+      <div class="legend">
+        <span><i style="background:var(--accent)"></i>Squads still measurable</span>
+        <span><i class="hatched"></i>Dropped at this step</span>
+      </div>
+      <figcaption>Thresholds as published in the project's intersection report: windowed redlink rate under 30%, and at least five of eight in-window youth editions actually appeared in. Loosening coverage to 35% adds at most one federation; the surviving count stays in the teens across every threshold combination tried.</figcaption>
+    </figure>
+
+    <p>The two filters are not independent of the thing being measured. Article coverage tracks national wealth and European club presence. Qualification frequency tracks youth-programme investment. <strong>Both select approximately the same federations, so the surviving set is close to a list of well-resourced football nations.</strong> Any finding computed on it is a finding about <em>that set</em>, and cannot speak to whether youth pipelines feed senior success in general.</p>
+    <p>The women's side cannot support cross-federation work at all: five squads and four federations survive across both editions &mdash; France, Germany and the United States in 2019, Spain and the United States in 2023. The men's side supplies 35 of the 40.</p>
+    <p>A supplementary source such as RSSSF would help less than the coverage gap suggests. It would rescue 18 more squads but only <strong>five more federations</strong> &mdash; Canada, China PR, Costa Rica, New Zealand and Paraguay &mdash; because most badly-covered federations also fail the precision filter, and no source can fix a federation not having qualified. Fourteen federations becoming nineteen does not turn a case study into a statistical finding.</p>
+
+    <div class="guard">
+      <div class="guard-label">What is actually out of reach</div>
+      <p>The general question &mdash; do youth World Cup pipelines feed senior success across world football &mdash; is unanswered here, and it is not unanswered for want of effort or scraping. The federations where the question is most interesting are precisely the ones open sources cover worst, and every filter that makes the measurement trustworthy also selects on the variable being measured. That is a design limit of open data on this subject, not a gap more data would close. It is an informative result: it says where the answer would have to come from, and it is not Wikipedia.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ METHOD ═══ -->
+<section id="method">
+  <div class="container">
+    <div class="section-eyebrow">06 &middot; Method, briefly</div>
+    <h2>How the numbers were made</h2>
+    <ul class="tight">
+      <li><strong>Source.</strong> English Wikipedia squad-list pages via the MediaWiki API. All 32 youth editions needed at least one parser accommodation, each logged rather than absorbed &mdash; a page parsing cleanly is not evidence the corpus is uniform.</li>
+      <li><strong>Identity.</strong> Players join on their Wikidata QID, never on display name and never on article title. Names split on accents, transliteration and nicknames; article titles get renamed out from under a saved dataset, silently lowering the overlap number on the next run.</li>
+      <li><strong>Window.</strong> For a senior tournament in year Y, the eligible youth editions are every U-20 and U-17 World Cup held in Y&minus;12 through Y&minus;4, applied identically to every federation and both genders. It truncates unusually long careers, uniformly, so the level is slightly understated and cross-federation comparison is unaffected.</li>
+      <li><strong>Denominators.</strong> A tournament that was never held &mdash; cancelled, or before the competition existed &mdash; is removed from the denominator rather than counted as a miss. A federation not qualifying is real signal and nothing is imputed for it. A squad with an empty youth pool gets a null share, never 0.0%.</li>
+      <li><strong>Nothing is dropped silently.</strong> Every unjoinable player and every parse failure is written to a CSV in the repository, along with integrity checks on team counts and squad sizes &mdash; the failure mode that costs the most here is a page that parses cleanly while returning 20 of 24 teams.</li>
+      <li><strong>Not corrected for coverage.</strong> Scaling overlap up by the inverse of the coverage rate would assume redlinked players convert at the same rate as covered ones, which is precisely the question at issue. The gap is reported, never modelled away.</li>
+    </ul>
+    <p style="margin-top:20px">Every figure on this page is generated from the CSVs in the repository at build time; the page fetches nothing at runtime. The long-form writeup, with the full correlation tables, is in <a href="https://github.com/sbahamon/seniors-world-cup-comparison/blob/main/reports/findings.md">reports/findings.md</a>.</p>
+  </div>
+</section>
+
+</main>
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <dl class="footer-sources">
+          <dt>Squad lists</dt>
+          <dd>English Wikipedia, MediaWiki action API &middot; 38 pages, 17,481 squad entries</dd>
+          <dt>Player identity</dt>
+          <dd>Wikidata QIDs, resolved through the Wikipedia pageprops API</dd>
+          <dt>Scope</dt>
+          <dd>Men's 2010, 2014, 2018, 2022 &middot; Women's 2019, 2023</dd>
+        </dl>
+      </div>
+      <div class="footer-right">
+        <p><a href="https://github.com/sbahamon/seniors-world-cup-comparison">Source code &amp; data</a></p>
+        <p><a href="https://github.com/sbahamon/seniors-world-cup-comparison/blob/main/reports/findings.md">Full writeup</a></p>
+        <p><a href="https://github.com/sbahamon/seniors-world-cup-comparison/blob/main/reports/coverage_diagnostic.md">Coverage diagnostic</a></p>
+        <p>August 2026</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* BEGIN GENERATED DATA -- built by scripts/build_site.py */
+const DATA = {"qualification":{"bins":[0,1,2,3,4,5,6,7,8],"m":[17,25,18,11,18,13,15,5,6],"w":[15,10,7,2,3,5,1,8,5],"n_squads":184,"n_men":128,"n_women":56,"full_house":["Australia (Men's 2010)","Brazil (Men's 2010)","Brazil (Men's 2014)","Germany (Women's 2019)","Germany (Women's 2023)","Mexico (Men's 2022)","New Zealand (Women's 2019)","New Zealand (Women's 2023)","Nigeria (Women's 2019)","United States (Men's 2010)","United States (Men's 2014)"],"n_zero":32},"measurable":[{"team":"Argentina","gender":"m","year":"2010","edition":"m2010","edition_label":"Men's 2010","share":0.2609,"lo":0.1255,"hi":0.4647,"alumni":6,"squad":23,"redlink":0.0776,"editions":6,"pool":116,"u20":6,"u17":2},{"team":"Argentina","gender":"m","year":"2014","edition":"m2014","edition_label":"Men's 2014","share":0.3913,"lo":0.2216,"hi":0.5921,"alumni":9,"squad":23,"redlink":0.121,"editions":6,"pool":124,"u20":9,"u17":3},{"team":"Argentina","gender":"m","year":"2018","edition":"m2018","edition_label":"Men's 2018","share":0.3478,"lo":0.1881,"hi":0.5511,"alumni":8,"squad":23,"redlink":0.1984,"editions":6,"pool":126,"u20":6,"u17":3},{"team":"Argentina","gender":"m","year":"2022","edition":"m2022","edition_label":"Men's 2022","share":0.3462,"lo":0.1941,"hi":0.5378,"alumni":9,"squad":26,"redlink":0.1587,"editions":6,"pool":126,"u20":9,"u17":1},{"team":"Australia","gender":"m","year":"2010","edition":"m2010","edition_label":"Men's 2010","share":0.4783,"lo":0.2924,"hi":0.6704,"alumni":11,"squad":23,"redlink":0.2338,"editions":8,"pool":154,"u20":10,"u17":3},{"team":"Australia","gender":"m","year":"2014","edition":"m2014","edition_label":"Men's 2014","share":0.3478,"lo":0.1881,"hi":0.5511,"alumni":8,"squad":23,"redlink":0.1863,"editions":5,"pool":102,"u20":7,"u17":1},{"team":"Brazil","gender":"m","year":"2010","edition":"m2010","edition_label":"Men's 2010","share":0.3478,"lo":0.1881,"hi":0.5511,"alumni":8,"squad":23,"redlink":0.0523,"editions":8,"pool":153,"u20":8,"u17":0},{"team":"Brazil","gender":"m","year":"2014","edition":"m2014","edition_label":"Men's 2014","share":0.3478,"lo":0.1881,"hi":0.5511,"alumni":8,"squad":23,"redlink":0.0424,"editions":8,"pool":165,"u20":7,"u17":2},{"team":"Brazil","gender":"m","year":"2018","edition":"m2018","edition_label":"Men's 2018","share":0.4783,"lo":0.2924,"hi":0.6704,"alumni":11,"squad":23,"redlink":0.0748,"editions":7,"pool":147,"u20":8,"u17":5},{"team":"Brazil","gender":"m","year":"2022","edition":"m2022","edition_label":"Men's 2022","share":0.2308,"lo":0.1103,"hi":0.4205,"alumni":6,"squad":26,"redlink":0.0714,"editions":6,"pool":126,"u20":4,"u17":2},{"team":"Colombia","gender":"m","year":"2014","edition":"m2014","edition_label":"Men's 2014","share":0.4348,"lo":0.2563,"hi":0.6319,"alumni":10,"squad":23,"redlink":0.2136,"editions":5,"pool":103,"u20":6,"u17":6},{"team":"England","gender":"m","year":"2018","edition":"m2018","edition_label":"Men's 2018","share":0.3913,"lo":0.2216,"hi":0.5921,"alumni":9,"squad":23,"redlink":0.0096,"editions":5,"pool":104,"u20":5,"u17":4},{"team":"England","gender":"m","year":"2022","edition":"m2022","edition_label":"Men's 2022","share":0.3462,"lo":0.1941,"hi":0.5378,"alumni":9,"squad":26,"redlink":0.032,"editions":6,"pool":125,"u20":4,"u17":5},{"team":"France","gender":"m","year":"2022","edition":"m2022","edition_label":"Men's 2022","share":0.2308,"lo":0.1103,"hi":0.4205,"alumni":6,"squad":26,"redlink":0.0397,"editions":6,"pool":126,"u20":4,"u17":2},{"team":"France","gender":"w","year":"2019","edition":"w2019","edition_label":"Women's 2019","share":0.5217,"lo":0.3296,"hi":0.7076,"alumni":12,"squad":23,"redlink":0.2667,"editions":5,"pool":105,"u20":10,"u17":5},{"team":"Germany","gender":"m","year":"2010","edition":"m2010","edition_label":"Men's 2010","share":0.087,"lo":0.0242,"hi":0.268,"alumni":2,"squad":23,"redlink":0.1368,"editions":5,"pool":95,"u20":2,"u17":0},{"team":"Germany","gender":"m","year":"2014","edition":"m2014","edition_label":"Men's 2014","share":0.1739,"lo":0.0698,"hi":0.3714,"alumni":4,"squad":23,"redlink":0.0577,"editions":5,"pool":104,"u20":1,"u17":3},{"team":"Germany","gender":"m","year":"2022","edition":"m2022","edition_label":"Men's 2022","share":0.0385,"lo":0.0068,"hi":0.1889,"alumni":1,"squad":26,"redlink":0.1048,"editions":5,"pool":105,"u20":1,"u17":0},{"team":"Germany","gender":"w","year":"2019","edition":"w2019","edition_label":"Women's 2019","share":0.7391,"lo":0.5353,"hi":0.8745,"alumni":17,"squad":23,"redlink":0.2083,"editions":8,"pool":168,"u20":16,"u17":12},{"team":"Japan","gender":"m","year":"2010","edition":"m2010","edition_label":"Men's 2010","share":0.3478,"lo":0.1881,"hi":0.5511,"alumni":8,"squad":23,"redlink":0.0408,"editions":5,"pool":98,"u20":7,"u17":1},{"team":"Japan","gender":"m","year":"2014","edition":"m2014","edition_label":"Men's 2014","share":0.4348,"lo":0.2563,"hi":0.6319,"alumni":10,"squad":23,"redlink":0.0769,"editions":5,"pool":104,"u20":8,"u17":2},{"team":"Japan","gender":"m","year":"2018","edition":"m2018","edition_label":"Men's 2018","share":0.2609,"lo":0.1255,"hi":0.4647,"alumni":6,"squad":23,"redlink":0.0952,"editions":5,"pool":105,"u20":2,"u17":4},{"team":"Mexico","gender":"m","year":"2014","edition":"m2014","edition_label":"Men's 2014","share":0.1739,"lo":0.0698,"hi":0.3714,"alumni":4,"squad":23,"redlink":0.1961,"editions":5,"pool":102,"u20":3,"u17":3},{"team":"Mexico","gender":"m","year":"2018","edition":"m2018","edition_label":"Men's 2018","share":0.2174,"lo":0.0966,"hi":0.419,"alumni":5,"squad":23,"redlink":0.1667,"editions":6,"pool":126,"u20":5,"u17":0},{"team":"Mexico","gender":"m","year":"2022","edition":"m2022","edition_label":"Men's 2022","share":0.2308,"lo":0.1103,"hi":0.4205,"alumni":6,"squad":26,"redlink":0.1726,"editions":8,"pool":168,"u20":6,"u17":0},{"team":"Nigeria","gender":"m","year":"2014","edition":"m2014","edition_label":"Men's 2014","share":0.2174,"lo":0.0966,"hi":0.419,"alumni":5,"squad":23,"redlink":0.272,"editions":6,"pool":125,"u20":2,"u17":4},{"team":"Nigeria","gender":"m","year":"2018","edition":"m2018","edition_label":"Men's 2018","share":0.4348,"lo":0.2563,"hi":0.6319,"alumni":10,"squad":23,"redlink":0.2585,"editions":7,"pool":147,"u20":7,"u17":4},{"team":"South Korea","gender":"m","year":"2014","edition":"m2014","edition_label":"Men's 2014","share":0.6522,"lo":0.4489,"hi":0.8119,"alumni":15,"squad":23,"redlink":0.1448,"editions":7,"pool":145,"u20":13,"u17":4},{"team":"South Korea","gender":"m","year":"2018","edition":"m2018","edition_label":"Men's 2018","share":0.3913,"lo":0.2216,"hi":0.5921,"alumni":9,"squad":23,"redlink":0.0952,"editions":6,"pool":126,"u20":8,"u17":2},{"team":"Spain","gender":"m","year":"2010","edition":"m2010","edition_label":"Men's 2010","share":0.4348,"lo":0.2563,"hi":0.6319,"alumni":10,"squad":23,"redlink":0.0609,"editions":6,"pool":115,"u20":8,"u17":5},{"team":"Spain","gender":"m","year":"2014","edition":"m2014","edition_label":"Men's 2014","share":0.4783,"lo":0.2924,"hi":0.6704,"alumni":11,"squad":23,"redlink":0.069,"editions":7,"pool":145,"u20":9,"u17":4},{"team":"Spain","gender":"m","year":"2018","edition":"m2018","edition_label":"Men's 2018","share":0.3913,"lo":0.2216,"hi":0.5921,"alumni":9,"squad":23,"redlink":0.0714,"editions":6,"pool":126,"u20":7,"u17":4},{"team":"Spain","gender":"w","year":"2023","edition":"w2023","edition_label":"Women's 2023","share":0.4348,"lo":0.2563,"hi":0.6319,"alumni":10,"squad":23,"redlink":0.1429,"editions":5,"pool":105,"u20":8,"u17":7},{"team":"United States","gender":"m","year":"2010","edition":"m2010","edition_label":"Men's 2010","share":0.5217,"lo":0.3296,"hi":0.7076,"alumni":12,"squad":23,"redlink":0.1634,"editions":8,"pool":153,"u20":11,"u17":5},{"team":"United States","gender":"m","year":"2014","edition":"m2014","edition_label":"Men's 2014","share":0.2174,"lo":0.0966,"hi":0.419,"alumni":5,"squad":23,"redlink":0.1394,"editions":8,"pool":165,"u20":4,"u17":2},{"team":"United States","gender":"m","year":"2022","edition":"m2022","edition_label":"Men's 2022","share":0.4231,"lo":0.2554,"hi":0.6105,"alumni":11,"squad":26,"redlink":0.0794,"editions":6,"pool":126,"u20":7,"u17":8},{"team":"United States","gender":"w","year":"2019","edition":"w2019","edition_label":"Women's 2019","share":0.4348,"lo":0.2563,"hi":0.6319,"alumni":10,"squad":23,"redlink":0.192,"editions":6,"pool":125,"u20":10,"u17":3},{"team":"United States","gender":"w","year":"2023","edition":"w2023","edition_label":"Women's 2023","share":0.5217,"lo":0.3296,"hi":0.7076,"alumni":12,"squad":23,"redlink":0.2245,"editions":7,"pool":147,"u20":11,"u17":5},{"team":"Uruguay","gender":"m","year":"2018","edition":"m2018","edition_label":"Men's 2018","share":0.5217,"lo":0.3296,"hi":0.7076,"alumni":12,"squad":23,"redlink":0.1565,"editions":7,"pool":147,"u20":12,"u17":1},{"team":"Uruguay","gender":"m","year":"2022","edition":"m2022","edition_label":"Men's 2022","share":0.4231,"lo":0.2554,"hi":0.6105,"alumni":11,"squad":26,"redlink":0.119,"editions":6,"pool":126,"u20":11,"u17":0}],"federations":["Argentina","Australia","Brazil","Colombia","England","France","Germany","Japan","Mexico","Nigeria","South Korea","Spain","United States","Uruguay"],"dispersion":{"m":[{"team":"England","label":"England · Men's 2010","redlink":0.0,"pool":38},{"team":"France","label":"France · Men's 2010","redlink":0.0,"pool":37},{"team":"Switzerland","label":"Switzerland · Men's 2010","redlink":0.0,"pool":21},{"team":"England","label":"England · Men's 2014","redlink":0.0,"pool":62},{"team":"Saudi Arabia","label":"Saudi Arabia · Men's 2018","redlink":0.0,"pool":21},{"team":"Portugal","label":"Portugal · Men's 2022","redlink":0.0,"pool":84},{"team":"Saudi Arabia","label":"Saudi Arabia · Men's 2022","redlink":0.0,"pool":42},{"team":"England","label":"England · Men's 2018","redlink":0.0096,"pool":104},{"team":"Portugal","label":"Portugal · Men's 2018","redlink":0.0159,"pool":63},{"team":"Spain","label":"Spain · Men's 2022","redlink":0.0317,"pool":63},{"team":"England","label":"England · Men's 2022","redlink":0.032,"pool":125},{"team":"Italy","label":"Italy · Men's 2014","redlink":0.0361,"pool":83},{"team":"France","label":"France · Men's 2022","redlink":0.0397,"pool":126},{"team":"Japan","label":"Japan · Men's 2010","redlink":0.0408,"pool":98},{"team":"Brazil","label":"Brazil · Men's 2014","redlink":0.0424,"pool":165},{"team":"Switzerland","label":"Switzerland · Men's 2014","redlink":0.0476,"pool":42},{"team":"Croatia","label":"Croatia · Men's 2018","redlink":0.0476,"pool":63},{"team":"France","label":"France · Men's 2018","redlink":0.0476,"pool":84},{"team":"Russia","label":"Russia · Men's 2018","redlink":0.0476,"pool":21},{"team":"Japan","label":"Japan · Men's 2022","redlink":0.0476,"pool":84},{"team":"Qatar","label":"Qatar · Men's 2022","redlink":0.0476,"pool":21},{"team":"Serbia","label":"Serbia · Men's 2022","redlink":0.0476,"pool":21},{"team":"Brazil","label":"Brazil · Men's 2010","redlink":0.0523,"pool":153},{"team":"Portugal","label":"Portugal · Men's 2010","redlink":0.0526,"pool":38},{"team":"Germany","label":"Germany · Men's 2014","redlink":0.0577,"pool":104},{"team":"Croatia","label":"Croatia · Men's 2022","redlink":0.0595,"pool":84},{"team":"Spain","label":"Spain · Men's 2010","redlink":0.0609,"pool":115},{"team":"Netherlands","label":"Netherlands · Men's 2010","redlink":0.0656,"pool":61},{"team":"Spain","label":"Spain · Men's 2014","redlink":0.069,"pool":145},{"team":"Chile","label":"Chile · Men's 2014","redlink":0.0714,"pool":42},{"team":"Spain","label":"Spain · Men's 2018","redlink":0.0714,"pool":126},{"team":"Brazil","label":"Brazil · Men's 2022","redlink":0.0714,"pool":126},{"team":"Italy","label":"Italy · Men's 2010","redlink":0.0732,"pool":41},{"team":"Portugal","label":"Portugal · Men's 2014","redlink":0.0732,"pool":41},{"team":"Brazil","label":"Brazil · Men's 2018","redlink":0.0748,"pool":147},{"team":"Japan","label":"Japan · Men's 2014","redlink":0.0769,"pool":104},{"team":"Argentina","label":"Argentina · Men's 2010","redlink":0.0776,"pool":116},{"team":"United States","label":"United States · Men's 2022","redlink":0.0794,"pool":126},{"team":"Australia","label":"Australia · Men's 2018","redlink":0.0833,"pool":84},{"team":"South Korea","label":"South Korea · Men's 2022","redlink":0.0833,"pool":84},{"team":"France","label":"France · Men's 2014","redlink":0.0952,"pool":21},{"team":"Germany","label":"Germany · Men's 2018","redlink":0.0952,"pool":84},{"team":"Japan","label":"Japan · Men's 2018","redlink":0.0952,"pool":105},{"team":"Poland","label":"Poland · Men's 2018","redlink":0.0952,"pool":21},{"team":"South Korea","label":"South Korea · Men's 2018","redlink":0.0952,"pool":126},{"team":"Sweden","label":"Sweden · Men's 2018","redlink":0.0952,"pool":21},{"team":"Switzerland","label":"Switzerland · Men's 2018","redlink":0.0952,"pool":21},{"team":"Netherlands","label":"Netherlands · Men's 2022","redlink":0.0952,"pool":21},{"team":"Netherlands","label":"Netherlands · Men's 2014","redlink":0.0968,"pool":62},{"team":"Chile","label":"Chile · Men's 2010","redlink":0.1026,"pool":39},{"team":"Germany","label":"Germany · Men's 2022","redlink":0.1048,"pool":105},{"team":"Uruguay","label":"Uruguay · Men's 2022","redlink":0.119,"pool":126},{"team":"Argentina","label":"Argentina · Men's 2014","redlink":0.121,"pool":124},{"team":"Germany","label":"Germany · Men's 2010","redlink":0.1368,"pool":95},{"team":"United States","label":"United States · Men's 2014","redlink":0.1394,"pool":165},{"team":"South Korea","label":"South Korea · Men's 2014","redlink":0.1448,"pool":145},{"team":"Slovakia","label":"Slovakia · Men's 2010","redlink":0.15,"pool":20},{"team":"Uruguay","label":"Uruguay · Men's 2018","redlink":0.1565,"pool":147},{"team":"Argentina","label":"Argentina · Men's 2022","redlink":0.1587,"pool":126},{"team":"Ghana","label":"Ghana · Men's 2022","redlink":0.1587,"pool":63},{"team":"United States","label":"United States · Men's 2010","redlink":0.1634,"pool":153},{"team":"Mexico","label":"Mexico · Men's 2018","redlink":0.1667,"pool":126},{"team":"Mexico","label":"Mexico · Men's 2022","redlink":0.1726,"pool":168},{"team":"Ghana","label":"Ghana · Men's 2014","redlink":0.1774,"pool":62},{"team":"Australia","label":"Australia · Men's 2014","redlink":0.1863,"pool":102},{"team":"Denmark","label":"Denmark · Men's 2018","redlink":0.1905,"pool":21},{"team":"Egypt","label":"Egypt · Men's 2018","redlink":0.1905,"pool":63},{"team":"Denmark","label":"Denmark · Men's 2022","redlink":0.1905,"pool":21},{"team":"Mexico","label":"Mexico · Men's 2014","redlink":0.1961,"pool":102},{"team":"Argentina","label":"Argentina · Men's 2018","redlink":0.1984,"pool":126},{"team":"Australia","label":"Australia · Men's 2022","redlink":0.2024,"pool":84},{"team":"Uruguay","label":"Uruguay · Men's 2014","redlink":0.2048,"pool":83},{"team":"Iran","label":"Iran · Men's 2022","redlink":0.2063,"pool":63},{"team":"Colombia","label":"Colombia · Men's 2014","redlink":0.2136,"pool":103},{"team":"South Korea","label":"South Korea · Men's 2010","redlink":0.2152,"pool":79},{"team":"Colombia","label":"Colombia · Men's 2018","redlink":0.2262,"pool":84},{"team":"Australia","label":"Australia · Men's 2010","redlink":0.2338,"pool":154},{"team":"Peru","label":"Peru · Men's 2018","redlink":0.2381,"pool":21},{"team":"Belgium","label":"Belgium · Men's 2022","redlink":0.2381,"pool":21},{"team":"Nigeria","label":"Nigeria · Men's 2018","redlink":0.2585,"pool":147},{"team":"Nigeria","label":"Nigeria · Men's 2014","redlink":0.272,"pool":125},{"team":"Uruguay","label":"Uruguay · Men's 2010","redlink":0.2857,"pool":56},{"team":"Iran","label":"Iran · Men's 2014","redlink":0.2857,"pool":21},{"team":"Iran","label":"Iran · Men's 2018","redlink":0.2857,"pool":42},{"team":"Morocco","label":"Morocco · Men's 2018","redlink":0.3333,"pool":21},{"team":"Morocco","label":"Morocco · Men's 2022","redlink":0.3333,"pool":21},{"team":"Mexico","label":"Mexico · Men's 2010","redlink":0.3438,"pool":96},{"team":"Nigeria","label":"Nigeria · Men's 2010","redlink":0.3636,"pool":77},{"team":"Ghana","label":"Ghana · Men's 2010","redlink":0.3784,"pool":74},{"team":"Paraguay","label":"Paraguay · Men's 2010","redlink":0.4043,"pool":94},{"team":"Senegal","label":"Senegal · Men's 2022","redlink":0.4048,"pool":42},{"team":"Costa Rica","label":"Costa Rica · Men's 2018","redlink":0.419,"pool":105},{"team":"Canada","label":"Canada · Men's 2022","redlink":0.4286,"pool":42},{"team":"Cameroon","label":"Cameroon · Men's 2014","redlink":0.4524,"pool":42},{"team":"Cameroon","label":"Cameroon · Men's 2010","redlink":0.4615,"pool":39},{"team":"Belgium","label":"Belgium · Men's 2014","redlink":0.4762,"pool":21},{"team":"Belgium","label":"Belgium · Men's 2018","redlink":0.4762,"pool":21},{"team":"Ivory Coast","label":"Ivory Coast · Men's 2010","redlink":0.5,"pool":40},{"team":"New Zealand","label":"New Zealand · Men's 2010","redlink":0.5,"pool":18},{"team":"Ivory Coast","label":"Ivory Coast · Men's 2014","redlink":0.5,"pool":40},{"team":"Costa Rica","label":"Costa Rica · Men's 2014","redlink":0.5081,"pool":124},{"team":"Honduras","label":"Honduras · Men's 2010","redlink":0.5128,"pool":39},{"team":"Algeria","label":"Algeria · Men's 2014","redlink":0.5238,"pool":21},{"team":"Ecuador","label":"Ecuador · Men's 2022","redlink":0.5238,"pool":84},{"team":"Costa Rica","label":"Costa Rica · Men's 2022","redlink":0.5357,"pool":84},{"team":"Cameroon","label":"Cameroon · Men's 2022","redlink":0.5714,"pool":21},{"team":"Honduras","label":"Honduras · Men's 2014","redlink":0.5833,"pool":84},{"team":"North Korea","label":"North Korea · Men's 2010","redlink":0.65,"pool":20},{"team":"Panama","label":"Panama · Men's 2018","redlink":0.6667,"pool":84},{"team":"Tunisia","label":"Tunisia · Men's 2018","redlink":0.6667,"pool":42},{"team":"Tunisia","label":"Tunisia · Men's 2022","redlink":0.7143,"pool":21}],"w":[{"team":"England","label":"England · Women's 2023","redlink":0.1111,"pool":63},{"team":"England","label":"England · Women's 2019","redlink":0.119,"pool":84},{"team":"France","label":"France · Women's 2023","redlink":0.131,"pool":84},{"team":"Spain","label":"Spain · Women's 2023","redlink":0.1429,"pool":105},{"team":"United States","label":"United States · Women's 2019","redlink":0.192,"pool":125},{"team":"Germany","label":"Germany · Women's 2019","redlink":0.2083,"pool":168},{"team":"United States","label":"United States · Women's 2023","redlink":0.2245,"pool":147},{"team":"Sweden","label":"Sweden · Women's 2019","redlink":0.2381,"pool":21},{"team":"France","label":"France · Women's 2019","redlink":0.2667,"pool":105},{"team":"Sweden","label":"Sweden · Women's 2023","redlink":0.2857,"pool":21},{"team":"Japan","label":"Japan · Women's 2023","redlink":0.3197,"pool":147},{"team":"Germany","label":"Germany · Women's 2023","redlink":0.3214,"pool":168},{"team":"Japan","label":"Japan · Women's 2019","redlink":0.3333,"pool":147},{"team":"Spain","label":"Spain · Women's 2019","redlink":0.3571,"pool":42},{"team":"Netherlands","label":"Netherlands · Women's 2023","redlink":0.381,"pool":21},{"team":"Brazil","label":"Brazil · Women's 2023","redlink":0.3878,"pool":147},{"team":"Canada","label":"Canada · Women's 2023","redlink":0.3946,"pool":147},{"team":"Norway","label":"Norway · Women's 2023","redlink":0.4286,"pool":21},{"team":"New Zealand","label":"New Zealand · Women's 2019","redlink":0.4583,"pool":168},{"team":"New Zealand","label":"New Zealand · Women's 2023","redlink":0.4643,"pool":168},{"team":"Argentina","label":"Argentina · Women's 2019","redlink":0.4762,"pool":42},{"team":"Argentina","label":"Argentina · Women's 2023","redlink":0.4762,"pool":21},{"team":"Haiti","label":"Haiti · Women's 2023","redlink":0.4762,"pool":21},{"team":"Chile","label":"Chile · Women's 2019","redlink":0.5238,"pool":42},{"team":"Norway","label":"Norway · Women's 2019","redlink":0.5238,"pool":42},{"team":"Zambia","label":"Zambia · Women's 2023","redlink":0.5238,"pool":21},{"team":"Canada","label":"Canada · Women's 2019","redlink":0.5306,"pool":147},{"team":"Nigeria","label":"Nigeria · Women's 2019","redlink":0.5417,"pool":168},{"team":"South Korea","label":"South Korea · Women's 2019","redlink":0.5429,"pool":105},{"team":"South Africa","label":"South Africa · Women's 2023","redlink":0.5714,"pool":21},{"team":"Brazil","label":"Brazil · Women's 2019","redlink":0.5986,"pool":147},{"team":"Nigeria","label":"Nigeria · Women's 2023","redlink":0.6054,"pool":147},{"team":"South Korea","label":"South Korea · Women's 2023","redlink":0.631,"pool":84},{"team":"Italy","label":"Italy · Women's 2019","redlink":0.6667,"pool":42},{"team":"Costa Rica","label":"Costa Rica · Women's 2023","redlink":0.6667,"pool":42},{"team":"Italy","label":"Italy · Women's 2023","redlink":0.6667,"pool":42},{"team":"China PR","label":"China PR · Women's 2023","redlink":0.6762,"pool":105},{"team":"China PR","label":"China PR · Women's 2019","redlink":0.6857,"pool":105},{"team":"South Africa","label":"South Africa · Women's 2019","redlink":0.7143,"pool":21},{"team":"Switzerland","label":"Switzerland · Women's 2023","redlink":0.7143,"pool":21},{"team":"Colombia","label":"Colombia · Women's 2023","redlink":0.7778,"pool":63}]},"funnel":[{"label":"Senior squads in scope","squads":184,"feds":63,"note":"Six senior World Cups, 2010–2023."},{"label":"Overlap is defined","squads":152,"feds":52,"note":"32 squads appeared in none of their eight eligible youth editions. Their share is undefined, not zero."},{"label":"Coverage filter: under 30% redlink","squads":94,"feds":33,"note":"Above roughly 30% unjoinable players, measured overlap starts tracking article coverage instead of football."},{"label":"Precision filter: 5+ of 8 youth editions","squads":40,"feds":14,"note":"A federation that reached one youth edition has a 21-player pool and mechanically almost no chance of a high share."}],"thresholds":{"redlink":0.3,"editions":5}};
+/* END GENERATED DATA */
+</script>
+
+<script>
+// ── Shared chart furniture ──────────────────────────────────────────────
+const INK = '#16150F', INK_LIGHT = '#55534A', INK_FAINT = '#8A887D';
+const RULE = '#E3E0D6', MEN = '#2E4E7E', WOMEN = '#8C3A62';
+const ACCENT = '#1F6F5C', DROPPED = '#B4B1A5';
+
+const EDITION_COLOR = {
+  m2010: '#6D89B4', m2014: '#4A6899', m2018: '#2E4E7E', m2022: '#1A2F53',
+  w2019: '#B4728F', w2023: '#8C3A62',
+};
+const EDITION_ORDER = ['m2010', 'm2014', 'm2018', 'm2022', 'w2019', 'w2023'];
+
+const BASE = {
+  font: {family: 'IBM Plex Sans, sans-serif', color: INK, size: 13},
+  paper_bgcolor: '#fff',
+  plot_bgcolor: '#fff',
+  hoverlabel: {font: {family: 'IBM Plex Mono, monospace', size: 13}},
+};
+const CONFIG = {displayModeBar: false, responsive: true};
+const pct = v => (v * 100).toFixed(1) + '%';
+
+// Charts are laid out for a 960px column; on a phone the axis gutters have to
+// shrink or they eat the plot. One flag, checked at draw time.
+const NARROW = window.matchMedia('(max-width: 720px)').matches;
+const pick = (wide, narrow) => (NARROW ? narrow : wide);
+
+// ── 1. Qualification frequency ──────────────────────────────────────────
+(function () {
+  const q = DATA.qualification;
+  const labels = q.bins.map(String);
+  Plotly.newPlot('chart-qualification', [
+    {
+      type: 'bar', name: "Men's squads", x: labels, y: q.m,
+      marker: {color: MEN},
+      hovertemplate: '<b>%{x} of 8 youth editions</b><br>%{y} men\'s squads<extra></extra>',
+    },
+    {
+      type: 'bar', name: "Women's squads", x: labels, y: q.w,
+      marker: {color: WOMEN},
+      hovertemplate: '<b>%{x} of 8 youth editions</b><br>%{y} women\'s squads<extra></extra>',
+    },
+  ], {
+    ...BASE,
+    height: pick(400, 360),
+    barmode: 'group',
+    bargap: 0.28,
+    margin: {l: pick(56, 44), r: pick(24, 12), t: 56, b: 62},
+    legend: {orientation: 'h', y: 1.14, x: 0, font: {size: pick(13, 12)}},
+    xaxis: {
+      title: {
+        text: pick('In-window youth World Cups the federation appeared in',
+                   'Youth World Cups appeared in'),
+        standoff: 14,
+      },
+      tickfont: {family: 'IBM Plex Mono, monospace'},
+      gridcolor: RULE, zeroline: false,
+    },
+    yaxis: {title: 'Senior squads', gridcolor: RULE, zeroline: true, zerolinecolor: INK, range: [0, 34]},
+    shapes: [{
+      type: 'rect', x0: -0.5, x1: 0.5, y0: 0, y1: 34, layer: 'below',
+      fillcolor: 'rgba(180,177,165,0.16)', line: {width: 0},
+    }],
+    annotations: [{
+      x: -0.44, y: 32, xanchor: 'left', yanchor: 'top', align: 'left',
+      text: pick('<b>' + q.n_zero + ' squads</b> reached none of the eight &mdash;<br>no youth pipeline to measure at all',
+                 '<b>' + q.n_zero + ' squads</b> reached<br>none of the eight'),
+      showarrow: false,
+      font: {size: 12, color: INK_LIGHT},
+    }],
+  }, CONFIG);
+})();
+
+// ── 2. The 14 measurable federations ────────────────────────────────────
+(function () {
+  const feds = DATA.federations;
+  const rowOf = {};
+  feds.forEach((f, i) => { rowOf[f] = i; });
+
+  // Spread a federation's squads vertically inside its own row so the dots
+  // and their intervals stay legible; row order stays alphabetical.
+  const perFed = {};
+  DATA.measurable.forEach(d => { (perFed[d.team] ||= []).push(d); });
+  Object.values(perFed).forEach(rows => {
+    rows.forEach((d, i) => {
+      d.y = rowOf[d.team] + (i - (rows.length - 1) / 2) * 0.23;
+    });
+  });
+
+  const traces = EDITION_ORDER.map(ed => {
+    const rows = DATA.measurable.filter(d => d.edition === ed);
+    return {
+      type: 'scatter', mode: 'markers',
+      name: rows.length ? rows[0].edition_label : ed,
+      x: rows.map(d => d.share), y: rows.map(d => d.y),
+      customdata: rows.map(d => [d.team, d.edition_label, d.alumni, d.squad,
+                                 pct(d.lo), pct(d.hi), d.editions, pct(d.redlink)]),
+      error_x: {
+        type: 'data', symmetric: false,
+        array: rows.map(d => d.hi - d.share),
+        arrayminus: rows.map(d => d.share - d.lo),
+        color: 'rgba(85,83,74,0.55)', thickness: 1.5, width: 0,
+      },
+      marker: {color: EDITION_COLOR[ed], size: 11, line: {color: '#fff', width: 1.5}},
+      hovertemplate:
+        '<b>%{customdata[0]} · %{customdata[1]}</b><br>' +
+        '%{customdata[2]} of %{customdata[3]} players were youth alumni<br>' +
+        'share %{x:.1%} · 95% interval %{customdata[4]}–%{customdata[5]}<br>' +
+        'reached %{customdata[6]} of 8 youth editions · %{customdata[7]} redlinked' +
+        '<extra></extra>',
+    };
+  });
+
+  Plotly.newPlot('chart-overlap', traces, {
+    ...BASE,
+    height: pick(700, 620),
+    margin: {l: pick(118, 92), r: pick(28, 14), t: pick(62, 152), b: 62},
+    legend: {orientation: 'h', y: pick(1.10, 1.26), x: 0, font: {size: pick(12, 11)}},
+    xaxis: {
+      title: {
+        text: pick('Share of the senior squad who played a youth World Cup',
+                   'Youth-alumni share of squad'),
+        standoff: 14,
+      },
+      tickformat: '.0%', range: [-0.02, 0.92], dtick: pick(0.1, 0.2),
+      gridcolor: RULE, zeroline: true, zerolinecolor: INK,
+    },
+    yaxis: {
+      tickvals: feds.map((_, i) => i), ticktext: feds,
+      range: [feds.length - 0.5, -0.5],
+      gridcolor: RULE, zeroline: false, tickfont: {size: pick(13, 11.5)},
+    },
+  }, CONFIG);
+})();
+
+// ── 3. Dispersion of the coverage gap ───────────────────────────────────
+(function () {
+  const mk = (rows, name, color) => ({
+    type: 'box', name, orientation: 'h',
+    x: rows.map(d => d.redlink),
+    text: rows.map(d => d.label),
+    boxpoints: 'all', jitter: 0.7, pointpos: 0, boxmean: true,
+    marker: {color, size: 6, opacity: 0.55},
+    line: {color, width: 1.5},
+    fillcolor: 'rgba(0,0,0,0)',
+    hovertemplate: '<b>%{text}</b><br>%{x:.1%} of the youth pool unjoinable<extra></extra>',
+  });
+
+  Plotly.newPlot('chart-dispersion', [
+    mk(DATA.dispersion.w, "Women's", WOMEN),
+    mk(DATA.dispersion.m, "Men's", MEN),
+  ], {
+    ...BASE,
+    height: pick(390, 340),
+    showlegend: false,
+    margin: {l: pick(84, 66), r: pick(28, 14), t: 46, b: 62},
+    xaxis: {
+      title: {
+        text: pick('Share of the in-window youth pool with no joinable article',
+                   'Share of the youth pool with no article'),
+        standoff: 14,
+      },
+      tickformat: '.0%', range: [-0.03, 0.85], dtick: pick(0.1, 0.2),
+      gridcolor: RULE, zeroline: false,
+    },
+    yaxis: {gridcolor: RULE, zeroline: false, tickfont: {size: 14}},
+    shapes: [{
+      type: 'line', x0: 0.30, x1: 0.30, y0: 0, y1: 1, yref: 'paper',
+      line: {color: ACCENT, width: 1.5, dash: 'dot'},
+    }],
+    annotations: [{
+      x: 0.30, y: 1.03, yref: 'paper',
+      xanchor: pick('left', 'right'), xshift: pick(6, -6),
+      text: pick('coverage filter, 30%', '30% filter'), showarrow: false,
+      font: {size: 12, color: ACCENT},
+    }],
+  }, CONFIG);
+})();
+
+// ── 4. The funnel ───────────────────────────────────────────────────────
+(function () {
+  const steps = DATA.funnel;
+  const total = steps[0].squads;
+  const SHORT = ['All squads', 'Overlap defined', 'Coverage &lt; 30%', '5+ of 8 editions'];
+  const labels = steps.map((s, i) => pick(s.label, SHORT[i]));
+
+  Plotly.newPlot('chart-funnel', [
+    {
+      type: 'bar', orientation: 'h', name: 'Measurable',
+      y: labels, x: steps.map(s => s.squads),
+      marker: {color: ACCENT},
+      customdata: steps.map(s => [s.feds, s.note]),
+      hovertemplate: '<b>%{y}</b><br>%{x} squads · %{customdata[0]} federations<extra></extra>',
+    },
+    {
+      type: 'bar', orientation: 'h', name: 'Dropped',
+      y: labels, x: steps.map(s => total - s.squads),
+      marker: {
+        color: '#fff', line: {color: DROPPED, width: 1},
+        pattern: {shape: '/', bgcolor: '#fff', fgcolor: DROPPED, size: 5, solidity: 0.28},
+      },
+      hovertemplate: '%{x} squads dropped by this point<extra></extra>',
+    },
+  ], {
+    ...BASE,
+    height: pick(340, 300),
+    barmode: 'stack',
+    bargap: 0.36,
+    showlegend: false,
+    margin: {l: pick(236, 108), r: pick(124, 78), t: 20, b: 54},
+    xaxis: {
+      title: {text: 'Senior squads', standoff: 12},
+      range: [0, total * 1.01], gridcolor: RULE, zeroline: false,
+    },
+    yaxis: {autorange: 'reversed', tickfont: {size: 12.5}},
+    annotations: steps.map((s, i) => ({
+      x: s.squads, y: labels[i], xanchor: 'left', xshift: 10,
+      text: '<b>' + s.squads + '</b> · ' + s.feds + pick(' feds', ''),
+      showarrow: false,
+      font: {family: 'IBM Plex Mono, monospace', size: 12, color: INK},
+    })),
+  }, CONFIG);
+})();
+</script>
+
+</body>
+</html>
