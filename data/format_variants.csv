@@ -8,3 +8,7 @@ seniorm2014,senior,m,2014,2014 FIFA World Cup squads,player_template:national fo
 seniorm2014,senior,m,2014,2014 FIFA World Cup squads,redirect_resolved,17,article title was a redirect; canonical title used
 seniorm2018,senior,m,2018,2018 FIFA World Cup squads,redirect_resolved,20,article title was a redirect; canonical title used
 seniorm2022,senior,m,2022,2022 FIFA World Cup squads,redirect_resolved,22,article title was a redirect; canonical title used
+u17m1999,u17,m,1999,1999 FIFA U-17 World Championship squads,bluelink_to_missing_page,113,name linked to a page that does not exist; treated as a redlink
+u17m1999,u17,m,1999,1999 FIFA U-17 World Championship squads,header_code_needs_expansion,5,team header is a country code COUNTRY_CODES does not know; resolved via expandtemplates
+u17m1999,u17,m,1999,1999 FIFA U-17 World Championship squads,name_wrapped_in_bold,80,player name wrapped in ''' bold '''
+u17m1999,u17,m,1999,1999 FIFA U-17 World Championship squads,redirect_resolved,11,article title was a redirect; canonical title used
