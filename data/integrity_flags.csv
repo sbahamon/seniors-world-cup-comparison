@@ -1,1 +1,2 @@
 tournament_id,level,gender,year,page_title,team,check,severity,expected,observed,detail
+seniorm2022,senior,m,2022,2022 FIFA World Cup squads,Iran,squad_size_vs_edition,warn,26,25,1 off this edition's modal squad size (31 of 32 squads are 26)
