@@ -109,3 +109,7 @@ u17w2018,u17,w,2018,2018 FIFA U-17 Women's World Cup squads,bluelink_to_missing_
 u17w2018,u17,w,2018,2018 FIFA U-17 Women's World Cup squads,player_template:nat fs player no caps,63,non-baseline player template dialect
 u17w2018,u17,w,2018,2018 FIFA U-17 Women's World Cup squads,player_template:national football squad player (no caps),273,non-baseline player template dialect
 u17w2018,u17,w,2018,2018 FIFA U-17 Women's World Cup squads,redirect_resolved,16,article title was a redirect; canonical title used
+u20w2008,u20,w,2008,2008 FIFA U-20 Women's World Cup squads,bluelink_to_missing_page,76,name linked to a page that does not exist; treated as a redlink
+u20w2008,u20,w,2008,2008 FIFA U-20 Women's World Cup squads,redirect_resolved,10,article title was a redirect; canonical title used
+u20w2008,u20,w,2008,2008 FIFA U-20 Women's World Cup squads,table_nonplayer_row_dropped,1,wikitable row with no shirt number and no DOB (head-coach row) excluded from the squad
+u20w2008,u20,w,2008,2008 FIFA U-20 Women's World Cup squads,wikitable_squad,5,"squad written as a raw wikitable, not player templates"
