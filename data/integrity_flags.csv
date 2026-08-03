@@ -2,3 +2,4 @@ tournament_id,level,gender,year,page_title,team,check,severity,expected,observed
 seniorm2022,senior,m,2022,2022 FIFA World Cup squads,Iran,squad_size_vs_edition,warn,26,25,1 off this edition's modal squad size (31 of 32 squads are 26)
 u17m2001,u17,m,2001,2001 FIFA U-17 World Championship squads,Japan,squad_size_vs_edition,warn,18,20,2 off this edition's modal squad size (15 of 16 squads are 18)
 u17m2003,u17,m,2003,2003 FIFA U-17 World Championship squads,Cameroon,squad_size_vs_edition,warn,20,21,1 off this edition's modal squad size (15 of 16 squads are 20)
+u17m2011,u17,m,2011,2011 FIFA U-17 World Cup squads,Congo,squad_size_vs_edition,warn,21,19,2 off this edition's modal squad size (23 of 24 squads are 21)
