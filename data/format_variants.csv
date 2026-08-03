@@ -35,3 +35,7 @@ u17m2009,u17,m,2009,2009 FIFA U-17 World Cup squads,header_code_needs_expansion,
 u17m2009,u17,m,2009,2009 FIFA U-17 World Cup squads,name_via_sortname,2,player name given as {{sortname}} rather than a wikilink
 u17m2009,u17,m,2009,2009 FIFA U-17 World Cup squads,name_wrapped_in_bold,102,player name wrapped in ''' bold '''
 u17m2009,u17,m,2009,2009 FIFA U-17 World Cup squads,redirect_resolved,18,article title was a redirect; canonical title used
+u17m2011,u17,m,2011,2011 FIFA U-17 World Cup squads,bluelink_to_missing_page,14,name linked to a page that does not exist; treated as a redlink
+u17m2011,u17,m,2011,2011 FIFA U-17 World Cup squads,name_wrapped_in_bold,121,player name wrapped in ''' bold '''
+u17m2011,u17,m,2011,2011 FIFA U-17 World Cup squads,player_template:national football squad player,490,non-baseline player template dialect
+u17m2011,u17,m,2011,2011 FIFA U-17 World Cup squads,redirect_resolved,15,article title was a redirect; canonical title used
