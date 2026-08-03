@@ -308,6 +308,33 @@ class Flag:
         }
 
 
+# Format variants that count as "this page needed a parser accommodation".
+# Deliberately excludes the two baseline dialects -- a plain ===Spain=== header
+# and a {{nat fs player}} row are not accommodations, they are the default. The
+# point of the count is the residual: if a third of the corpus needed special
+# handling, the editions that parsed clean are not evidence of uniformity, only
+# of no-one having looked hard at them.
+ACCOMMODATION_VARIANTS = {
+    "header_code_needs_expansion": "team header is a country code COUNTRY_CODES "
+                                   "does not know; resolved via expandtemplates",
+    "wikitable_squad": "squad written as a raw wikitable, not player templates",
+    "table_column_fallback": "wikitable had no identifiable header row; "
+                             "column positions guessed",
+    "table_nonplayer_row_dropped": "wikitable row with no shirt number and no DOB "
+                                   "(head-coach row) excluded from the squad",
+    "name_via_sortname": "player name given as {{sortname}} rather than a wikilink",
+    "name_wrapped_in_bold": "player name wrapped in ''' bold '''",
+    "bluelink_to_missing_page": "name linked to a page that does not exist; "
+                                "treated as a redlink",
+    "redirect_resolved": "article title was a redirect; canonical title used",
+    "no_wikidata_item": "article carries no Wikidata item; joined on title instead",
+}
+
+# Non-baseline player-template dialects. "nat fs player" and "nat fs g player"
+# are the two common ones; anything else is a variant worth counting.
+BASELINE_TEMPLATES = {"nat fs player", "nat fs g player"}
+
+
 @dataclass
 class EditionResult:
     edition: Edition
@@ -315,7 +342,20 @@ class EditionResult:
     flags: list[Flag] = field(default_factory=list)
     failures: list[dict] = field(default_factory=list)
     teams: set[str] = field(default_factory=set)
+    accommodations: Counter = field(default_factory=Counter)
     fetched: bool = False
+
+    @property
+    def variant_kinds(self) -> dict[str, int]:
+        """The accommodations this page actually needed, baseline excluded."""
+        out = {k: v for k, v in self.accommodations.items()
+               if k in ACCOMMODATION_VARIANTS and v}
+        for key, n in self.accommodations.items():
+            if key.startswith("player_template:"):
+                dialect = key.split(":", 1)[1]
+                if dialect not in BASELINE_TEMPLATES:
+                    out[f"player_template:{dialect}"] = n
+        return out
 
     @property
     def errors(self) -> list[Flag]:
@@ -434,9 +474,10 @@ def ingest_edition(ed: Edition) -> EditionResult:
     res = EditionResult(edition=ed)
     print(f"\n{ed}  <- {ed.page_title}")
 
+    acc: Counter = Counter()
     try:
         wikitext = fetch_wikitext(ed.page_title)
-        players, warnings = parse_page(wikitext, expand=True, tables=True)
+        players, warnings = parse_page(wikitext, expand=True, tables=True, acc=acc)
     except Exception as exc:  # noqa: BLE001 - record and move on, per CLAUDE.md
         res.failures.append({"tournament_id": ed.tid, "page": ed.page_title,
                              "reason": repr(exc)})
@@ -444,6 +485,7 @@ def ingest_edition(ed: Edition) -> EditionResult:
         return res
 
     res.fetched = True
+    res.accommodations = acc
     for w in warnings:
         res.failures.append({"tournament_id": ed.tid, "page": ed.page_title, "reason": w})
     res.flags = check_edition(ed, players, warnings)
@@ -458,7 +500,7 @@ def ingest_edition(ed: Edition) -> EditionResult:
             "birth_year": p.birth_year,
         })
 
-    resolve_qids(rows)
+    resolve_qids(rows, acc)
     res.rows = rows
     res.teams = {r["team"] for r in rows}
 
@@ -474,11 +516,16 @@ def ingest_edition(ed: Edition) -> EditionResult:
         print(f"  [{f.severity.upper():5s}] {f.check}"
               + (f" {f.team}" if f.team else "")
               + f": expected {f.expected}, got {f.observed}")
+    variants = res.variant_kinds
+    if variants:
+        print("  format accommodations: "
+              + ", ".join(f"{k}x{v}" for k, v in sorted(variants.items())))
     return res
 
 
-def resolve_qids(rows: list[dict]) -> None:
+def resolve_qids(rows: list[dict], acc: Counter | None = None) -> None:
     """Attach player_qid / join_key in place. QID is the join key; see CLAUDE.md."""
+    note = acc if acc is not None else Counter()
     resolved = resolve_pages([r["player_article"] for r in rows if r["player_article"]])
     for r in rows:
         raw = r["player_article"]
@@ -490,6 +537,7 @@ def resolve_qids(rows: list[dict]) -> None:
             r["player_article"] = ""
             r["player_qid"], r["join_key"] = "", ""
             r["join_note"] = "linked article does not exist"
+            note["bluelink_to_missing_page"] += 1
         else:
             r["player_article"] = info.canonical
             r["player_qid"] = info.qid
@@ -497,8 +545,10 @@ def resolve_qids(rows: list[dict]) -> None:
             notes = []
             if info.canonical != raw:
                 notes.append(f"redirect from {raw}")
+                note["redirect_resolved"] += 1
             if not info.qid:
                 notes.append("no wikidata item, joined on title")
+                note["no_wikidata_item"] += 1
             r["join_note"] = "; ".join(notes)
 
 
@@ -570,6 +620,66 @@ def build_window_coverage(
 # persistence
 # --------------------------------------------------------------------------
 
+def build_window_coverage_rates(
+    squad_rows: list[dict], coverage_rows: list[dict]
+) -> list[dict]:
+    """Per senior squad: the redlink rate over its whole 8-edition window pool.
+
+    A per-edition redlink rate is noisy -- one edition is 16-24 squads of about
+    21, and a federation can look well covered in 2013 and terrible in 2009. The
+    number that actually decides whether a federation is joinable is the rate
+    over the pool that its senior squad is measured against, which is every
+    in-window U-20 and U-17 edition it appeared in. That is what this computes.
+
+    This is NOT overlap.csv and must not become it. There is no alumni count and
+    no share column here, only the coverage side: pool size, how much of the pool
+    is joinable, and the edition-status counts. Overlap is not computed this
+    session.
+    """
+    youth = [r for r in squad_rows if r["level"] != "senior"]
+    pool_index: dict[tuple[str, str, str, int], list[dict]] = defaultdict(list)
+    for r in youth:
+        pool_index[(r["team"], r["gender"], r["level"], int(r["year"]))].append(r)
+
+    status_index: dict[tuple[str, str, int], Counter] = defaultdict(Counter)
+    for c in coverage_rows:
+        status_index[(c["team"], c["gender"], int(c["senior_year"]))][c["status"]] += 1
+
+    rows: list[dict] = []
+    for gender, senior_year, _ in V1_SENIOR:
+        senior_tid = tid("senior", gender, senior_year)
+        squads: dict[str, int] = Counter(
+            r["team"] for r in squad_rows if r["tournament_id"] == senior_tid
+        )
+        window = editions_in_window(gender, senior_year)
+        total, held = window_counts(gender, senior_year)
+
+        for team in sorted(squads):
+            pool: list[dict] = []
+            for level, g, yr, title in window:
+                if title:
+                    pool.extend(pool_index.get((team, g, level, yr), []))
+            linked = sum(1 for p in pool if p.get("player_qid") or p.get("player_article"))
+            counts = status_index[(team, gender, senior_year)]
+            rows.append({
+                "team": team, "gender": gender, "senior_year": senior_year,
+                "senior_squad_size": squads[team],
+                "n_youth_pool": len(pool),
+                "n_youth_pool_linked": linked,
+                "n_youth_pool_redlinks": len(pool) - linked,
+                # null, never 0.0%, when the pool is empty -- an empty pool is an
+                # undefined coverage rate, the same trap as a zero denominator
+                "youth_coverage_rate": f"{linked / len(pool):.4f}" if pool else "",
+                "n_editions_in_window": total,
+                "n_editions_held_in_window": held,
+                "n_editions_ingested": counts["ingested"],
+                "n_editions_not_qualified": counts["not_qualified"],
+                "n_editions_failed": counts["failed"],
+                "provisional": "yes" if counts["failed"] else "no",
+            })
+    return rows
+
+
 SQUAD_FIELDS = ["tournament_id", "level", "gender", "year", "team", "shirt_no",
                 "position", "player_article", "player_qid", "display_name",
                 "source_url", "birth_year"]
@@ -579,6 +689,27 @@ FAILURE_FIELDS = ["tournament_id", "page", "reason"]
 FLAG_FIELDS = ["tournament_id", "level", "gender", "year", "page_title", "team",
                "check", "severity", "expected", "observed", "detail"]
 COVERAGE_FIELDS = ["team", "gender", "senior_year", "youth_level", "youth_year", "status"]
+RATE_FIELDS = ["team", "gender", "senior_year", "senior_squad_size", "n_youth_pool",
+               "n_youth_pool_linked", "n_youth_pool_redlinks", "youth_coverage_rate",
+               "n_editions_in_window", "n_editions_held_in_window",
+               "n_editions_ingested", "n_editions_not_qualified",
+               "n_editions_failed", "provisional"]
+VARIANT_FIELDS = ["tournament_id", "level", "gender", "year", "page_title",
+                  "variant", "count", "description"]
+
+
+def variant_rows(res: EditionResult) -> list[dict]:
+    ed = res.edition
+    out = []
+    for variant, n in sorted(res.variant_kinds.items()):
+        out.append({
+            "tournament_id": ed.tid, "level": ed.level, "gender": ed.gender,
+            "year": ed.year, "page_title": ed.page_title, "variant": variant,
+            "count": n,
+            "description": ACCOMMODATION_VARIANTS.get(
+                variant, "non-baseline player template dialect"),
+        })
+    return out
 
 
 def write_csv(path: Path, fields: list[str], data: list[dict], quiet: bool = False) -> None:
@@ -676,6 +807,7 @@ def main() -> int:
     keep_squads = read_csv(out / "squads.csv")
     keep_flags = read_csv(out / "integrity_flags.csv")
     keep_failures = read_csv(out / "parse_failures.csv")
+    keep_variants = read_csv(out / "format_variants.csv")
     done = {r["tournament_id"] for r in keep_squads}
     if args.resume:
         skipped = [e for e in selected if e.tid in done]
@@ -686,6 +818,7 @@ def main() -> int:
     keep_squads = [r for r in keep_squads if r["tournament_id"] not in refetching]
     keep_flags = [r for r in keep_flags if r["tournament_id"] not in refetching]
     keep_failures = [r for r in keep_failures if r["tournament_id"] not in refetching]
+    keep_variants = [r for r in keep_variants if r["tournament_id"] not in refetching]
 
     print(f"\ningesting {len(selected)} editions -> {out}")
 
@@ -693,6 +826,7 @@ def main() -> int:
     squad_rows: list[dict] = list(keep_squads)
     flag_rows: list[dict] = list(keep_flags)
     failure_rows: list[dict] = list(keep_failures)
+    var_rows: list[dict] = list(keep_variants)
 
     for ed in selected:
         res = ingest_edition(ed)
@@ -700,6 +834,7 @@ def main() -> int:
         squad_rows.extend(res.rows)
         flag_rows.extend(f.row() for f in res.flags)
         failure_rows.extend(res.failures)
+        var_rows.extend(variant_rows(res))
 
         # Persist after every edition. The VM is ephemeral; nothing is held only
         # in memory (CLAUDE.md, Operating environment).
@@ -708,6 +843,7 @@ def main() -> int:
                   quiet=True)
         write_csv(out / "integrity_flags.csv", FLAG_FIELDS, flag_rows, quiet=True)
         write_csv(out / "parse_failures.csv", FAILURE_FIELDS, failure_rows, quiet=True)
+        write_csv(out / "format_variants.csv", VARIANT_FIELDS, var_rows, quiet=True)
         if args.commit:
             git_commit(out, f"Ingest {ed.tid}: {len(res.rows)} players, "
                             f"{len(res.teams)} teams")
@@ -717,7 +853,10 @@ def main() -> int:
     write_csv(out / "squads.csv", SQUAD_FIELDS, squad_rows)
     write_csv(out / "integrity_flags.csv", FLAG_FIELDS, flag_rows)
     write_csv(out / "parse_failures.csv", FAILURE_FIELDS, failure_rows)
+    write_csv(out / "format_variants.csv", VARIANT_FIELDS, var_rows)
 
+    coverage: list[dict] = []
+    rate_rows: list[dict] = []
     # cross-edition federation-name check, only meaningful over a full corpus
     if not partial:
         appearances: dict[str, set[str]] = defaultdict(set)
@@ -731,17 +870,20 @@ def main() -> int:
 
         coverage = build_window_coverage(results, squad_rows)
         write_csv(out / "window_coverage.csv", COVERAGE_FIELDS, coverage)
+        rate_rows = build_window_coverage_rates(squad_rows, coverage)
+        write_csv(out / "window_coverage_rates.csv", RATE_FIELDS, rate_rows)
         if args.commit:
-            git_commit(out, "Window coverage and integrity flags for the v1 scope")
+            git_commit(out, "Window coverage, coverage rates and integrity flags "
+                            "for the v1 scope")
     else:
-        print("\npartial run: window_coverage.csv and the federation-name check "
-              "need the full corpus and were skipped")
+        print("\npartial run: window_coverage.csv, window_coverage_rates.csv and "
+              "the federation-name check need the full corpus and were skipped")
 
-    report(selected, results, squad_rows, flag_rows)
+    report(selected, results, squad_rows, flag_rows, var_rows, rate_rows)
     return 0
 
 
-def report(selected, results, squad_rows, flag_rows) -> None:
+def report(selected, results, squad_rows, flag_rows, var_rows, rate_rows) -> None:
     print(f"\n{'=' * 72}\nsummary\n{'=' * 72}")
     ok = [t for t, r in results.items() if r.fetched]
     bad = [t for t, r in results.items() if not r.fetched]
@@ -759,6 +901,55 @@ def report(selected, results, squad_rows, flag_rows) -> None:
     if total:
         print(f"  players             {total}, linked {linked}, "
               f"redlinks {total - linked} ({(total - linked) / total:.1%})")
+
+    # --- format accommodations ------------------------------------------------
+    youth_ids = {e.tid for e in youth_targets()}
+    touched = {r["tournament_id"] for r in var_rows}
+    all_ids = {e.tid for e in senior_targets() + youth_targets()}
+    print("\n  format accommodations")
+    print(f"      youth editions needing >=1 accommodation: "
+          f"{len(touched & youth_ids)} of {len(youth_ids)}")
+    print(f"      all editions needing >=1 accommodation:   "
+          f"{len(touched & all_ids)} of {len(all_ids)}")
+    per_variant = Counter()
+    per_variant_editions = defaultdict(set)
+    for r in var_rows:
+        per_variant[r["variant"]] += int(r["count"])
+        per_variant_editions[r["variant"]].add(r["tournament_id"])
+    for variant, n in per_variant.most_common():
+        print(f"      {variant:36s} {n:6d} occurrences across "
+              f"{len(per_variant_editions[variant]):2d} editions")
+
+    # --- per-edition redlink rate ---------------------------------------------
+    per_ed: dict[str, list[int]] = defaultdict(lambda: [0, 0])
+    for r in squad_rows:
+        per_ed[r["tournament_id"]][0] += 1
+        if not (r.get("player_qid") or r.get("player_article")):
+            per_ed[r["tournament_id"]][1] += 1
+    print(f"\n  redlink rate per edition (worst first)")
+    for t, (n, red) in sorted(per_ed.items(), key=lambda kv: -kv[1][1] / max(kv[1][0], 1)):
+        print(f"      {red:4d}/{n:4d}  {red / n:6.1%}  {t}")
+
+    # --- windowed redlink rate per federation ---------------------------------
+    # The number that decides joinability: coverage over the whole pool a senior
+    # squad is measured against, not one noisy edition.
+    if rate_rows:
+        print(f"\n  windowed redlink rate per (federation, senior squad), worst first")
+        print(f"      {'redlinks/pool':>16}  {'rate':>7}  {'ed':>5}  federation")
+        ranked = sorted(
+            rate_rows,
+            key=lambda r: (-(int(r["n_youth_pool_redlinks"]) / int(r["n_youth_pool"]))
+                           if int(r["n_youth_pool"]) else 1.0, r["team"]),
+        )
+        for r in ranked:
+            pool = int(r["n_youth_pool"])
+            red = int(r["n_youth_pool_redlinks"])
+            rate = f"{red / pool:6.1%}" if pool else "  undef"
+            who = "w" if r["gender"] == "w" else "m"
+            print(f"      {red:7d}/{pool:<8d} {rate}  "
+                  f"{r['n_editions_ingested']:>2}/{r['n_editions_held_in_window']:<2}  "
+                  f"{r['team']} {who}{r['senior_year']}"
+                  + ("  PROVISIONAL" if r["provisional"] == "yes" else ""))
 
 
 if __name__ == "__main__":

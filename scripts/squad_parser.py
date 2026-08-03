@@ -63,6 +63,7 @@ from __future__ import annotations
 
 import re
 import sys
+from collections import Counter
 from dataclasses import dataclass
 
 from fetch_page import API, USER_AGENT, fetch_wikitext
@@ -445,8 +446,11 @@ def strip_cell_attrs(cell: str) -> str:
     return cell.strip()
 
 
-def parse_table_squad(section: str, team: str) -> list[Player]:
+def parse_table_squad(
+    section: str, team: str, acc: Counter | None = None
+) -> list[Player]:
     """Parse a squad written as a raw wikitable rather than player templates."""
+    note = acc if acc is not None else Counter()
     table = extract_table(section)
     if table is None:
         return []
@@ -490,6 +494,7 @@ def parse_table_squad(section: str, team: str) -> list[Player]:
         break
     if col_name is None:
         col_no, col_name = 0, 1
+        note["table_column_fallback"] += 1
 
     players: list[Player] = []
     position = ""
@@ -525,6 +530,7 @@ def parse_table_squad(section: str, team: str) -> list[Player]:
         # "player" named Stephane Pilard. Fabricating a squad member is worse
         # than dropping a real one, so the row is required to look like a player.
         if not shirt and not dob:
+            note["table_nonplayer_row_dropped"] += 1
             continue
         pos = position
         if col_pos is not None and col_pos < len(cells):
@@ -561,6 +567,23 @@ def is_player_template(name: str) -> bool:
 BIRTH_TEMPLATE_RE = re.compile(r"(?i)\{\{\s*birth date and age")
 
 
+def note_header(raw: str, expanded: dict[str, str] | None, note: Counter) -> None:
+    """Record how a team header had to be resolved.
+
+    `header_code_needs_expansion` is the interesting one: the header is a
+    template whose country code the COUNTRY_CODES literal does not know, so
+    before expand_headers() existed this section was dropped outright.
+    """
+    if "{{" not in raw:
+        note["header_plain_text"] += 1
+        return
+    note["header_template"] += 1
+    if header_to_team(raw, None) is None:
+        note["header_code_needs_expansion"] += 1
+        if not (expanded and raw in expanded):
+            note["header_unresolvable"] += 1
+
+
 def looks_like_squad_table(section: str) -> bool:
     """Gate for the table fallback: squad tables carry a DOB per player.
 
@@ -572,13 +595,26 @@ def looks_like_squad_table(section: str) -> bool:
 
 
 def parse_page(
-    wikitext: str, *, expand: bool = False, tables: bool = False
+    wikitext: str,
+    *,
+    expand: bool = False,
+    tables: bool = False,
+    acc: Counter | None = None,
 ) -> tuple[list[Player], list[str]]:
     """Parse a squads page. Returns (players, warnings).
 
     Both keyword flags default off so Phase 1 output is unchanged; see the module
     docstring for what they buy Phase 2.
+
+    `acc` is an optional Counter the parser fills with the format variants it had
+    to accommodate on this page -- which player-template dialect, whether a
+    header needed API expansion, whether a squad came from a wikitable, and so
+    on. It is an out-parameter rather than a third return value so existing
+    two-value callers keep working. The point is not the individual counts; it is
+    that a page which needed three accommodations is evidence that pages which
+    needed none may simply have variants nobody has looked for yet.
     """
+    note = acc if acc is not None else Counter()
     players: list[Player] = []
     warnings: list[str] = []
 
@@ -605,10 +641,12 @@ def parse_page(
             if not team:
                 warnings.append(f"table squad under unrecognised header {h.group(2)!r}")
                 continue
-            table_players = parse_table_squad(section, team)
+            note_header(h.group(2), expanded, note)
+            table_players = parse_table_squad(section, team, note)
             if not table_players:
                 warnings.append(f"table squad for {team!r} yielded no players")
                 continue
+            note["wikitable_squad"] += 1
             players.extend(table_players)
             continue
 
@@ -618,10 +656,17 @@ def parse_page(
                 f"{len(rows)} players under unrecognised header {h.group(2)!r}"
             )
             continue
+        note_header(h.group(2), expanded, note)
 
-        for _, params in rows:
+        for tmpl_name, params in rows:
+            note[f"player_template:{tmpl_name}"] += 1
             named, _ = parse_named(params)
-            article, display = parse_player_name(named.get("name", ""))
+            raw_name = named.get("name", "")
+            if SORTNAME_RE.search(raw_name):
+                note["name_via_sortname"] += 1
+            if "'''" in raw_name:
+                note["name_wrapped_in_bold"] += 1
+            article, display = parse_player_name(raw_name)
             players.append(
                 Player(
                     team=team,
