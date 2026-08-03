@@ -1,0 +1,175 @@
+tournament_id,level,gender,year,team,shirt_no,position,player_article,player_qid,display_name,source_url,birth_year
+wwc2023,senior,w,2023,Spain,1,GK,Misa Rodríguez,Q55846245,Misa Rodríguez,https://en.wikipedia.org/wiki/2023_FIFA_Women%27s_World_Cup_squads,1999
+wwc2023,senior,w,2023,Spain,2,DF,Ona Batlle,Q50375727,Ona Batlle,https://en.wikipedia.org/wiki/2023_FIFA_Women%27s_World_Cup_squads,1999
+wwc2023,senior,w,2023,Spain,3,MF,Teresa Abelleira,Q65275611,Teresa Abelleira,https://en.wikipedia.org/wiki/2023_FIFA_Women%27s_World_Cup_squads,2000
+wwc2023,senior,w,2023,Spain,4,DF,Irene Paredes,Q10524460,Irene Paredes,https://en.wikipedia.org/wiki/2023_FIFA_Women%27s_World_Cup_squads,1991
+wwc2023,senior,w,2023,Spain,5,DF,Ivana Andrés,Q20870088,Ivana Andrés,https://en.wikipedia.org/wiki/2023_FIFA_Women%27s_World_Cup_squads,1994
+wwc2023,senior,w,2023,Spain,6,MF,Aitana Bonmatí,Q27995553,Aitana Bonmatí,https://en.wikipedia.org/wiki/2023_FIFA_Women%27s_World_Cup_squads,1998
+wwc2023,senior,w,2023,Spain,7,MF,Irene Guerrero,Q55238648,Irene Guerrero,https://en.wikipedia.org/wiki/2023_FIFA_Women%27s_World_Cup_squads,1996
+wwc2023,senior,w,2023,Spain,8,FW,Mariona Caldentey,Q27910301,Mariona Caldentey,https://en.wikipedia.org/wiki/2023_FIFA_Women%27s_World_Cup_squads,1996
+wwc2023,senior,w,2023,Spain,9,FW,Esther González,Q5401181,Esther González,https://en.wikipedia.org/wiki/2023_FIFA_Women%27s_World_Cup_squads,1992
+wwc2023,senior,w,2023,Spain,10,MF,Jenni Hermoso,Q6178420,Jenni Hermoso,https://en.wikipedia.org/wiki/2023_FIFA_Women%27s_World_Cup_squads,1990
+wwc2023,senior,w,2023,Spain,11,MF,Alexia Putellas,Q4721366,Alexia Putellas,https://en.wikipedia.org/wiki/2023_FIFA_Women%27s_World_Cup_squads,1994
+wwc2023,senior,w,2023,Spain,12,DF,Oihane Hernández,Q87823058,Oihane Hernández,https://en.wikipedia.org/wiki/2023_FIFA_Women%27s_World_Cup_squads,2000
+wwc2023,senior,w,2023,Spain,13,GK,Enith Salón,Q98068903,Enith Salón,https://en.wikipedia.org/wiki/2023_FIFA_Women%27s_World_Cup_squads,2001
+wwc2023,senior,w,2023,Spain,14,DF,Laia Codina,Q66588148,Laia Codina,https://en.wikipedia.org/wiki/2023_FIFA_Women%27s_World_Cup_squads,2000
+wwc2023,senior,w,2023,Spain,15,MF,Eva Navarro (footballer),Q55443390,Eva Navarro,https://en.wikipedia.org/wiki/2023_FIFA_Women%27s_World_Cup_squads,2001
+wwc2023,senior,w,2023,Spain,16,MF,María Pérez (Spanish footballer),Q98834876,María Pérez,https://en.wikipedia.org/wiki/2023_FIFA_Women%27s_World_Cup_squads,2001
+wwc2023,senior,w,2023,Spain,17,FW,Alba Redondo,Q23014108,Alba Redondo,https://en.wikipedia.org/wiki/2023_FIFA_Women%27s_World_Cup_squads,1996
+wwc2023,senior,w,2023,Spain,18,FW,Salma Paralluelo,Q61762234,Salma Paralluelo,https://en.wikipedia.org/wiki/2023_FIFA_Women%27s_World_Cup_squads,2003
+wwc2023,senior,w,2023,Spain,19,DF,Olga Carmona,Q78535734,Olga Carmona,https://en.wikipedia.org/wiki/2023_FIFA_Women%27s_World_Cup_squads,2000
+wwc2023,senior,w,2023,Spain,20,DF,Rocío Gálvez,Q50231418,Rocío Gálvez,https://en.wikipedia.org/wiki/2023_FIFA_Women%27s_World_Cup_squads,1997
+wwc2023,senior,w,2023,Spain,21,MF,Claudia Zornoza,Q5129284,Claudia Zornoza,https://en.wikipedia.org/wiki/2023_FIFA_Women%27s_World_Cup_squads,1990
+wwc2023,senior,w,2023,Spain,22,MF,Athenea del Castillo,Q91913349,Athenea del Castillo,https://en.wikipedia.org/wiki/2023_FIFA_Women%27s_World_Cup_squads,2000
+wwc2023,senior,w,2023,Spain,23,GK,Cata Coll,Q65619766,Cata Coll,https://en.wikipedia.org/wiki/2023_FIFA_Women%27s_World_Cup_squads,2001
+u20w2018,u20,w,2018,Spain,1,GK,Misa Rodríguez,Q55846245,María Isabel Rodríguez,https://en.wikipedia.org/wiki/2018_FIFA_U-20_Women%27s_World_Cup_squads,1999
+u20w2018,u20,w,2018,Spain,2,DF,Ona Batlle,Q50375727,Ona Batlle,https://en.wikipedia.org/wiki/2018_FIFA_U-20_Women%27s_World_Cup_squads,1999
+u20w2018,u20,w,2018,Spain,3,DF,Berta Pujadas,Q97730968,Berta Pujadas,https://en.wikipedia.org/wiki/2018_FIFA_U-20_Women%27s_World_Cup_squads,2000
+u20w2018,u20,w,2018,Spain,4,DF,Laia Aleixandri,Q58489967,Laia Aleixandri,https://en.wikipedia.org/wiki/2018_FIFA_U-20_Women%27s_World_Cup_squads,2000
+u20w2018,u20,w,2018,Spain,5,DF,Andrea Sierra,Q37349380,Andrea Sierra,https://en.wikipedia.org/wiki/2018_FIFA_U-20_Women%27s_World_Cup_squads,1998
+u20w2018,u20,w,2018,Spain,6,MF,Damaris Egurrola,Q37180819,Damaris Egurrola,https://en.wikipedia.org/wiki/2018_FIFA_U-20_Women%27s_World_Cup_squads,1999
+u20w2018,u20,w,2018,Spain,7,FW,Nuria Rábano,Q97732166,Nuria Rábano,https://en.wikipedia.org/wiki/2018_FIFA_U-20_Women%27s_World_Cup_squads,1999
+u20w2018,u20,w,2018,Spain,8,MF,Patricia Guijarro,Q27916814,Patricia Guijarro,https://en.wikipedia.org/wiki/2018_FIFA_U-20_Women%27s_World_Cup_squads,1998
+u20w2018,u20,w,2018,Spain,9,MF,Paula Fernández,Q97730958,Paula Fernández,https://en.wikipedia.org/wiki/2018_FIFA_U-20_Women%27s_World_Cup_squads,1998
+u20w2018,u20,w,2018,Spain,10,MF,Maite Oroz,Q28149974,Maite Oroz,https://en.wikipedia.org/wiki/2018_FIFA_U-20_Women%27s_World_Cup_squads,1998
+u20w2018,u20,w,2018,Spain,11,DF,Carmen Menayo,Q27891192,Carmen Menayo,https://en.wikipedia.org/wiki/2018_FIFA_U-20_Women%27s_World_Cup_squads,1998
+u20w2018,u20,w,2018,Spain,12,DF,Lucía Rodríguez (footballer),Q97730985,Lucía Rodríguez,https://en.wikipedia.org/wiki/2018_FIFA_U-20_Women%27s_World_Cup_squads,1999
+u20w2018,u20,w,2018,Spain,13,GK,Noelia Ramos,Q27827506,Noelia Ramos,https://en.wikipedia.org/wiki/2018_FIFA_U-20_Women%27s_World_Cup_squads,1999
+u20w2018,u20,w,2018,Spain,14,MF,Aitana Bonmatí,Q27995553,Aitana Bonmatí,https://en.wikipedia.org/wiki/2018_FIFA_U-20_Women%27s_World_Cup_squads,1998
+u20w2018,u20,w,2018,Spain,15,FW,Candela Andújar,Q44926335,Candela Andújar,https://en.wikipedia.org/wiki/2018_FIFA_U-20_Women%27s_World_Cup_squads,2000
+u20w2018,u20,w,2018,Spain,16,MF,Silvia Rubio,Q97730975,Silvia Rubio,https://en.wikipedia.org/wiki/2018_FIFA_U-20_Women%27s_World_Cup_squads,2000
+u20w2018,u20,w,2018,Spain,17,FW,Lucía García,Q27910556,Lucía García,https://en.wikipedia.org/wiki/2018_FIFA_U-20_Women%27s_World_Cup_squads,1998
+u20w2018,u20,w,2018,Spain,18,FW,Eva Navarro (footballer),Q55443390,Eva Navarro,https://en.wikipedia.org/wiki/2018_FIFA_U-20_Women%27s_World_Cup_squads,2001
+u20w2018,u20,w,2018,Spain,19,MF,"Pauleta (footballer, born 1998)",Q97750562,Paula Sancho,https://en.wikipedia.org/wiki/2018_FIFA_U-20_Women%27s_World_Cup_squads,1998
+u20w2018,u20,w,2018,Spain,20,FW,Clàudia Pina,Q47415754,Clàudia Pina,https://en.wikipedia.org/wiki/2018_FIFA_U-20_Women%27s_World_Cup_squads,2001
+u20w2018,u20,w,2018,Spain,21,GK,Cata Coll,Q65619766,Catalina Coll,https://en.wikipedia.org/wiki/2018_FIFA_U-20_Women%27s_World_Cup_squads,2001
+u20w2022,u20,w,2022,Spain,1,GK,Adriana Nanclares,Q98071272,Adriana Nanclares,https://en.wikipedia.org/wiki/2022_FIFA_U-20_Women%27s_World_Cup_squads,2002
+u20w2022,u20,w,2022,Spain,2,FW,Carmen Álvarez,Q98835674,Carmen Álvarez,https://en.wikipedia.org/wiki/2022_FIFA_U-20_Women%27s_World_Cup_squads,2003
+u20w2022,u20,w,2022,Spain,3,DF,Ana Tejada,Q65619066,Ana Tejada,https://en.wikipedia.org/wiki/2022_FIFA_U-20_Women%27s_World_Cup_squads,2002
+u20w2022,u20,w,2022,Spain,4,DF,Sonia García Majarín,Q98068232,Sonia García Majarín,https://en.wikipedia.org/wiki/2022_FIFA_U-20_Women%27s_World_Cup_squads,2002
+u20w2022,u20,w,2022,Spain,5,DF,Andrea Medina,Q98088903,Andrea Medina,https://en.wikipedia.org/wiki/2022_FIFA_U-20_Women%27s_World_Cup_squads,2004
+u20w2022,u20,w,2022,Spain,6,MF,Ariadna Mingueza,Q98068239,Ariadna Mingueza,https://en.wikipedia.org/wiki/2022_FIFA_U-20_Women%27s_World_Cup_squads,2003
+u20w2022,u20,w,2022,Spain,7,FW,,,Ornella María Vignola,https://en.wikipedia.org/wiki/2022_FIFA_U-20_Women%27s_World_Cup_squads,2004
+u20w2022,u20,w,2022,Spain,8,MF,Silvia Lloris,Q98068236,Silvia Lloris,https://en.wikipedia.org/wiki/2022_FIFA_U-20_Women%27s_World_Cup_squads,2004
+u20w2022,u20,w,2022,Spain,9,MF,Inma Gabarro,Q98071709,Inma Gabarro,https://en.wikipedia.org/wiki/2022_FIFA_U-20_Women%27s_World_Cup_squads,2002
+u20w2022,u20,w,2022,Spain,10,MF,Júlia Bartel,Q98068227,Júlia Bartel,https://en.wikipedia.org/wiki/2022_FIFA_U-20_Women%27s_World_Cup_squads,2004
+u20w2022,u20,w,2022,Spain,11,FW,Salma Paralluelo,Q61762234,Salma Paralluelo,https://en.wikipedia.org/wiki/2022_FIFA_U-20_Women%27s_World_Cup_squads,2003
+u20w2022,u20,w,2022,Spain,12,DF,,,Esther Laborde,https://en.wikipedia.org/wiki/2022_FIFA_U-20_Women%27s_World_Cup_squads,2004
+u20w2022,u20,w,2022,Spain,13,GK,Txell Font,Q98834628,Meritxell Font,https://en.wikipedia.org/wiki/2022_FIFA_U-20_Women%27s_World_Cup_squads,2004
+u20w2022,u20,w,2022,Spain,14,FW,Fiamma Benítez,Q98835177,Fiamma Benítez,https://en.wikipedia.org/wiki/2022_FIFA_U-20_Women%27s_World_Cup_squads,2004
+u20w2022,u20,w,2022,Spain,15,MF,Clara Pinedo,Q98091203,Clara Pinedo,https://en.wikipedia.org/wiki/2022_FIFA_U-20_Women%27s_World_Cup_squads,2003
+u20w2022,u20,w,2022,Spain,16,MF,Maite Zubieta,Q98091173,Maite Zubieta,https://en.wikipedia.org/wiki/2022_FIFA_U-20_Women%27s_World_Cup_squads,2004
+u20w2022,u20,w,2022,Spain,17,FW,Mirari Uria,Q98071274,Mirari Uria,https://en.wikipedia.org/wiki/2022_FIFA_U-20_Women%27s_World_Cup_squads,2003
+u20w2022,u20,w,2022,Spain,18,DF,Izarne Sarasola,Q98091730,Izarne Sarasola,https://en.wikipedia.org/wiki/2022_FIFA_U-20_Women%27s_World_Cup_squads,2002
+u20w2022,u20,w,2022,Spain,19,DF,Ane Elexpuru,Q98091167,Ane Elexpuru,https://en.wikipedia.org/wiki/2022_FIFA_U-20_Women%27s_World_Cup_squads,2003
+u20w2022,u20,w,2022,Spain,20,FW,Asun Martínez,Q98068237,Asun Martínez,https://en.wikipedia.org/wiki/2022_FIFA_U-20_Women%27s_World_Cup_squads,2002
+u20w2022,u20,w,2022,Spain,21,GK,Jana Xin,Q98070812,Jana Xin,https://en.wikipedia.org/wiki/2022_FIFA_U-20_Women%27s_World_Cup_squads,2003
+u17w2018,u17,w,2018,Spain,1,GK,,,Paula Suárez,https://en.wikipedia.org/wiki/2018_FIFA_U-17_Women%27s_World_Cup_squads,2001
+u17w2018,u17,w,2018,Spain,2,MF,Nerea Nevado,Q87889937,Nerea Nevado,https://en.wikipedia.org/wiki/2018_FIFA_U-17_Women%27s_World_Cup_squads,2001
+u17w2018,u17,w,2018,Spain,3,DF,Ana Tejada,Q65619066,Ana Tejada,https://en.wikipedia.org/wiki/2018_FIFA_U-17_Women%27s_World_Cup_squads,2002
+u17w2018,u17,w,2018,Spain,4,DF,Teresa Mérida,Q97749357,Teresa Mérida,https://en.wikipedia.org/wiki/2018_FIFA_U-17_Women%27s_World_Cup_squads,2002
+u17w2018,u17,w,2018,Spain,5,DF,Jana Fernández,Q97749321,Jana Fernández,https://en.wikipedia.org/wiki/2018_FIFA_U-17_Women%27s_World_Cup_squads,2002
+u17w2018,u17,w,2018,Spain,6,MF,Irene López (footballer),Q97749340,Irene López,https://en.wikipedia.org/wiki/2018_FIFA_U-17_Women%27s_World_Cup_squads,2001
+u17w2018,u17,w,2018,Spain,7,MF,Paola Hernández,Q97749330,Paola Hernández,https://en.wikipedia.org/wiki/2018_FIFA_U-17_Women%27s_World_Cup_squads,2002
+u17w2018,u17,w,2018,Spain,8,MF,,,Isabel Pala,https://en.wikipedia.org/wiki/2018_FIFA_U-17_Women%27s_World_Cup_squads,2002
+u17w2018,u17,w,2018,Spain,9,MF,,,María Isabel Okoye,https://en.wikipedia.org/wiki/2018_FIFA_U-17_Women%27s_World_Cup_squads,2001
+u17w2018,u17,w,2018,Spain,10,FW,Clàudia Pina,Q47415754,Clàudia Pina,https://en.wikipedia.org/wiki/2018_FIFA_U-17_Women%27s_World_Cup_squads,2001
+u17w2018,u17,w,2018,Spain,11,FW,Salma Paralluelo,Q61762234,Salma Paralluelo,https://en.wikipedia.org/wiki/2018_FIFA_U-17_Women%27s_World_Cup_squads,2003
+u17w2018,u17,w,2018,Spain,12,MF,Leire Peña,Q97749383,Leire Peña,https://en.wikipedia.org/wiki/2018_FIFA_U-17_Women%27s_World_Cup_squads,2001
+u17w2018,u17,w,2018,Spain,13,GK,Cata Coll,Q65619766,Catalina Coll,https://en.wikipedia.org/wiki/2018_FIFA_U-17_Women%27s_World_Cup_squads,2001
+u17w2018,u17,w,2018,Spain,14,FW,Ainhoa Marín,Q92046672,Ainhoa Marín,https://en.wikipedia.org/wiki/2018_FIFA_U-17_Women%27s_World_Cup_squads,2001
+u17w2018,u17,w,2018,Spain,15,DF,Naroa Uriarte,Q87827946,Naroa Uriarte,https://en.wikipedia.org/wiki/2018_FIFA_U-17_Women%27s_World_Cup_squads,2001
+u17w2018,u17,w,2018,Spain,16,FW,Paula Arana,Q97749287,Paula Arana,https://en.wikipedia.org/wiki/2018_FIFA_U-17_Women%27s_World_Cup_squads,2001
+u17w2018,u17,w,2018,Spain,17,DF,María Méndez,Q97749348,María Méndez,https://en.wikipedia.org/wiki/2018_FIFA_U-17_Women%27s_World_Cup_squads,2001
+u17w2018,u17,w,2018,Spain,18,FW,Eva Navarro (footballer),Q55443390,Eva Navarro,https://en.wikipedia.org/wiki/2018_FIFA_U-17_Women%27s_World_Cup_squads,2001
+u17w2018,u17,w,2018,Spain,19,MF,,,Eva Alonso,https://en.wikipedia.org/wiki/2018_FIFA_U-17_Women%27s_World_Cup_squads,2002
+u17w2018,u17,w,2018,Spain,20,GK,María Valenzuela (footballer),Q97760824,María López,https://en.wikipedia.org/wiki/2018_FIFA_U-17_Women%27s_World_Cup_squads,2002
+u17w2018,u17,w,2018,Spain,21,DF,Aixa Salvador,Q97749392,Aixa Salvador,https://en.wikipedia.org/wiki/2018_FIFA_U-17_Women%27s_World_Cup_squads,2001
+wc2014,senior,m,2014,Nigeria,1,GK,Vincent Enyeama,Q147172,Vincent Enyeama,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1982
+wc2014,senior,m,2014,Nigeria,2,DF,Joseph Yobo,Q147896,Joseph Yobo,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1980
+wc2014,senior,m,2014,Nigeria,3,MF,Ejike Uzoenyi,Q3078237,Ejike Uzoenyi,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1992
+wc2014,senior,m,2014,Nigeria,4,MF,Reuben Gabriel,Q3177131,Reuben Gabriel,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1990
+wc2014,senior,m,2014,Nigeria,5,DF,Efe Ambrose,Q2110494,Efe Ambrose,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1988
+wc2014,senior,m,2014,Nigeria,6,DF,Azubuike Egwuekwe,Q794244,Azubuike Egwuekwe,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1989
+wc2014,senior,m,2014,Nigeria,7,FW,Ahmed Musa,Q401418,Ahmed Musa,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1992
+wc2014,senior,m,2014,Nigeria,8,FW,Peter Odemwingie,Q311329,Peter Odemwingie,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1981
+wc2014,senior,m,2014,Nigeria,9,FW,Emmanuel Emenike,Q918473,Emmanuel Emenike,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1987
+wc2014,senior,m,2014,Nigeria,10,MF,Mikel John Obi,Q166984,John Obi Mikel,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1987
+wc2014,senior,m,2014,Nigeria,11,MF,Victor Moses,Q295637,Victor Moses,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1990
+wc2014,senior,m,2014,Nigeria,12,DF,Kunle Odunlami,Q15901357,Kunle Odunlami,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1991
+wc2014,senior,m,2014,Nigeria,13,DF,Juwon Oshaniwa,Q3078601,Juwon Oshaniwa,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1990
+wc2014,senior,m,2014,Nigeria,14,DF,Godfrey Oboabona,Q3177363,Godfrey Oboabona,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1990
+wc2014,senior,m,2014,Nigeria,15,MF,Ramon Azeez,Q3418515,Ramon Azeez,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1992
+wc2014,senior,m,2014,Nigeria,16,GK,Austin Ejide,Q147133,Austin Ejide,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1984
+wc2014,senior,m,2014,Nigeria,17,MF,Ogenyi Onazi,Q115879,Ogenyi Onazi,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1992
+wc2014,senior,m,2014,Nigeria,18,MF,Michael Babatunde,Q2477110,Michael Babatunde,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1992
+wc2014,senior,m,2014,Nigeria,19,FW,Uche Nwofor,Q862977,Uche Nwofor,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1991
+wc2014,senior,m,2014,Nigeria,20,FW,Michael Uchebo,Q736457,Michael Uchebo,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1990
+wc2014,senior,m,2014,Nigeria,21,GK,Chigozie Agbim,Q3177055,Chigozie Agbim,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1984
+wc2014,senior,m,2014,Nigeria,22,DF,Kenneth Omeruo,Q182041,Kenneth Omeruo,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1993
+wc2014,senior,m,2014,Nigeria,23,FW,Shola Ameobi,Q313085,Shola Ameobi,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1981
+wc2018,senior,m,2018,Nigeria,1,GK,Ikechukwu Ezenwa,Q2604012,Ikechukwu Ezenwa,https://en.wikipedia.org/wiki/2018_FIFA_World_Cup_squads,1988
+wc2018,senior,m,2018,Nigeria,2,DF,Brian Idowu,Q4197956,Brian Idowu,https://en.wikipedia.org/wiki/2018_FIFA_World_Cup_squads,1992
+wc2018,senior,m,2018,Nigeria,3,DF,Elderson Echiéjilé,Q370568,Elderson Echiéjilé,https://en.wikipedia.org/wiki/2018_FIFA_World_Cup_squads,1988
+wc2018,senior,m,2018,Nigeria,4,MF,Wilfred Ndidi,Q19587938,Wilfred Ndidi,https://en.wikipedia.org/wiki/2018_FIFA_World_Cup_squads,1996
+wc2018,senior,m,2018,Nigeria,5,DF,William Troost-Ekong,Q15884045,William Troost-Ekong,https://en.wikipedia.org/wiki/2018_FIFA_World_Cup_squads,1993
+wc2018,senior,m,2018,Nigeria,6,DF,Leon Balogun,Q509422,Leon Balogun,https://en.wikipedia.org/wiki/2018_FIFA_World_Cup_squads,1988
+wc2018,senior,m,2018,Nigeria,7,FW,Ahmed Musa,Q401418,Ahmed Musa,https://en.wikipedia.org/wiki/2018_FIFA_World_Cup_squads,1992
+wc2018,senior,m,2018,Nigeria,8,MF,Peter Etebo,Q16733640,Peter Etebo,https://en.wikipedia.org/wiki/2018_FIFA_World_Cup_squads,1995
+wc2018,senior,m,2018,Nigeria,9,FW,Odion Ighalo,Q928969,Odion Ighalo,https://en.wikipedia.org/wiki/2018_FIFA_World_Cup_squads,1989
+wc2018,senior,m,2018,Nigeria,10,MF,Mikel John Obi,Q166984,John Obi Mikel,https://en.wikipedia.org/wiki/2018_FIFA_World_Cup_squads,1987
+wc2018,senior,m,2018,Nigeria,11,FW,Victor Moses,Q295637,Victor Moses,https://en.wikipedia.org/wiki/2018_FIFA_World_Cup_squads,1990
+wc2018,senior,m,2018,Nigeria,12,DF,Shehu Abdullahi,Q15901384,Shehu Abdullahi,https://en.wikipedia.org/wiki/2018_FIFA_World_Cup_squads,1993
+wc2018,senior,m,2018,Nigeria,13,FW,Simy,Q16762728,Simeon Nwankwo,https://en.wikipedia.org/wiki/2018_FIFA_World_Cup_squads,1992
+wc2018,senior,m,2018,Nigeria,14,FW,Kelechi Iheanacho,Q15506789,Kelechi Iheanacho,https://en.wikipedia.org/wiki/2018_FIFA_World_Cup_squads,1996
+wc2018,senior,m,2018,Nigeria,15,MF,Joel Obi,Q326480,Joel Obi,https://en.wikipedia.org/wiki/2018_FIFA_World_Cup_squads,1991
+wc2018,senior,m,2018,Nigeria,16,GK,Daniel Akpeyi,Q5216374,Daniel Akpeyi,https://en.wikipedia.org/wiki/2018_FIFA_World_Cup_squads,1986
+wc2018,senior,m,2018,Nigeria,17,MF,Ogenyi Onazi,Q115879,Ogenyi Onazi,https://en.wikipedia.org/wiki/2018_FIFA_World_Cup_squads,1992
+wc2018,senior,m,2018,Nigeria,18,FW,Alex Iwobi,Q21091691,Alex Iwobi,https://en.wikipedia.org/wiki/2018_FIFA_World_Cup_squads,1996
+wc2018,senior,m,2018,Nigeria,19,MF,John Ogu,Q10470405,John Ogu,https://en.wikipedia.org/wiki/2018_FIFA_World_Cup_squads,1988
+wc2018,senior,m,2018,Nigeria,20,DF,Chidozie Awaziem,Q22958457,Chidozie Awaziem,https://en.wikipedia.org/wiki/2018_FIFA_World_Cup_squads,1997
+wc2018,senior,m,2018,Nigeria,21,DF,Tyronne Ebuehi,Q17496848,Tyronne Ebuehi,https://en.wikipedia.org/wiki/2018_FIFA_World_Cup_squads,1995
+wc2018,senior,m,2018,Nigeria,22,DF,Kenneth Omeruo,Q182041,Kenneth Omeruo,https://en.wikipedia.org/wiki/2018_FIFA_World_Cup_squads,1993
+wc2018,senior,m,2018,Nigeria,23,GK,Francis Uzoho,Q42213208,Francis Uzoho,https://en.wikipedia.org/wiki/2018_FIFA_World_Cup_squads,1998
+u17m2013,u17,m,2013,Nigeria,1,GK,Dele Alampasu,Q15830727,Dele Alampasu,https://en.wikipedia.org/wiki/2013_FIFA_U-17_World_Cup_squads,1996
+u17m2013,u17,m,2013,Nigeria,2,DF,Musa Muhammed,Q22007071,Musa Muhammed,https://en.wikipedia.org/wiki/2013_FIFA_U-17_World_Cup_squads,1996
+u17m2013,u17,m,2013,Nigeria,3,DF,Samuel Okon,Q65550230,Samuel Okon,https://en.wikipedia.org/wiki/2013_FIFA_U-17_World_Cup_squads,1996
+u17m2013,u17,m,2013,Nigeria,4,MF,Akinjide Idowu,Q24085022,Akinjide Idowu,https://en.wikipedia.org/wiki/2013_FIFA_U-17_World_Cup_squads,1996
+u17m2013,u17,m,2013,Nigeria,5,DF,Denis Nya,Q63431830,Denis Nya,https://en.wikipedia.org/wiki/2013_FIFA_U-17_World_Cup_squads,1996
+u17m2013,u17,m,2013,Nigeria,6,DF,Aliyu Abubakar (footballer),Q26056270,Aliyu Abubakar,https://en.wikipedia.org/wiki/2013_FIFA_U-17_World_Cup_squads,1996
+u17m2013,u17,m,2013,Nigeria,7,MF,,,Habib Makanjuola,https://en.wikipedia.org/wiki/2013_FIFA_U-17_World_Cup_squads,1999
+u17m2013,u17,m,2013,Nigeria,8,MF,,,Abdullahi Alfa,https://en.wikipedia.org/wiki/2013_FIFA_U-17_World_Cup_squads,1996
+u17m2013,u17,m,2013,Nigeria,9,FW,Isaac Success,Q17635038,Isaac Success,https://en.wikipedia.org/wiki/2013_FIFA_U-17_World_Cup_squads,1996
+u17m2013,u17,m,2013,Nigeria,10,FW,Kelechi Iheanacho,Q15506789,Kelechi Iheanacho,https://en.wikipedia.org/wiki/2013_FIFA_U-17_World_Cup_squads,1996
+u17m2013,u17,m,2013,Nigeria,11,MF,Musa Yahaya,Q20056621,Musa Yahaya,https://en.wikipedia.org/wiki/2013_FIFA_U-17_World_Cup_squads,1997
+u17m2013,u17,m,2013,Nigeria,12,MF,,,Chigozi Obasi,https://en.wikipedia.org/wiki/2013_FIFA_U-17_World_Cup_squads,1998
+u17m2013,u17,m,2013,Nigeria,13,MF,Saviour Godwin,Q21621371,Saviour Godwin,https://en.wikipedia.org/wiki/2013_FIFA_U-17_World_Cup_squads,1996
+u17m2013,u17,m,2013,Nigeria,14,DF,Chidiebere Nwakali,Q16679997,Chidiebere Nwakali,https://en.wikipedia.org/wiki/2013_FIFA_U-17_World_Cup_squads,1996
+u17m2013,u17,m,2013,Nigeria,15,DF,,,Raymond Japhet,https://en.wikipedia.org/wiki/2013_FIFA_U-17_World_Cup_squads,1997
+u17m2013,u17,m,2013,Nigeria,16,GK,,,Abdulazeez Abubakar,https://en.wikipedia.org/wiki/2013_FIFA_U-17_World_Cup_squads,1999
+u17m2013,u17,m,2013,Nigeria,17,FW,Chidera Ezeh,Q16721715,Chidera Ezeh,https://en.wikipedia.org/wiki/2013_FIFA_U-17_World_Cup_squads,1997
+u17m2013,u17,m,2013,Nigeria,18,FW,Taiwo Awoniyi,Q20932574,Taiwo Awoniyi,https://en.wikipedia.org/wiki/2013_FIFA_U-17_World_Cup_squads,1997
+u17m2013,u17,m,2013,Nigeria,19,DF,Zaharaddeen Bello,Q28777468,Zaharaddeen Bello,https://en.wikipedia.org/wiki/2013_FIFA_U-17_World_Cup_squads,1997
+u17m2013,u17,m,2013,Nigeria,20,MF,,,Baba Salihu,https://en.wikipedia.org/wiki/2013_FIFA_U-17_World_Cup_squads,1997
+u17m2013,u17,m,2013,Nigeria,21,GK,Francis Uzoho,Q42213208,Francis Uzoho,https://en.wikipedia.org/wiki/2013_FIFA_U-17_World_Cup_squads,1998
+u17m2015,u17,m,2015,Nigeria,1,GK,,,Akpan David Udoh,https://en.wikipedia.org/wiki/2015_FIFA_U-17_World_Cup_squads,1999
+u17m2015,u17,m,2015,Nigeria,2,DF,,,Lazarus John,https://en.wikipedia.org/wiki/2015_FIFA_U-17_World_Cup_squads,1998
+u17m2015,u17,m,2015,Nigeria,3,DF,,,Tobechukwu Ibe,https://en.wikipedia.org/wiki/2015_FIFA_U-17_World_Cup_squads,1998
+u17m2015,u17,m,2015,Nigeria,4,MF,,,David Enogela,https://en.wikipedia.org/wiki/2015_FIFA_U-17_World_Cup_squads,1998
+u17m2015,u17,m,2015,Nigeria,5,DF,,,Lukman Zakari,https://en.wikipedia.org/wiki/2015_FIFA_U-17_World_Cup_squads,1998
+u17m2015,u17,m,2015,Nigeria,6,MF,Kingsley Michael,Q58010553,Kingsley Michael,https://en.wikipedia.org/wiki/2015_FIFA_U-17_World_Cup_squads,1999
+u17m2015,u17,m,2015,Nigeria,7,FW,Funsho Bamgboye,Q28722349,Funsho Bamgboye,https://en.wikipedia.org/wiki/2015_FIFA_U-17_World_Cup_squads,1999
+u17m2015,u17,m,2015,Nigeria,8,MF,Samuel Chukwueze,Q57017297,Samuel Chukwueze,https://en.wikipedia.org/wiki/2015_FIFA_U-17_World_Cup_squads,1999
+u17m2015,u17,m,2015,Nigeria,9,FW,Victor Osimhen,Q25253293,Victor Osimhen,https://en.wikipedia.org/wiki/2015_FIFA_U-17_World_Cup_squads,1998
+u17m2015,u17,m,2015,Nigeria,10,MF,Kelechi Nwakali,Q22919631,Kelechi Nwakali,https://en.wikipedia.org/wiki/2015_FIFA_U-17_World_Cup_squads,1998
+u17m2015,u17,m,2015,Nigeria,11,MF,,,Chinedu Madueke,https://en.wikipedia.org/wiki/2015_FIFA_U-17_World_Cup_squads,1998
+u17m2015,u17,m,2015,Nigeria,12,MF,,,Chukwudi Agor,https://en.wikipedia.org/wiki/2015_FIFA_U-17_World_Cup_squads,1998
+u17m2015,u17,m,2015,Nigeria,13,MF,,,Joel Osikel,https://en.wikipedia.org/wiki/2015_FIFA_U-17_World_Cup_squads,1998
+u17m2015,u17,m,2015,Nigeria,14,DF,,,Ejike Ikwu,https://en.wikipedia.org/wiki/2015_FIFA_U-17_World_Cup_squads,1999
+u17m2015,u17,m,2015,Nigeria,15,FW,,,Udochukwu Anumudu,https://en.wikipedia.org/wiki/2015_FIFA_U-17_World_Cup_squads,1998
+u17m2015,u17,m,2015,Nigeria,16,GK,,,Amos Innocent Benjamin,https://en.wikipedia.org/wiki/2015_FIFA_U-17_World_Cup_squads,1998
+u17m2015,u17,m,2015,Nigeria,17,FW,Christian Ebere,Q117350990,Christian Ebere,https://en.wikipedia.org/wiki/2015_FIFA_U-17_World_Cup_squads,1998
+u17m2015,u17,m,2015,Nigeria,18,MF,,,Edidiong Essien,https://en.wikipedia.org/wiki/2015_FIFA_U-17_World_Cup_squads,1999
+u17m2015,u17,m,2015,Nigeria,19,FW,,,Sunday Alimi,https://en.wikipedia.org/wiki/2015_FIFA_U-17_World_Cup_squads,1999
+u17m2015,u17,m,2015,Nigeria,20,FW,Orji Okwonkwo,Q28800455,Orji Okwonkwo,https://en.wikipedia.org/wiki/2015_FIFA_U-17_World_Cup_squads,1998
+u17m2015,u17,m,2015,Nigeria,21,GK,,,Chisom Chiaha,https://en.wikipedia.org/wiki/2015_FIFA_U-17_World_Cup_squads,1998

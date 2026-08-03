@@ -14,9 +14,13 @@ The headline metric is squad overlap, not title-to-title correlation. Title-to-t
 
 **Phase 1 — passed and confirmed closed (2026-08-02).** The parser handles every template dialect encountered, QIDs resolve, and the join produced high overlap for Spain women and low for Nigeria men, which is what it was built to test. Signed off; the approval gate on Phase 2 is satisfied.
 
-**Phase 2 — cleared to begin, not started.** Ingest the v1 scope (see "Scope for v1"): 32 youth editions, ~184 senior squads across women's 2019/2023 and men's 2010/2014/2018/2022. Runs in its own session.
+**Phase 2 ingestion — done (2026-08-03).** All 38 pages of the v1 scope ingested by `scripts/ingest.py`: 32 youth editions plus the 6 senior pages, 17,481 players, 184 senior squads. 0 editions failed, `parse_failures.csv` empty, 0 error-severity integrity flags. `window_coverage.csv` came out 573 `ingested` / 899 `not_qualified`, with no `failed` and no `not_held`, so **no squad in the v1 scope is provisional on window grounds**. The senior pages are needed as well as the youth ones because `window_coverage.csv` is keyed per senior squad.
 
-Two things Phase 2 must build that do not exist yet: `data/window_coverage.csv`, and the five columns `overlap.csv` carries beyond the Phase 1 set (`n_youth_pool`, `n_youth_pool_linked`, `youth_coverage_rate`, `n_editions_in_window`, `n_editions_held_in_window`). Both are specified in Schema; neither is implemented. `scripts/editions.py` already supplies the edition lookup and `window_counts()`.
+`scripts/ingest.py` fetches each edition once and extracts every federation from it, windowing through `editions_in_window()`. It is not `phase1.py` extended — `phase1.py` still applies the retired any-prior-edition rule, which is correct for the window-exempt validation and wrong for measurement, and it stays as the parser/join regression check. The two scripts no longer share output paths: `ingest.py` owns `data/squads.csv` and the other unprefixed data files, `phase1.py` writes only `phase1_`-prefixed ones, so the regression check is now free to run. See Schema.
+
+**Phase 2 overlap — not started.** `data/overlap.csv` is still unwritten. Everything it needs is now on disk; the coverage columns (`n_youth_pool`, `n_youth_pool_linked`, `youth_coverage_rate`, `n_editions_in_window`, `n_editions_held_in_window`) are already computed in `window_coverage_rates.csv` and can be carried across.
+
+Read "Coverage bias" before scoping that work. The full corpus reverses the assumption this project has been carrying about which gender is better covered, and that bears directly on which senior editions can support a finding.
 
 Phase 1 is a parser and join test, **not a measurement**, and is deliberately exempt from the age window. Its cases are Spain women's 2023 senior squad against U-20 women 2018/2022 and U-17 women 2018, and Nigeria men's 2014 and 2018 senior squads against U-17 men 2013/2015. Several of those pairings fall outside the window. This is intentional. Do not amend Phase 1 into window compliance; that would cost a cheap regression check and buy nothing.
 
@@ -26,13 +30,20 @@ Phase 1 outputs are therefore **not results** and must never be reported as over
 
 - Runs in Claude Code on the web (ephemeral cloud VM). Anything not committed to git is lost when the session ends. Commit intermediate data as you produce it; do not hold it only in memory.
 - Network egress is allowlisted. The only external domain this project needs is `en.wikipedia.org` (MediaWiki API). If a request is blocked by the proxy, stop and tell me to allowlist the domain. Do not loop on retries.
+- **Throttle the API.** A full ingest is ~450 requests and firing them back to back earns a sustained HTTP 429 partway through — the first Phase 2 run lost nine editions to it, recorded as `failed` for a reason having nothing to do with the data. All API access goes through `fetch_page.api_get()`: one request per second, plus a bounded four-attempt backoff honouring `Retry-After`. That backoff is not the retry loop ruled out above; that rule is about the proxy blocking a domain, where retrying cannot help. A 429 with `Retry-After` is the API stating its rate. After four attempts it raises and the edition is recorded as failed like any other retrieval failure. A full run takes roughly an hour at this rate — that is the correct cost, not a problem to optimise away.
 - Python runs with `uv`. Use PEP 723 inline script metadata (a `# /// script` dependency block) so scripts run with `uv run scripts/<name>.py` and no separate venv step.
 
 ## Data source
 
 Source is English Wikipedia squad-list pages via the MediaWiki action API (`action=parse`, `prop=wikitext`), for example the page `2023 FIFA Women's World Cup squads`. Parse the squad templates and the section headers that name each team.
 
-Squad-page formatting varies by edition — inspect the actual wikitext before assuming a structure. Dialects already encountered include `{{nat fs g player}}`, `{{nat fs player no caps}}`, `{{National football squad player}}` and `{{National football squad player (no caps)}}`; player names appear both as wikilinks and as `{{sortname|First|Last}}` with an optional `dab=`; team headers appear both as plain names and as `{{fbu|17|CODE}}` with country codes that are not consistent between editions.
+Squad-page formatting varies by edition — inspect the actual wikitext before assuming a structure. Dialects encountered include `{{nat fs player}}`, `{{nat fs g player}}`, `{{nat fs player no caps}}`, `{{National football squad player}}`, `{{National football squad player (no caps)}}` and `{{National football squad player (goals)}}`; player names appear as wikilinks, as `'''bolded'''` wikilinks, and as `{{sortname|First|Last}}` with an optional `dab=`; team headers appear both as plain names and as `{{fbu|17|CODE}}` with country codes that are not consistent between editions.
+
+**Some squads are not templates at all.** A few pages write a squad as a raw wikitable, one row per player, with position taken from `!colspan=...|Goalkeepers` band rows. On the 2008 U-20 Women's page 5 of 16 squads are in that dialect — England, France, United States, Canada, New Zealand — and a template-only parser returns 11 teams while raising no warning whatsoever. Four of the five are well-covered federations, so the loss lands precisely where the data is otherwise good. Table rows must carry a shirt number or a date of birth to count as a player; the row with neither is the trailing head-coach row.
+
+**Do not resolve `{{fbu|N|CODE}}` headers from a hand-maintained code map.** Ask the API: `action=expandtemplates` returns the rendered country name, so NGR/NGA and IRN/IRI collapse to one federation for free and there is no map to keep current. The hand-typed map in `squad_parser.COUNTRY_CODES` was missing codes on 15 of the 38 v1 pages, and every miss drops an entire 18–24 player squad.
+
+Assume more variance exists than you have seen. All 32 youth editions in the v1 scope needed at least one parser accommodation; see `data/format_variants.csv`.
 
 ## The join key
 
@@ -70,9 +81,37 @@ Persist everything as CSV under `data/` so it stays diffable and reviewable from
 
 **Two different `status` columns exist, with different value sets. Do not conflate them.** `editions.csv.status` is `exists | not_held | failed` and describes the *page*: whether a squad-list article is retrievable for that edition at all, independent of any federation. `window_coverage.csv.status` is `ingested | not_qualified | not_held | failed` and describes one *federation's relationship* to one edition. Only the latter feeds the denominator rule.
 
-`data/phase1_validation.csv` holds the Phase 1 parser/join test output. It is not a results file and carries no share column — Phase 1 is window-exempt, so its shares are withdrawn (see "Where the project is now"). Squad-size and alumni counts are kept because they are the regression signal if the parser changes.
+**`scripts/ingest.py` is the sole writer of `data/squads.csv`**, and of `redlinks.csv`, `parse_failures.csv`, `integrity_flags.csv`, `format_variants.csv`, `window_coverage.csv` and `window_coverage_rates.csv`. No other script may write any of those paths.
+
+Everything `scripts/phase1.py` produces is prefixed `phase1_` and is owned by it alone:
+`data/phase1_squads.csv`, `data/phase1_results.csv`, `data/phase1_redlinks.csv`, `data/phase1_parse_failures.csv`, `data/phase1_validation.csv`.
+
+That split exists because `phase1.py` originally wrote the unprefixed `squads.csv`, `redlinks.csv`, `parse_failures.csv` and `results.csv`. Running the regression check replaced a 17,481-player `squads.csv` with 174 rows and a 4,490-row `redlinks.csv` with 26, recoverable only by an hour-long re-ingest. A regression check that punishes you for running it stops being run, which costs the safety net it exists to provide. Do not let either script reclaim the other's paths.
+
+`data/phase1_validation.csv` holds the Phase 1 parser/join test output. It is not a results file and carries no share column — Phase 1 is window-exempt, so its shares are withdrawn (see "Where the project is now"). Squad-size and alumni counts are kept because they are the regression signal if the parser changes. The committed `phase1_*` files are the expected output: a clean run reproduces them byte-for-byte (174 squad rows, 26 redlinks, ratios 0/23, 2/23, 6/23), so `git diff` after `uv run scripts/phase1.py` is the regression check.
+
+`data/results.csv` is **not yet curated**. It currently holds only the three fixture rows Phase 1 left behind when it still wrote this path, duplicated now in `phase1_results.csv`. Measuring overlap for the v1 scope needs finishes for all 184 senior squads; treat the present contents as a stub, not as data.
 
 `data/redlinks.csv` and `data/parse_failures.csv` capture everything that could not be joined or could not be parsed. Nothing is ever dropped silently.
+
+`data/window_coverage_rates.csv`, derived, one row per (senior squad):
+`team, gender, senior_year, senior_squad_size, n_youth_pool, n_youth_pool_linked, n_youth_pool_redlinks, youth_coverage_rate, n_editions_in_window, n_editions_held_in_window, n_editions_ingested, n_editions_not_qualified, n_editions_failed, provisional`
+
+This is the coverage half of `overlap.csv`, computed without computing overlap — it exists so the redlink gap can be read before any share is calculated. It deliberately carries **no alumni count and no share column**, so it cannot quietly become `overlap.csv` under another name. `youth_coverage_rate` is empty, never `0.0`, when `n_youth_pool` is 0; an empty pool is an undefined rate, the same trap as a zero denominator. Note that a rate over a small pool is noisy — a federation appearing in 1 of its 8 in-window editions has a 21-player pool, so read `n_editions_ingested` alongside the rate.
+
+A per-edition redlink rate is not a substitute for this. The pool a senior squad is actually measured against spans its whole window, and single-edition rates swing widely around it.
+
+`data/integrity_flags.csv`, one row per detected deviation:
+`tournament_id, level, gender, year, page_title, team, check, severity, expected, observed, detail`
+
+`severity` is `error | warn`. This file exists for the failure mode that does not throw: a page that parses cleanly and returns 20 of 24 teams, or 14 of 18 players. Nothing errors, so nothing reaches `parse_failures.csv`, and the youth pool silently shrinks — which deflates overlap hardest for the federations already worst hit by the redlink gap. Checks are team count against the known finals field size, squad size against an absolute band, squad size against the edition's own modal squad, unresolved section headers, duplicate teams, squads with no shirt numbers, squads with zero linked players, and near-duplicate federation spellings across the corpus.
+
+**An `error`-severity flag changes how `window_coverage.csv` reads that edition.** A federation missing from an edition we know we mis-parsed is `failed`, not `not_qualified`. Without that rule a parser bug masquerades as "this country didn't qualify" and the provisional flag never fires.
+
+`data/format_variants.csv`, one row per (edition, accommodation):
+`tournament_id, level, gender, year, page_title, variant, count, description`
+
+Every format variant the parser had to accommodate, logged rather than silently absorbed. Baseline dialects (plain `===Spain===` headers, `{{nat fs player}}` / `{{nat fs g player}}`) are excluded by design — the residual is the number that matters. It is a proxy for how much variance is still hiding in editions that happened to parse cleanly: in the v1 corpus **32 of 32 youth editions needed at least one accommodation**, so an edition parsing without complaint is not evidence of uniformity.
 
 ## Overlap definition
 
@@ -133,9 +172,17 @@ Resolve edition page titles from the explicit lookup table in `scripts/editions.
 
 Check for equivalent renames before relying on any newly constructed title.
 
-## Coverage bias. Read before reporting any men's number.
+## Coverage bias. Read before reporting any number, either gender.
 
 The dominant error source in this project is not identity matching. It is that players with no English Wikipedia article have no QID and are structurally unjoinable. In Phase 1 this was 20 of 42 in Nigeria's youth pool.
+
+**A "redlink" here means any squad player we cannot join on a QID**, whichever of these three produced it, because the effect on the pool is identical:
+
+1. the name is plain text in the wikitext, never linked at all;
+2. the name is linked but the target article does not exist — a literal red link on the rendered page;
+3. the name is linked to a real article that carries no Wikidata item (rare: 9 players in 17,481 across the whole v1 corpus, and these fall back to a title-keyed join rather than dropping out).
+
+Cases 1 and 2 are the ones that matter, and case 2 is the larger of the two in this corpus — 3,069 occurrences, logged as `bluelink_to_missing_page` in `format_variants.csv`. A redlinked player is not missing from the *squad*; they are missing from the *joinable pool*, so they can never be counted as a youth alumnus no matter how many youth tournaments they actually played. Everything unjoinable goes to `data/redlinks.csv`; nothing is dropped silently.
 
 This gap is not random. English Wikipedia coverage of youth footballers correlates with national wealth, league profile, and European club presence — which is close to the exact variable the project is trying to measure. Low measured overlap for an under-covered federation and genuinely poor youth-to-senior conversion produce the same number. The pipeline cannot currently distinguish them.
 
@@ -144,10 +191,24 @@ Therefore:
 - Never report a cross-federation men's comparison as a finding until the redlink gap is closed for the under-covered federations in it. RSSSF is the realistic supplementary source for youth squad lists. Until then, men's cross-federation numbers are provisional and must be labeled provisional wherever they appear.
 - Compute and carry a coverage rate alongside every overlap number, via `n_youth_pool`, `n_youth_pool_linked` and `youth_coverage_rate`. An overlap share without its coverage rate next to it is not interpretable and must not be presented alone.
 - A 0.0% overlap on a squad with a low coverage rate is a coverage floor showing through, not a result. Say so explicitly rather than reporting the zero.
-- The women's side has better article coverage and is not distorted by age misrepresentation the way the men's side is. When the two disagree, weight the women's result and say why.
+- **The women's side does NOT have better article coverage. Measured, it is substantially worse.** This reverses what this file asserted before Phase 2 ingestion, and it was asserted on no evidence. Over the full v1 corpus the windowed redlink rate is 42.8% for women's 2019 and 41.5% for women's 2023, against 15.8–19.8% for all four men's editions — roughly 2.3× worse. The mechanism is structural rather than an artifact of one senior edition: women's U-17 is the worst-covered family in the corpus at 53–63% and supplies four of the eight editions in *every* women's window, so no choice of women's senior edition escapes it. The old "weight the women's result" rule does not survive on coverage grounds and must not be applied.
+- The age-misrepresentation advantage of the women's side is **not** affected by the above and still stands — that is a separate axis, and nothing in Phase 2 tested it. So the two sides now trade off rather than one dominating: men's data is better covered, women's data has cleaner ages. When they disagree, say which axis is driving the disagreement instead of privileging either gender by default.
 - Do not "correct" for coverage by scaling overlap up by the inverse coverage rate. That assumes redlinked players convert at the same rate as covered ones, which is precisely the thing in question. Report the gap; do not model it away.
 
-**Scoping does not fix this.** Scoping equalizes denominators only. The redlink gap remains the dominant men's error source and is unresolved. Men's cross-federation results stay provisional and labeled provisional regardless of how clean the window arithmetic looks.
+**Scoping does not fix this.** Scoping equalizes denominators only. The redlink gap remains the dominant error source on both sides and is unresolved. Cross-federation results stay provisional and labeled provisional regardless of how clean the window arithmetic looks — and note that `provisional` in `window_coverage_rates.csv` means something narrower (an in-window edition we failed to retrieve). A squad can be non-provisional there and still be uninterpretable through coverage. Do not read that column as an all-clear.
+
+Measured windowed redlink rates for the v1 corpus, for reference when scoping the overlap work:
+
+| senior edition | squads | youth pool | redlinks | rate |
+|---|---|---|---|---|
+| men's 2010 | 32 | 1811 | 358 | 19.8% |
+| men's 2014 | 32 | 2235 | 410 | 18.3% |
+| men's 2018 | 32 | 2141 | 377 | 17.6% |
+| men's 2022 | 32 | 2099 | 332 | 15.8% |
+| women's 2019 | 24 | 1721 | 736 | 42.8% |
+| women's 2023 | 32 | 1827 | 759 | 41.5% |
+
+32 of the 184 senior squads have an empty in-window youth pool — the federation appeared in none of its 8 eligible youth editions. Their coverage rate is undefined, not 0%, and so is any overlap share computed for them.
 
 ## Era comparability. Both genders.
 
@@ -175,5 +236,7 @@ Do not present a single correlation coefficient as the answer. The sample is sma
 - Don't ingest or report anything outside the v1 scope. (the better standing rule — the fan-out gate was one-time, this is permanent)
 - Don't begin ingestion until Phase 1 is explicitly confirmed closed. Confirmed 2026-08-02 — this gate is satisfied and spent. It is kept only as a record that it was met; it is not a live constraint.
 - Don't hold results only in memory. Commit CSVs as you go.
-- Don't emit 0.0% for a squad with a zero denominator. Emit null.
+- Don't emit 0.0% for a squad with a zero denominator. Emit null. Same for a coverage rate over an empty youth pool.
 - Don't present an overlap share without its coverage rate and edition counts.
+- Don't treat a clean parse as evidence the page was fully extracted. Check the extracted team count and squad sizes against expectation and record deviations in `data/integrity_flags.csv`. Silent partial extraction is the failure mode that costs the most here, and it never raises an error.
+- Don't silently absorb a format variant. Log it in `data/format_variants.csv` and keep going.

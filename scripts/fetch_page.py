@@ -8,6 +8,7 @@ Usage: uv run scripts/fetch_page.py "<page title>"
 Prints the wikitext to stdout. Also used as a library by the parser scripts.
 """
 import sys
+import time
 
 import requests
 
@@ -18,21 +19,56 @@ USER_AGENT = (
     "https://github.com/sbahamon/seniors-world-cup-comparison)"
 )
 
+# A full Phase 2 ingest is ~450 API calls (one parse and one expandtemplates per
+# page, plus a pageprops batch per 50 players). Fired back to back that earns a
+# sustained 429 and nine editions get recorded as `failed` for a reason that has
+# nothing to do with the data. So: one request per second, and a BOUNDED backoff
+# when the API says 429 anyway.
+#
+# This is not the retry loop CLAUDE.md rules out. That rule is about the egress
+# proxy blocking a domain, where retrying cannot help and the answer is to ask
+# for an allowlist entry. A 429 with a Retry-After header is the API telling us
+# its rate and asking us to honour it. Four attempts, then it raises and the
+# edition is recorded as failed like any other retrieval failure.
+MIN_REQUEST_INTERVAL = 1.0  # seconds
+MAX_RETRIES = 4
+
+_session = requests.Session()
+_last_request = 0.0
+
+
+def api_get(params: dict, timeout: int = 30) -> requests.Response:
+    """GET the MediaWiki API, throttled, with a bounded 429 backoff."""
+    global _last_request
+    for attempt in range(MAX_RETRIES + 1):
+        pause = MIN_REQUEST_INTERVAL - (time.monotonic() - _last_request)
+        if pause > 0:
+            time.sleep(pause)
+        resp = _session.get(
+            API, params=params, headers={"User-Agent": USER_AGENT}, timeout=timeout
+        )
+        _last_request = time.monotonic()
+        if resp.status_code == 429 and attempt < MAX_RETRIES:
+            header = resp.headers.get("Retry-After", "")
+            delay = float(header) if header.isdigit() else 5.0 * 2**attempt
+            print(f"    API returned 429; waiting {delay:.0f}s "
+                  f"(attempt {attempt + 1} of {MAX_RETRIES})", flush=True)
+            time.sleep(delay)
+            continue
+        resp.raise_for_status()
+        return resp
+    resp.raise_for_status()
+    return resp
+
 
 def fetch_wikitext(title: str) -> str:
-    resp = requests.get(
-        API,
-        params={
-            "action": "parse",
-            "page": title,
-            "prop": "wikitext",
-            "format": "json",
-            "formatversion": "2",
-        },
-        headers={"User-Agent": USER_AGENT},
-        timeout=30,
-    )
-    resp.raise_for_status()
+    resp = api_get({
+        "action": "parse",
+        "page": title,
+        "prop": "wikitext",
+        "format": "json",
+        "formatversion": "2",
+    })
     data = resp.json()
     if "error" in data:
         raise RuntimeError(f"MediaWiki API error for {title!r}: {data['error']}")

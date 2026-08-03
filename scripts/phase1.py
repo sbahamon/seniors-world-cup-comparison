@@ -18,8 +18,26 @@ figures. Squad-size and alumni COUNTS are kept -- they are the regression
 signal on a re-run -- but the shares themselves are withdrawn and are not
 computed here.
 
-Also writes data/squads.csv, data/results.csv, data/redlinks.csv and
-data/parse_failures.csv, then prints a report.
+EVERY OUTPUT OF THIS SCRIPT IS PREFIXED `phase1_`. It writes
+data/phase1_squads.csv, data/phase1_results.csv, data/phase1_redlinks.csv,
+data/phase1_parse_failures.csv and data/phase1_validation.csv, and it writes
+nothing else.
+
+That prefix is load-bearing. This script used to write the unprefixed
+data/squads.csv, data/redlinks.csv, data/parse_failures.csv and
+data/results.csv -- all four of which ingest.py owns and fills with the v1
+corpus. Running the regression check therefore replaced a 17,481-player
+squads.csv with 174 rows and a 4,490-row redlinks.csv with 26, and the only way
+back was an hour-long re-ingest. A regression check that punishes you for
+running it does not get run, which costs exactly the safety net it exists to
+provide. ingest.py is the sole writer of the unprefixed paths; this script must
+never reclaim one.
+
+data/results.csv is included in that rule even though nothing else writes it
+today. The schema calls it hand-curated, and the three rows below are this
+script's own fixture for its two validation cases -- not a curated result set.
+Regenerating a hand-curated file from a hardcoded constant is the same bug
+wearing a different hat.
 
     uv run scripts/phase1.py
 """
@@ -138,15 +156,16 @@ def main() -> None:
             r["join_note"] = "; ".join(notes)
 
     write_csv(
-        DATA / "squads.csv",
+        DATA / "phase1_squads.csv",
         ["tournament_id", "level", "gender", "year", "team", "shirt_no",
          "position", "player_article", "player_qid", "display_name", "source_url",
          "birth_year"],
         rows,
     )
-    write_csv(DATA / "results.csv", ["team", "gender", "year", "finish"],
+    write_csv(DATA / "phase1_results.csv", ["team", "gender", "year", "finish"],
               [dict(zip(["team", "gender", "year", "finish"], r)) for r in RESULTS])
-    write_csv(DATA / "parse_failures.csv", ["tournament_id", "page", "reason"], failures)
+    write_csv(DATA / "phase1_parse_failures.csv",
+              ["tournament_id", "page", "reason"], failures)
 
     overlap_rows, redlink_rows, report = compute(rows)
 
@@ -157,7 +176,7 @@ def main() -> None:
         overlap_rows,
     )
     write_csv(
-        DATA / "redlinks.csv",
+        DATA / "phase1_redlinks.csv",
         ["tournament_id", "level", "gender", "year", "team", "display_name",
          "reason", "fuzzy_match", "fuzzy_match_source", "confidence"],
         redlink_rows,
