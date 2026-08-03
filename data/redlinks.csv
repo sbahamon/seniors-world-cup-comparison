@@ -1,3 +1,8 @@
 tournament_id,level,gender,year,team,display_name,reason,fuzzy_match,fuzzy_match_source,confidence
 u20w2022,u20,w,2022,Spain,Ornella María Vignola,no linked article,,,
 u20w2022,u20,w,2022,Spain,Esther Laborde,no linked article,,,
+seniorw2023,senior,w,2023,Zambia,Mary Mulenga,linked article does not exist,,,
+seniorw2023,senior,w,2023,Haiti,Nahomie Ambroise,linked article does not exist,,,
+seniorw2023,senior,w,2023,Haiti,Esthericove Joseph,linked article does not exist,,,
+seniorw2023,senior,w,2023,Haiti,Noa Ganthier,linked article does not exist,,,
+seniorw2023,senior,w,2023,Haiti,Lara Larco,linked article does not exist,,,
