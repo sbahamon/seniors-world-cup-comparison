@@ -808,11 +808,11 @@ def main() -> int:
             print(f"\nresume: skipping {len(skipped)} already-ingested editions")
     refetching = {e.tid for e in selected}
     # Rows for editions outside the v1 target set are dropped, not carried.
-    # phase1.py writes the same data/squads.csv under its own tournament_ids
-    # (wc2014, wwc2023, u20w2022), so running it re-seeds this file with a
-    # duplicate copy of three senior squads plus one out-of-scope youth edition.
-    # Carrying those forward would double-count senior federations and breach
-    # "don't ingest or report anything outside the v1 scope".
+    # This script is the sole writer of data/squads.csv -- phase1.py now writes
+    # only phase1_-prefixed paths -- so in normal operation this finds nothing.
+    # It is kept as a backstop for the case it was written for: squads.csv
+    # holding ids the current scope does not own, which would breach "don't
+    # ingest or report anything outside the v1 scope" if carried forward.
     owned = {e.tid for e in targets}
     foreign = sorted({r["tournament_id"] for r in keep_squads
                       if r["tournament_id"] not in owned})

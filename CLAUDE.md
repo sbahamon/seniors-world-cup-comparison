@@ -16,7 +16,7 @@ The headline metric is squad overlap, not title-to-title correlation. Title-to-t
 
 **Phase 2 ingestion — done (2026-08-03).** All 38 pages of the v1 scope ingested by `scripts/ingest.py`: 32 youth editions plus the 6 senior pages, 17,481 players, 184 senior squads. 0 editions failed, `parse_failures.csv` empty, 0 error-severity integrity flags. `window_coverage.csv` came out 573 `ingested` / 899 `not_qualified`, with no `failed` and no `not_held`, so **no squad in the v1 scope is provisional on window grounds**. The senior pages are needed as well as the youth ones because `window_coverage.csv` is keyed per senior squad.
 
-`scripts/ingest.py` fetches each edition once and extracts every federation from it, windowing through `editions_in_window()`. It is not `phase1.py` extended — `phase1.py` still applies the retired any-prior-edition rule, which is correct for the window-exempt validation and wrong for measurement, and it stays as the parser/join regression check. Note that both scripts write `data/squads.csv`: `ingest.py` owns that path and drops any `tournament_id` outside the v1 target set, so re-running `phase1.py` re-seeds the file with its own ids and `ingest.py` must be re-run to clean it.
+`scripts/ingest.py` fetches each edition once and extracts every federation from it, windowing through `editions_in_window()`. It is not `phase1.py` extended — `phase1.py` still applies the retired any-prior-edition rule, which is correct for the window-exempt validation and wrong for measurement, and it stays as the parser/join regression check. The two scripts no longer share output paths: `ingest.py` owns `data/squads.csv` and the other unprefixed data files, `phase1.py` writes only `phase1_`-prefixed ones, so the regression check is now free to run. See Schema.
 
 **Phase 2 overlap — not started.** `data/overlap.csv` is still unwritten. Everything it needs is now on disk; the coverage columns (`n_youth_pool`, `n_youth_pool_linked`, `youth_coverage_rate`, `n_editions_in_window`, `n_editions_held_in_window`) are already computed in `window_coverage_rates.csv` and can be carried across.
 
@@ -81,7 +81,16 @@ Persist everything as CSV under `data/` so it stays diffable and reviewable from
 
 **Two different `status` columns exist, with different value sets. Do not conflate them.** `editions.csv.status` is `exists | not_held | failed` and describes the *page*: whether a squad-list article is retrievable for that edition at all, independent of any federation. `window_coverage.csv.status` is `ingested | not_qualified | not_held | failed` and describes one *federation's relationship* to one edition. Only the latter feeds the denominator rule.
 
-`data/phase1_validation.csv` holds the Phase 1 parser/join test output. It is not a results file and carries no share column — Phase 1 is window-exempt, so its shares are withdrawn (see "Where the project is now"). Squad-size and alumni counts are kept because they are the regression signal if the parser changes.
+**`scripts/ingest.py` is the sole writer of `data/squads.csv`**, and of `redlinks.csv`, `parse_failures.csv`, `integrity_flags.csv`, `format_variants.csv`, `window_coverage.csv` and `window_coverage_rates.csv`. No other script may write any of those paths.
+
+Everything `scripts/phase1.py` produces is prefixed `phase1_` and is owned by it alone:
+`data/phase1_squads.csv`, `data/phase1_results.csv`, `data/phase1_redlinks.csv`, `data/phase1_parse_failures.csv`, `data/phase1_validation.csv`.
+
+That split exists because `phase1.py` originally wrote the unprefixed `squads.csv`, `redlinks.csv`, `parse_failures.csv` and `results.csv`. Running the regression check replaced a 17,481-player `squads.csv` with 174 rows and a 4,490-row `redlinks.csv` with 26, recoverable only by an hour-long re-ingest. A regression check that punishes you for running it stops being run, which costs the safety net it exists to provide. Do not let either script reclaim the other's paths.
+
+`data/phase1_validation.csv` holds the Phase 1 parser/join test output. It is not a results file and carries no share column — Phase 1 is window-exempt, so its shares are withdrawn (see "Where the project is now"). Squad-size and alumni counts are kept because they are the regression signal if the parser changes. The committed `phase1_*` files are the expected output: a clean run reproduces them byte-for-byte (174 squad rows, 26 redlinks, ratios 0/23, 2/23, 6/23), so `git diff` after `uv run scripts/phase1.py` is the regression check.
+
+`data/results.csv` is **not yet curated**. It currently holds only the three fixture rows Phase 1 left behind when it still wrote this path, duplicated now in `phase1_results.csv`. Measuring overlap for the v1 scope needs finishes for all 184 senior squads; treat the present contents as a stub, not as data.
 
 `data/redlinks.csv` and `data/parse_failures.csv` capture everything that could not be joined or could not be parsed. Nothing is ever dropped silently.
 
