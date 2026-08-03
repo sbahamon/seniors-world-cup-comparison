@@ -26,3 +26,7 @@ u17m2005,u17,m,2005,2005 FIFA U-17 World Championship squads,bluelink_to_missing
 u17m2005,u17,m,2005,2005 FIFA U-17 World Championship squads,header_code_needs_expansion,4,team header is a country code COUNTRY_CODES does not know; resolved via expandtemplates
 u17m2005,u17,m,2005,2005 FIFA U-17 World Championship squads,name_wrapped_in_bold,84,player name wrapped in ''' bold '''
 u17m2005,u17,m,2005,2005 FIFA U-17 World Championship squads,redirect_resolved,27,article title was a redirect; canonical title used
+u17m2007,u17,m,2007,2007 FIFA U-17 World Cup squads,bluelink_to_missing_page,174,name linked to a page that does not exist; treated as a redlink
+u17m2007,u17,m,2007,2007 FIFA U-17 World Cup squads,header_code_needs_expansion,5,team header is a country code COUNTRY_CODES does not know; resolved via expandtemplates
+u17m2007,u17,m,2007,2007 FIFA U-17 World Cup squads,name_wrapped_in_bold,143,player name wrapped in ''' bold '''
+u17m2007,u17,m,2007,2007 FIFA U-17 World Cup squads,redirect_resolved,15,article title was a redirect; canonical title used
