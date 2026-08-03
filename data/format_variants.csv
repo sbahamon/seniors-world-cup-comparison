@@ -59,3 +59,7 @@ u20m2001,u20,m,2001,2001 FIFA World Youth Championship squads,header_code_needs_
 u20m2001,u20,m,2001,2001 FIFA World Youth Championship squads,name_wrapped_in_bold,211,player name wrapped in ''' bold '''
 u20m2001,u20,m,2001,2001 FIFA World Youth Championship squads,no_wikidata_item,4,article carries no Wikidata item; joined on title instead
 u20m2001,u20,m,2001,2001 FIFA World Youth Championship squads,redirect_resolved,20,article title was a redirect; canonical title used
+u20m2003,u20,m,2003,2003 FIFA World Youth Championship squads,bluelink_to_missing_page,11,name linked to a page that does not exist; treated as a redlink
+u20m2003,u20,m,2003,2003 FIFA World Youth Championship squads,header_code_needs_expansion,5,team header is a country code COUNTRY_CODES does not know; resolved via expandtemplates
+u20m2003,u20,m,2003,2003 FIFA World Youth Championship squads,name_wrapped_in_bold,206,player name wrapped in ''' bold '''
+u20m2003,u20,m,2003,2003 FIFA World Youth Championship squads,redirect_resolved,22,article title was a redirect; canonical title used
