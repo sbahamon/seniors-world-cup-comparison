@@ -66,7 +66,7 @@ import sys
 from collections import Counter
 from dataclasses import dataclass
 
-from fetch_page import API, USER_AGENT, fetch_wikitext
+from fetch_page import API, USER_AGENT, api_get, fetch_wikitext
 
 import requests
 
@@ -338,23 +338,16 @@ def expand_headers(raw_headers: list[str]) -> dict[str, str]:
         return {}
 
     out: dict[str, str] = {}
-    session = requests.Session()
     for i in range(0, len(uniq), 60):
         batch = uniq[i : i + 60]
         text = "\n".join(f"@@{n}@@\n{h}" for n, h in enumerate(batch))
-        resp = session.get(
-            API,
-            params={
-                "action": "expandtemplates",
-                "prop": "wikitext",
-                "text": text,
-                "format": "json",
-                "formatversion": "2",
-            },
-            headers={"User-Agent": USER_AGENT},
-            timeout=40,
-        )
-        resp.raise_for_status()
+        resp = api_get({
+            "action": "expandtemplates",
+            "prop": "wikitext",
+            "text": text,
+            "format": "json",
+            "formatversion": "2",
+        }, timeout=40)
         expanded = resp.json()["expandtemplates"]["wikitext"]
 
         parts = re.split(r"@@(\d+)@@", expanded)
@@ -706,25 +699,18 @@ def resolve_pages(titles: list[str]) -> dict[str, PageInfo]:
     """
     out: dict[str, PageInfo] = {}
     uniq = sorted({t for t in titles if t})
-    session = requests.Session()
 
     for i in range(0, len(uniq), 50):  # API caps titles at 50 per request
         batch = uniq[i : i + 50]
-        resp = session.get(
-            API,
-            params={
-                "action": "query",
-                "titles": "|".join(batch),
-                "prop": "pageprops",
-                "ppprop": "wikibase_item",
-                "redirects": "1",
-                "format": "json",
-                "formatversion": "2",
-            },
-            headers={"User-Agent": USER_AGENT},
-            timeout=30,
-        )
-        resp.raise_for_status()
+        resp = api_get({
+            "action": "query",
+            "titles": "|".join(batch),
+            "prop": "pageprops",
+            "ppprop": "wikibase_item",
+            "redirects": "1",
+            "format": "json",
+            "formatversion": "2",
+        })
         data = resp.json().get("query", {})
 
         chain: dict[str, str] = {}

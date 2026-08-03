@@ -59,10 +59,8 @@ from collections import Counter, defaultdict
 from dataclasses import dataclass, field
 from pathlib import Path
 
-import requests
-
 from editions import editions_in_window, window_counts
-from fetch_page import API, USER_AGENT, fetch_wikitext
+from fetch_page import api_get, fetch_wikitext
 from squad_parser import parse_page, resolve_pages
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -255,18 +253,12 @@ def preflight(targets: list[Edition]) -> list[str]:
 
 def check_titles(titles: list[str]) -> set[str]:
     """Return the subset of `titles` that does not resolve to an existing page."""
-    session = requests.Session()
     gone: set[str] = set()
     for i in range(0, len(titles), 50):
         batch = titles[i : i + 50]
-        resp = session.get(
-            API,
-            params={"action": "query", "titles": "|".join(batch), "redirects": "1",
-                    "format": "json", "formatversion": "2"},
-            headers={"User-Agent": USER_AGENT},
-            timeout=40,
-        )
-        resp.raise_for_status()
+        resp = api_get({"action": "query", "titles": "|".join(batch),
+                        "redirects": "1", "format": "json", "formatversion": "2"},
+                       timeout=40)
         data = resp.json()["query"]
         chain: dict[str, str] = {}
         for key in ("normalized", "redirects"):
@@ -815,10 +807,28 @@ def main() -> int:
         if skipped:
             print(f"\nresume: skipping {len(skipped)} already-ingested editions")
     refetching = {e.tid for e in selected}
-    keep_squads = [r for r in keep_squads if r["tournament_id"] not in refetching]
-    keep_flags = [r for r in keep_flags if r["tournament_id"] not in refetching]
-    keep_failures = [r for r in keep_failures if r["tournament_id"] not in refetching]
-    keep_variants = [r for r in keep_variants if r["tournament_id"] not in refetching]
+    # Rows for editions outside the v1 target set are dropped, not carried.
+    # phase1.py writes the same data/squads.csv under its own tournament_ids
+    # (wc2014, wwc2023, u20w2022), so running it re-seeds this file with a
+    # duplicate copy of three senior squads plus one out-of-scope youth edition.
+    # Carrying those forward would double-count senior federations and breach
+    # "don't ingest or report anything outside the v1 scope".
+    owned = {e.tid for e in targets}
+    foreign = sorted({r["tournament_id"] for r in keep_squads
+                      if r["tournament_id"] not in owned})
+    if foreign:
+        print(f"\ndropping {len(foreign)} out-of-scope tournament_ids carried in "
+              f"{out.name}/squads.csv (phase1.py writes the same path): "
+              f"{', '.join(foreign)}")
+
+    def retain(rows: list[dict]) -> list[dict]:
+        return [r for r in rows
+                if r["tournament_id"] in owned and r["tournament_id"] not in refetching]
+
+    keep_squads = retain(keep_squads)
+    keep_flags = retain(keep_flags)
+    keep_failures = retain(keep_failures)
+    keep_variants = retain(keep_variants)
 
     print(f"\ningesting {len(selected)} editions -> {out}")
 
