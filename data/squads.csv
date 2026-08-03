@@ -2023,3 +2023,739 @@ seniorm2010,senior,m,2010,Switzerland,20,MF,Pirmin Schwegler,Q81615,Pirmin Schwe
 seniorm2010,senior,m,2010,Switzerland,21,GK,Johnny Leoni,Q351624,Johnny Leoni,https://en.wikipedia.org/wiki/2010_FIFA_World_Cup_squads,1984
 seniorm2010,senior,m,2010,Switzerland,22,DF,Mario Eggimann,Q349383,Mario Eggimann,https://en.wikipedia.org/wiki/2010_FIFA_World_Cup_squads,1981
 seniorm2010,senior,m,2010,Switzerland,23,MF,Xherdan Shaqiri,Q252190,Xherdan Shaqiri,https://en.wikipedia.org/wiki/2010_FIFA_World_Cup_squads,1991
+seniorm2014,senior,m,2014,Brazil,1,GK,"Jefferson (footballer, born 1983)",Q514252,Jefferson,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1983
+seniorm2014,senior,m,2014,Brazil,2,DF,Dani Alves,Q172720,Dani Alves,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1983
+seniorm2014,senior,m,2014,Brazil,3,DF,Thiago Silva,Q210453,Thiago Silva,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1984
+seniorm2014,senior,m,2014,Brazil,4,DF,David Luiz,Q193706,David Luiz,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1987
+seniorm2014,senior,m,2014,Brazil,5,MF,"Fernandinho (footballer, born May 1985)",Q459356,Fernandinho,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1985
+seniorm2014,senior,m,2014,Brazil,6,DF,"Marcelo (footballer, born 1988)",Q38136,Marcelo,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1988
+seniorm2014,senior,m,2014,Brazil,7,FW,Hulk (footballer),Q62786,Hulk,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1986
+seniorm2014,senior,m,2014,Brazil,8,MF,"Paulinho (footballer, born July 1988)",Q73082,Paulinho,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1988
+seniorm2014,senior,m,2014,Brazil,9,FW,"Fred (footballer, born 1983)",Q312772,Fred,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1983
+seniorm2014,senior,m,2014,Brazil,10,FW,Neymar,Q142794,Neymar,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1992
+seniorm2014,senior,m,2014,Brazil,11,MF,"Oscar (footballer, born 1991)",Q19497,Oscar,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1991
+seniorm2014,senior,m,2014,Brazil,12,GK,"Júlio César (football goalkeeper, born 1979)",Q182459,Júlio César,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1979
+seniorm2014,senior,m,2014,Brazil,13,DF,Dante (footballer),Q80761,Dante,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1983
+seniorm2014,senior,m,2014,Brazil,14,DF,"Maxwell (footballer, born 1981)",Q215040,Maxwell,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1981
+seniorm2014,senior,m,2014,Brazil,15,DF,"Henrique (footballer, born October 1986)",Q313576,Henrique,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1986
+seniorm2014,senior,m,2014,Brazil,16,MF,Ramires,Q204407,Ramires,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1987
+seniorm2014,senior,m,2014,Brazil,17,MF,Luiz Gustavo,Q329451,Luiz Gustavo,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1987
+seniorm2014,senior,m,2014,Brazil,18,MF,Hernanes,Q313570,Hernanes,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1985
+seniorm2014,senior,m,2014,Brazil,19,MF,"Willian (footballer, born 1988)",Q73480,Willian,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1988
+seniorm2014,senior,m,2014,Brazil,20,FW,Bernard (footballer),Q137242,Bernard,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1992
+seniorm2014,senior,m,2014,Brazil,21,FW,Jô,Q314099,Jô,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1987
+seniorm2014,senior,m,2014,Brazil,22,GK,"Victor (footballer, born 1983)",Q563649,Victor,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1983
+seniorm2014,senior,m,2014,Brazil,23,DF,"Maicon (footballer, born 1981)",Q177686,Maicon,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1981
+seniorm2014,senior,m,2014,Cameroon,1,GK,Maxime Loïc Feudjou,Q17042716,Loïc Feudjou,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1992
+seniorm2014,senior,m,2014,Cameroon,2,DF,Benoît Assou-Ekotto,Q77863,Benoît Assou-Ekotto,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1984
+seniorm2014,senior,m,2014,Cameroon,3,DF,Nicolas Nkoulou,Q313155,Nicolas Nkoulou,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1990
+seniorm2014,senior,m,2014,Cameroon,4,DF,Cédric Djeugoué,Q16873020,Cédric Djeugoué,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1992
+seniorm2014,senior,m,2014,Cameroon,5,DF,Dany Nounkeu,Q595517,Dany Nounkeu,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1986
+seniorm2014,senior,m,2014,Cameroon,6,MF,Alex Song,Q189012,Alex Song,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1987
+seniorm2014,senior,m,2014,Cameroon,7,MF,Landry Nguémo,Q31792,Landry N'Guémo,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1985
+seniorm2014,senior,m,2014,Cameroon,8,FW,Benjamin Moukandjo,Q2699470,Benjamin Moukandjo,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1988
+seniorm2014,senior,m,2014,Cameroon,9,FW,Samuel Eto'o,Q1255625,Samuel Eto'o,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1981
+seniorm2014,senior,m,2014,Cameroon,10,FW,Vincent Aboubakar,Q116743,Vincent Aboubakar,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1992
+seniorm2014,senior,m,2014,Cameroon,11,MF,Jean Makoun,Q213119,Jean Makoun,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1983
+seniorm2014,senior,m,2014,Cameroon,12,DF,Henri Bedimo,Q2418732,Henri Bedimo,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1984
+seniorm2014,senior,m,2014,Cameroon,13,FW,Eric Maxim Choupo-Moting,Q309532,Eric Maxim Choupo-Moting,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1989
+seniorm2014,senior,m,2014,Cameroon,14,DF,Aurélien Chedjou,Q326445,Aurélien Chedjou,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1985
+seniorm2014,senior,m,2014,Cameroon,15,FW,Pierre Webó,Q314740,Pierre Webó,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1982
+seniorm2014,senior,m,2014,Cameroon,16,GK,Charles Itandje,Q299403,Charles Itandje,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1982
+seniorm2014,senior,m,2014,Cameroon,17,MF,Stéphane Mbia,Q312928,Stéphane Mbia,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1986
+seniorm2014,senior,m,2014,Cameroon,18,MF,Eyong Enoh,Q349181,Eyong Enoh,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1986
+seniorm2014,senior,m,2014,Cameroon,19,FW,Fabrice Olinga,Q762606,Fabrice Olinga,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1996
+seniorm2014,senior,m,2014,Cameroon,20,MF,Edgar Salli,Q3047499,Edgar Salli,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1992
+seniorm2014,senior,m,2014,Cameroon,21,MF,Joël Matip,Q57567,Joël Matip,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1991
+seniorm2014,senior,m,2014,Cameroon,22,DF,Allan Nyom,Q2705713,Allan Nyom,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1988
+seniorm2014,senior,m,2014,Cameroon,23,GK,Sammy Ndjock,Q1574987,Sammy Ndjock,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1990
+seniorm2014,senior,m,2014,Croatia,1,GK,Stipe Pletikosa,Q208706,Stipe Pletikosa,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1979
+seniorm2014,senior,m,2014,Croatia,2,DF,Šime Vrsaljko,Q391628,Šime Vrsaljko,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1992
+seniorm2014,senior,m,2014,Croatia,3,DF,Danijel Pranjić,Q154512,Danijel Pranjić,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1981
+seniorm2014,senior,m,2014,Croatia,4,FW,Ivan Perišić,Q161054,Ivan Perišić,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1989
+seniorm2014,senior,m,2014,Croatia,5,DF,Vedran Ćorluka,Q206306,Vedran Ćorluka,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1986
+seniorm2014,senior,m,2014,Croatia,6,DF,Dejan Lovren,Q349125,Dejan Lovren,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1989
+seniorm2014,senior,m,2014,Croatia,7,MF,Ivan Rakitić,Q115453,Ivan Rakitić,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1988
+seniorm2014,senior,m,2014,Croatia,8,DF,Ognjen Vukojević,Q294996,Ognjen Vukojević,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1983
+seniorm2014,senior,m,2014,Croatia,9,FW,Nikica Jelavić,Q221233,Nikica Jelavić,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1985
+seniorm2014,senior,m,2014,Croatia,10,MF,Luka Modrić,Q483837,Luka Modrić,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1985
+seniorm2014,senior,m,2014,Croatia,11,DF,Darijo Srna,Q184269,Darijo Srna,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1982
+seniorm2014,senior,m,2014,Croatia,12,GK,Oliver Zelenika,Q15042666,Oliver Zelenika,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1993
+seniorm2014,senior,m,2014,Croatia,13,DF,Gordon Schildenfeld,Q314048,Gordon Schildenfeld,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1985
+seniorm2014,senior,m,2014,Croatia,14,MF,Marcelo Brozović,Q3845710,Marcelo Brozović,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1992
+seniorm2014,senior,m,2014,Croatia,15,MF,Milan Badelj,Q433120,Milan Badelj,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1989
+seniorm2014,senior,m,2014,Croatia,16,FW,Ante Rebić,Q3209607,Ante Rebić,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1993
+seniorm2014,senior,m,2014,Croatia,17,FW,Mario Mandžukić,Q187171,Mario Mandžukić,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1986
+seniorm2014,senior,m,2014,Croatia,18,FW,Ivica Olić,Q150484,Ivica Olić,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1979
+seniorm2014,senior,m,2014,Croatia,19,MF,Sammir,Q166506,Sammir,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1987
+seniorm2014,senior,m,2014,Croatia,20,MF,Mateo Kovačić,Q701297,Mateo Kovačić,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1994
+seniorm2014,senior,m,2014,Croatia,21,DF,Domagoj Vida,Q314227,Domagoj Vida,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1989
+seniorm2014,senior,m,2014,Croatia,22,FW,"Eduardo (footballer, born 1983)",Q180444,Eduardo,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1983
+seniorm2014,senior,m,2014,Croatia,23,GK,Danijel Subašić,Q358075,Danijel Subašić,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1984
+seniorm2014,senior,m,2014,Mexico,1,GK,José de Jesús Corona,Q530450,Jesús Corona,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1981
+seniorm2014,senior,m,2014,Mexico,2,DF,Francisco Javier Rodríguez,Q215469,Francisco Javier Rodríguez,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1981
+seniorm2014,senior,m,2014,Mexico,3,DF,Carlos Salcido,Q208689,Carlos Salcido,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1980
+seniorm2014,senior,m,2014,Mexico,4,DF,Rafael Márquez,Q186330,Rafael Márquez,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1979
+seniorm2014,senior,m,2014,Mexico,5,DF,Diego Reyes,Q672388,Diego Reyes,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1992
+seniorm2014,senior,m,2014,Mexico,6,MF,Héctor Herrera,Q2297174,Héctor Herrera,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1990
+seniorm2014,senior,m,2014,Mexico,7,DF,Miguel Layún,Q2358664,Miguel Layún,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1988
+seniorm2014,senior,m,2014,Mexico,8,MF,Marco Fabián,Q248057,Marco Fabián,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1989
+seniorm2014,senior,m,2014,Mexico,9,FW,Raúl Jiménez,Q1925465,Raúl Jiménez,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1991
+seniorm2014,senior,m,2014,Mexico,10,MF,Giovani dos Santos,Q562337,Giovani dos Santos,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1989
+seniorm2014,senior,m,2014,Mexico,11,FW,Alan Pulido,Q2617208,Alan Pulido,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1991
+seniorm2014,senior,m,2014,Mexico,12,GK,Alfredo Talavera,Q2118086,Alfredo Talavera,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1982
+seniorm2014,senior,m,2014,Mexico,13,GK,Guillermo Ochoa,Q215522,Guillermo Ochoa,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1985
+seniorm2014,senior,m,2014,Mexico,14,FW,Javier Hernández,Q165125,Javier Hernández,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1988
+seniorm2014,senior,m,2014,Mexico,15,DF,Héctor Moreno,Q313158,Héctor Moreno,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1988
+seniorm2014,senior,m,2014,Mexico,16,DF,Miguel Ángel Ponce,Q518170,Miguel Ángel Ponce,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1989
+seniorm2014,senior,m,2014,Mexico,17,MF,Isaác Brizuela,Q6079096,Isaác Brizuela,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1990
+seniorm2014,senior,m,2014,Mexico,18,MF,Andrés Guardado,Q19364,Andrés Guardado,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1986
+seniorm2014,senior,m,2014,Mexico,19,FW,Oribe Peralta,Q456834,Oribe Peralta,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1984
+seniorm2014,senior,m,2014,Mexico,20,MF,Javier Aquino,Q2408770,Javier Aquino,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1990
+seniorm2014,senior,m,2014,Mexico,21,MF,Carlos Peña (Mexican footballer),Q5041702,Carlos Peña,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1990
+seniorm2014,senior,m,2014,Mexico,22,DF,Paul Aguilar,Q315692,Paul Aguilar,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1986
+seniorm2014,senior,m,2014,Mexico,23,MF,José Juan Vázquez,Q5940875,José Juan Vázquez,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1988
+seniorm2014,senior,m,2014,Australia,1,GK,Mathew Ryan,Q1587689,Mathew Ryan,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1992
+seniorm2014,senior,m,2014,Australia,2,DF,Ivan Franjic,Q6096247,Ivan Franjic,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1987
+seniorm2014,senior,m,2014,Australia,3,DF,Jason Davidson,Q153436,Jason Davidson,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1991
+seniorm2014,senior,m,2014,Australia,4,FW,Tim Cahill,Q187238,Tim Cahill,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1979
+seniorm2014,senior,m,2014,Australia,5,MF,Mark Milligan,Q247965,Mark Milligan,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1985
+seniorm2014,senior,m,2014,Australia,6,DF,Matthew Spiranovic,Q705456,Matthew Spiranovic,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1988
+seniorm2014,senior,m,2014,Australia,7,FW,Mathew Leckie,Q176304,Mathew Leckie,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1991
+seniorm2014,senior,m,2014,Australia,8,DF,Bailey Wright,Q4848393,Bailey Wright,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1992
+seniorm2014,senior,m,2014,Australia,9,FW,Adam Taggart,Q351052,Adam Taggart,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1993
+seniorm2014,senior,m,2014,Australia,10,MF,Ben Halloran,Q4885777,Ben Halloran,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1992
+seniorm2014,senior,m,2014,Australia,11,MF,Tommy Oar,Q795466,Tommy Oar,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1991
+seniorm2014,senior,m,2014,Australia,12,GK,Mitchell Langerak,Q691911,Mitchell Langerak,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1988
+seniorm2014,senior,m,2014,Australia,13,MF,Oliver Bozanic,Q446832,Oliver Bozanic,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1989
+seniorm2014,senior,m,2014,Australia,14,MF,James Troisi,Q557329,James Troisi,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1988
+seniorm2014,senior,m,2014,Australia,15,MF,Mile Jedinak,Q321330,Mile Jedinak,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1984
+seniorm2014,senior,m,2014,Australia,16,MF,James Holland (soccer),Q544059,James Holland,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1989
+seniorm2014,senior,m,2014,Australia,17,MF,Matt McKay,Q484281,Matt McKay,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1983
+seniorm2014,senior,m,2014,Australia,18,GK,Eugene Galekovic,Q518614,Eugene Galekovic,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1981
+seniorm2014,senior,m,2014,Australia,19,DF,Ryan McGowan,Q866723,Ryan McGowan,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1989
+seniorm2014,senior,m,2014,Australia,20,MF,Dario Vidošić,Q361040,Dario Vidošić,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1987
+seniorm2014,senior,m,2014,Australia,21,MF,Massimo Luongo,Q6784737,Massimo Luongo,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1992
+seniorm2014,senior,m,2014,Australia,22,DF,Alex Wilkinson,Q122198,Alex Wilkinson,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1984
+seniorm2014,senior,m,2014,Australia,23,MF,Mark Bresciano,Q312510,Mark Bresciano,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1980
+seniorm2014,senior,m,2014,Chile,1,GK,Claudio Bravo,Q313161,Claudio Bravo,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1983
+seniorm2014,senior,m,2014,Chile,2,DF,Eugenio Mena,Q2761481,Eugenio Mena,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1988
+seniorm2014,senior,m,2014,Chile,3,DF,Miiko Albornoz,Q2946141,Miiko Albornoz,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1990
+seniorm2014,senior,m,2014,Chile,4,DF,Mauricio Isla,Q296222,Mauricio Isla,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1988
+seniorm2014,senior,m,2014,Chile,5,MF,"Francisco Silva (footballer, born 1986)",Q2467631,Francisco Silva,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1986
+seniorm2014,senior,m,2014,Chile,6,MF,Carlos Carmona,Q349162,Carlos Carmona,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1987
+seniorm2014,senior,m,2014,Chile,7,FW,Alexis Sánchez,Q180553,Alexis Sánchez,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1988
+seniorm2014,senior,m,2014,Chile,8,DF,Arturo Vidal,Q192671,Arturo Vidal,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1987
+seniorm2014,senior,m,2014,Chile,9,FW,Mauricio Pinilla,Q1989585,Mauricio Pinilla,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1984
+seniorm2014,senior,m,2014,Chile,10,MF,Jorge Valdivia,Q360782,Jorge Valdivia,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1983
+seniorm2014,senior,m,2014,Chile,11,FW,Eduardo Vargas,Q2268949,Eduardo Vargas,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1989
+seniorm2014,senior,m,2014,Chile,12,GK,Cristopher Toselli,Q1530912,Cristopher Toselli,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1988
+seniorm2014,senior,m,2014,Chile,13,DF,"José Rojas (footballer, born 1983)",Q3179533,José Manuel Rojas,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1983
+seniorm2014,senior,m,2014,Chile,14,MF,Fabián Orellana,Q367851,Fabián Orellana,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1986
+seniorm2014,senior,m,2014,Chile,15,MF,Jean Beausejour,Q313307,Jean Beausejour,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1984
+seniorm2014,senior,m,2014,Chile,16,MF,Felipe Gutiérrez,Q195292,Felipe Gutiérrez,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1990
+seniorm2014,senior,m,2014,Chile,17,DF,Gary Medel,Q329524,Gary Medel,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1987
+seniorm2014,senior,m,2014,Chile,18,DF,"Gonzalo Jara (footballer, born 1985)",Q349172,Gonzalo Jara,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1985
+seniorm2014,senior,m,2014,Chile,19,MF,José Pedro Fuenzalida,Q946154,José Pedro Fuenzalida,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1985
+seniorm2014,senior,m,2014,Chile,20,MF,Charles Aránguiz,Q797945,Charles Aránguiz,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1989
+seniorm2014,senior,m,2014,Chile,21,MF,Marcelo Díaz,Q1353070,Marcelo Díaz,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1986
+seniorm2014,senior,m,2014,Chile,22,FW,Esteban Paredes,Q439914,Esteban Paredes,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1980
+seniorm2014,senior,m,2014,Chile,23,GK,Johnny Herrera (footballer),Q2612089,Johnny Herrera,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1981
+seniorm2014,senior,m,2014,Netherlands,1,GK,Jasper Cillessen,Q128719,Jasper Cillessen,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1989
+seniorm2014,senior,m,2014,Netherlands,2,DF,Ron Vlaar,Q212617,Ron Vlaar,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1985
+seniorm2014,senior,m,2014,Netherlands,3,DF,Stefan de Vrij,Q195953,Stefan de Vrij,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1992
+seniorm2014,senior,m,2014,Netherlands,4,DF,Bruno Martins Indi,Q198064,Bruno Martins Indi,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1992
+seniorm2014,senior,m,2014,Netherlands,5,DF,Daley Blind,Q128912,Daley Blind,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1990
+seniorm2014,senior,m,2014,Netherlands,6,MF,Nigel de Jong,Q185650,Nigel de Jong,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1984
+seniorm2014,senior,m,2014,Netherlands,7,DF,Daryl Janmaat,Q196069,Daryl Janmaat,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1989
+seniorm2014,senior,m,2014,Netherlands,8,MF,Jonathan de Guzmán,Q372470,Jonathan de Guzmán,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1987
+seniorm2014,senior,m,2014,Netherlands,9,FW,Robin van Persie,Q2339,Robin van Persie,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1983
+seniorm2014,senior,m,2014,Netherlands,10,MF,Wesley Sneijder,Q124086,Wesley Sneijder,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1984
+seniorm2014,senior,m,2014,Netherlands,11,FW,Arjen Robben,Q43913,Arjen Robben,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1984
+seniorm2014,senior,m,2014,Netherlands,12,DF,Paul Verhaegh,Q932667,Paul Verhaegh,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1983
+seniorm2014,senior,m,2014,Netherlands,13,DF,Joël Veltman,Q129077,Joël Veltman,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1992
+seniorm2014,senior,m,2014,Netherlands,14,DF,Terence Kongolo,Q218858,Terence Kongolo,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1994
+seniorm2014,senior,m,2014,Netherlands,15,DF,Dirk Kuyt,Q294214,Dirk Kuyt,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1980
+seniorm2014,senior,m,2014,Netherlands,16,MF,Jordy Clasie,Q198068,Jordy Clasie,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1991
+seniorm2014,senior,m,2014,Netherlands,17,FW,Jeremain Lens,Q519678,Jeremain Lens,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1987
+seniorm2014,senior,m,2014,Netherlands,18,MF,Leroy Fer,Q795537,Leroy Fer,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1990
+seniorm2014,senior,m,2014,Netherlands,19,FW,Klaas-Jan Huntelaar,Q26069,Klaas-Jan Huntelaar,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1983
+seniorm2014,senior,m,2014,Netherlands,20,MF,Georginio Wijnaldum,Q372379,Georginio Wijnaldum,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1990
+seniorm2014,senior,m,2014,Netherlands,21,FW,Memphis Depay,Q1894,Memphis Depay,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1994
+seniorm2014,senior,m,2014,Netherlands,22,GK,Michel Vorm,Q208518,Michel Vorm,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1983
+seniorm2014,senior,m,2014,Netherlands,23,GK,Tim Krul,Q296979,Tim Krul,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1988
+seniorm2014,senior,m,2014,Spain,1,GK,Iker Casillas,Q11584,Iker Casillas,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1981
+seniorm2014,senior,m,2014,Spain,2,DF,Raúl Albiol,Q4599,Raúl Albiol,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1985
+seniorm2014,senior,m,2014,Spain,3,DF,Gerard Piqué,Q17507,Gerard Piqué,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1987
+seniorm2014,senior,m,2014,Spain,4,MF,Javi Martínez,Q201752,Javi Martínez,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1988
+seniorm2014,senior,m,2014,Spain,5,DF,"Juanfran (footballer, born 1985)",Q210914,Juanfran,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1985
+seniorm2014,senior,m,2014,Spain,6,MF,Andrés Iniesta,Q43729,Andrés Iniesta,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1984
+seniorm2014,senior,m,2014,Spain,7,FW,David Villa,Q83006,David Villa,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1981
+seniorm2014,senior,m,2014,Spain,8,MF,"Xavi (footballer, born 1980)",Q17500,Xavi,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1980
+seniorm2014,senior,m,2014,Spain,9,FW,Fernando Torres,Q42731,Fernando Torres,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1984
+seniorm2014,senior,m,2014,Spain,10,MF,Cesc Fàbregas,Q17499,Cesc Fàbregas,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1987
+seniorm2014,senior,m,2014,Spain,11,FW,"Pedro (footballer, born 1987)",Q179773,Pedro,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1987
+seniorm2014,senior,m,2014,Spain,12,GK,David de Gea,Q150268,David de Gea,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1990
+seniorm2014,senior,m,2014,Spain,13,MF,Juan Mata,Q168740,Juan Mata,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1988
+seniorm2014,senior,m,2014,Spain,14,MF,Xabi Alonso,Q208104,Xabi Alonso,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1981
+seniorm2014,senior,m,2014,Spain,15,DF,Sergio Ramos,Q483309,Sergio Ramos,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1986
+seniorm2014,senior,m,2014,Spain,16,MF,Sergio Busquets,Q49704,Sergio Busquets,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1988
+seniorm2014,senior,m,2014,Spain,17,MF,"Koke (footballer, born 1992)",Q276091,Koke,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1992
+seniorm2014,senior,m,2014,Spain,18,DF,Jordi Alba,Q187159,Jordi Alba,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1989
+seniorm2014,senior,m,2014,Spain,19,FW,Diego Costa,Q459707,Diego Costa,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1988
+seniorm2014,senior,m,2014,Spain,20,MF,Santi Cazorla,Q185225,Santi Cazorla,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1984
+seniorm2014,senior,m,2014,Spain,21,MF,David Silva,Q161069,David Silva,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1986
+seniorm2014,senior,m,2014,Spain,22,DF,César Azpilicueta,Q294806,César Azpilicueta,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1989
+seniorm2014,senior,m,2014,Spain,23,GK,Pepe Reina,Q163666,Pepe Reina,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1982
+seniorm2014,senior,m,2014,Colombia,1,GK,David Ospina,Q436987,David Ospina,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1988
+seniorm2014,senior,m,2014,Colombia,2,DF,Cristián Zapata,Q316762,Cristián Zapata,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1986
+seniorm2014,senior,m,2014,Colombia,3,DF,Mario Yepes,Q309778,Mario Yepes,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1976
+seniorm2014,senior,m,2014,Colombia,4,DF,Santiago Arias,Q2502118,Santiago Arias,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1992
+seniorm2014,senior,m,2014,Colombia,5,MF,Carlos Carbonero,Q2080157,Carlos Carbonero,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1990
+seniorm2014,senior,m,2014,Colombia,6,MF,"Carlos Sánchez (footballer, born 1986)",Q116602,Carlos Sánchez,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1986
+seniorm2014,senior,m,2014,Colombia,7,DF,Pablo Armero,Q371305,Pablo Armero,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1986
+seniorm2014,senior,m,2014,Colombia,8,DF,Abel Aguilar,Q318416,Abel Aguilar,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1985
+seniorm2014,senior,m,2014,Colombia,9,FW,Teófilo Gutiérrez,Q369056,Teófilo Gutiérrez,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1985
+seniorm2014,senior,m,2014,Colombia,10,MF,James Rodríguez,Q368441,James Rodríguez,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1991
+seniorm2014,senior,m,2014,Colombia,11,MF,Juan Cuadrado,Q509374,Juan Cuadrado,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1988
+seniorm2014,senior,m,2014,Colombia,12,GK,Camilo Vargas,Q5026758,Camilo Vargas,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1989
+seniorm2014,senior,m,2014,Colombia,13,MF,Fredy Guarín,Q317532,Fredy Guarín,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1986
+seniorm2014,senior,m,2014,Colombia,14,FW,Víctor Ibarbo,Q2117509,Víctor Ibarbo,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1990
+seniorm2014,senior,m,2014,Colombia,15,MF,Alexander Mejía,Q5666201,Alexander Mejía,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1988
+seniorm2014,senior,m,2014,Colombia,16,DF,Éder Álvarez Balanta,Q6174184,Éder Álvarez Balanta,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1993
+seniorm2014,senior,m,2014,Colombia,17,FW,Carlos Bacca,Q74681,Carlos Bacca,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1986
+seniorm2014,senior,m,2014,Colombia,18,DF,Juan Camilo Zúñiga,Q456797,Juan Camilo Zúñiga,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1985
+seniorm2014,senior,m,2014,Colombia,19,FW,Adrián Ramos,Q370348,Adrián Ramos,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1986
+seniorm2014,senior,m,2014,Colombia,20,MF,Juan Fernando Quintero,Q2092409,Juan Fernando Quintero,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1993
+seniorm2014,senior,m,2014,Colombia,21,FW,Jackson Martínez,Q356142,Jackson Martínez,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1986
+seniorm2014,senior,m,2014,Colombia,22,GK,Faryd Mondragón,Q352215,Faryd Mondragón,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1971
+seniorm2014,senior,m,2014,Colombia,23,DF,Carlos Valdés (footballer),Q74533,Carlos Valdés,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1985
+seniorm2014,senior,m,2014,Greece,1,GK,Orestis Karnezis,Q179457,Orestis Karnezis,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1985
+seniorm2014,senior,m,2014,Greece,2,MF,Giannis Maniatis,Q312048,Giannis Maniatis,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1986
+seniorm2014,senior,m,2014,Greece,3,DF,Georgios Tzavellas,Q312377,Giorgos Tzavellas,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1987
+seniorm2014,senior,m,2014,Greece,4,DF,Kostas Manolas,Q650452,Kostas Manolas,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1991
+seniorm2014,senior,m,2014,Greece,5,DF,Vangelis Moras,Q349883,Vangelis Moras,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1981
+seniorm2014,senior,m,2014,Greece,6,MF,Alexandros Tziolis,Q313544,Alexandros Tziolis,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1985
+seniorm2014,senior,m,2014,Greece,7,FW,Georgios Samaras,Q202404,Georgios Samaras,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1985
+seniorm2014,senior,m,2014,Greece,8,MF,Panagiotis Kone,Q923206,Panagiotis Kone,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1987
+seniorm2014,senior,m,2014,Greece,9,FW,Kostas Mitroglou,Q312534,Kostas Mitroglou,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1988
+seniorm2014,senior,m,2014,Greece,10,MF,Giorgos Karagounis,Q188983,Giorgos Karagounis,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1977
+seniorm2014,senior,m,2014,Greece,11,DF,Loukas Vyntra,Q318553,Loukas Vyntra,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1981
+seniorm2014,senior,m,2014,Greece,12,GK,Panagiotis Glykos,Q3557375,Panagiotis Glykos,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1986
+seniorm2014,senior,m,2014,Greece,13,GK,Stefanos Kapino,Q928459,Stefanos Kapino,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1994
+seniorm2014,senior,m,2014,Greece,14,FW,Dimitris Salpingidis,Q201879,Dimitris Salpingidis,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1981
+seniorm2014,senior,m,2014,Greece,15,DF,Vasilis Torosidis,Q201776,Vasilis Torosidis,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1985
+seniorm2014,senior,m,2014,Greece,16,MF,Lazaros Christodoulopoulos,Q939590,Lazaros Christodoulopoulos,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1986
+seniorm2014,senior,m,2014,Greece,17,FW,Theofanis Gekas,Q201885,Theofanis Gekas,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1980
+seniorm2014,senior,m,2014,Greece,18,MF,Giannis Fetfatzidis,Q312036,Giannis Fetfatzidis,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1990
+seniorm2014,senior,m,2014,Greece,19,DF,Sokratis Papastathopoulos,Q192923,Sokratis Papastathopoulos,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1988
+seniorm2014,senior,m,2014,Greece,20,DF,José Holebas,Q161044,José Holebas,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1984
+seniorm2014,senior,m,2014,Greece,21,MF,Kostas Katsouranis,Q211124,Kostas Katsouranis,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1979
+seniorm2014,senior,m,2014,Greece,22,MF,Andreas Samaris,Q4755614,Andreas Samaris,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1989
+seniorm2014,senior,m,2014,Greece,23,MF,Panagiotis Tachtsidis,Q719197,Panagiotis Tachtsidis,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1991
+seniorm2014,senior,m,2014,Ivory Coast,1,GK,Boubacar Barry,Q343106,Boubacar Barry,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1979
+seniorm2014,senior,m,2014,Ivory Coast,2,DF,Ousmane Viera,Q241742,Ousmane Viera,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1986
+seniorm2014,senior,m,2014,Ivory Coast,3,DF,Arthur Boka,Q312508,Arthur Boka,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1983
+seniorm2014,senior,m,2014,Ivory Coast,4,DF,Kolo Touré,Q147589,Kolo Touré,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1981
+seniorm2014,senior,m,2014,Ivory Coast,5,DF,Didier Zokora,Q207397,Didier Zokora,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1980
+seniorm2014,senior,m,2014,Ivory Coast,6,FW,Mathis Bolly,Q3437964,Mathis Bolly,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1990
+seniorm2014,senior,m,2014,Ivory Coast,7,DF,Jean-Daniel Akpa Akpro,Q60445,Jean-Daniel Akpa Akpro,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1992
+seniorm2014,senior,m,2014,Ivory Coast,8,FW,Salomon Kalou,Q180462,Salomon Kalou,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1985
+seniorm2014,senior,m,2014,Ivory Coast,9,MF,Cheick Tioté,Q310668,Cheick Tioté,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1986
+seniorm2014,senior,m,2014,Ivory Coast,10,FW,Gervinho,Q208025,Gervinho,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1987
+seniorm2014,senior,m,2014,Ivory Coast,11,FW,Didier Drogba,Q48892,Didier Drogba,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1978
+seniorm2014,senior,m,2014,Ivory Coast,12,FW,Wilfried Bony,Q370339,Wilfried Bony,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1988
+seniorm2014,senior,m,2014,Ivory Coast,13,FW,Didier Ya Konan,Q376323,Didier Ya Konan,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1984
+seniorm2014,senior,m,2014,Ivory Coast,14,MF,"Ismaël Diomandé (footballer, born 1992)",Q6084996,Ismaël Diomandé,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1992
+seniorm2014,senior,m,2014,Ivory Coast,15,FW,Max Gradel,Q714036,Max Gradel,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1987
+seniorm2014,senior,m,2014,Ivory Coast,16,GK,Sylvain Gbohouo,Q17093825,Sylvain Gbohouo,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1988
+seniorm2014,senior,m,2014,Ivory Coast,17,DF,Serge Aurier,Q60605,Serge Aurier,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1992
+seniorm2014,senior,m,2014,Ivory Coast,18,DF,Constant Djakpa,Q519023,Constant Djakpa,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1986
+seniorm2014,senior,m,2014,Ivory Coast,19,MF,Yaya Touré,Q184277,Yaya Touré,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1983
+seniorm2014,senior,m,2014,Ivory Coast,20,MF,Serey Dié,Q525816,Serey Dié,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1984
+seniorm2014,senior,m,2014,Ivory Coast,21,FW,Giovanni Sio,Q1526376,Giovanni Sio,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1989
+seniorm2014,senior,m,2014,Ivory Coast,22,DF,Sol Bamba,Q350107,Sol Bamba,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1985
+seniorm2014,senior,m,2014,Ivory Coast,23,GK,Sayouba Mandé,Q7429288,Sayouba Mandé,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1993
+seniorm2014,senior,m,2014,Japan,1,GK,Eiji Kawashima,Q310610,Eiji Kawashima,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1983
+seniorm2014,senior,m,2014,Japan,2,DF,Atsuto Uchida,Q310607,Atsuto Uchida,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1988
+seniorm2014,senior,m,2014,Japan,3,DF,Gōtoku Sakai,Q558820,Gōtoku Sakai,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1991
+seniorm2014,senior,m,2014,Japan,4,MF,Keisuke Honda,Q202054,Keisuke Honda,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1986
+seniorm2014,senior,m,2014,Japan,5,DF,Yūto Nagatomo,Q281734,Yūto Nagatomo,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1986
+seniorm2014,senior,m,2014,Japan,6,DF,Masato Morishige,Q275841,Masato Morishige,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1987
+seniorm2014,senior,m,2014,Japan,7,MF,Yasuhito Endō,Q214859,Yasuhito Endo,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1980
+seniorm2014,senior,m,2014,Japan,8,MF,Hiroshi Kiyotake,Q733494,Hiroshi Kiyotake,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1989
+seniorm2014,senior,m,2014,Japan,9,FW,Shinji Okazaki,Q310612,Shinji Okazaki,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1986
+seniorm2014,senior,m,2014,Japan,10,MF,Shinji Kagawa,Q154708,Shinji Kagawa,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1989
+seniorm2014,senior,m,2014,Japan,11,FW,Yoichiro Kakitani,Q210095,Yoichiro Kakitani,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1990
+seniorm2014,senior,m,2014,Japan,12,GK,Shūsaku Nishikawa,Q558890,Shusaku Nishikawa,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1986
+seniorm2014,senior,m,2014,Japan,13,FW,Yoshito Ōkubo,Q311209,Yoshito Ōkubo,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1982
+seniorm2014,senior,m,2014,Japan,14,MF,Toshihiro Aoyama,Q499652,Toshihiro Aoyama,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1986
+seniorm2014,senior,m,2014,Japan,15,DF,Yasuyuki Konno,Q331957,Yasuyuki Konno,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1983
+seniorm2014,senior,m,2014,Japan,16,MF,Hotaru Yamaguchi,Q1091933,Hotaru Yamaguchi,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1990
+seniorm2014,senior,m,2014,Japan,17,MF,Makoto Hasebe,Q164676,Makoto Hasebe,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1984
+seniorm2014,senior,m,2014,Japan,18,FW,Yuya Osako,Q195620,Yuya Osako,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1990
+seniorm2014,senior,m,2014,Japan,19,DF,Masahiko Inoha,Q558814,Masahiko Inoha,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1983
+seniorm2014,senior,m,2014,Japan,20,FW,Manabu Saitō,Q1091962,Manabu Saitō,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1990
+seniorm2014,senior,m,2014,Japan,21,DF,Hiroki Sakai,Q558887,Hiroki Sakai,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1990
+seniorm2014,senior,m,2014,Japan,22,DF,Maya Yoshida,Q248141,Maya Yoshida,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1988
+seniorm2014,senior,m,2014,Japan,23,GK,Shūichi Gonda,Q558874,Shūichi Gonda,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1989
+seniorm2014,senior,m,2014,Costa Rica,1,GK,Keylor Navas,Q969423,Keylor Navas,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1986
+seniorm2014,senior,m,2014,Costa Rica,2,DF,Jhonny Acosta,Q3808254,Jhonny Acosta,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1983
+seniorm2014,senior,m,2014,Costa Rica,3,DF,Giancarlo González,Q3105178,Giancarlo González,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1988
+seniorm2014,senior,m,2014,Costa Rica,4,DF,Michael Umaña,Q726317,Michael Umaña,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1982
+seniorm2014,senior,m,2014,Costa Rica,5,MF,Celso Borges,Q2208497,Celso Borges,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1988
+seniorm2014,senior,m,2014,Costa Rica,6,DF,"Óscar Duarte (footballer, born 1989)",Q2063279,Óscar Duarte,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1989
+seniorm2014,senior,m,2014,Costa Rica,7,MF,Christian Bolaños,Q361694,Christian Bolaños,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1984
+seniorm2014,senior,m,2014,Costa Rica,8,DF,David Myrie,Q2471915,David Myrie,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1988
+seniorm2014,senior,m,2014,Costa Rica,9,FW,Joel Campbell,Q356797,Joel Campbell,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1992
+seniorm2014,senior,m,2014,Costa Rica,10,FW,Bryan Ruiz,Q318383,Bryan Ruiz,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1985
+seniorm2014,senior,m,2014,Costa Rica,11,MF,Michael Barrantes,Q2725258,Michael Barrantes,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1983
+seniorm2014,senior,m,2014,Costa Rica,12,DF,Waylon Francis,Q6166593,Waylon Francis,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1990
+seniorm2014,senior,m,2014,Costa Rica,13,MF,Óscar Granados,Q6174780,Óscar Granados,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1985
+seniorm2014,senior,m,2014,Costa Rica,14,FW,Randall Brenes,Q2467736,Randall Brenes,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1983
+seniorm2014,senior,m,2014,Costa Rica,15,DF,"Júnior Díaz (footballer, born 1983)",Q921418,Júnior Díaz,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1983
+seniorm2014,senior,m,2014,Costa Rica,16,DF,Cristian Gamboa,Q577471,Cristian Gamboa,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1989
+seniorm2014,senior,m,2014,Costa Rica,17,MF,Yeltsin Tejeda,Q4022676,Yeltsin Tejeda,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1992
+seniorm2014,senior,m,2014,Costa Rica,18,GK,Patrick Pemberton,Q7147457,Patrick Pemberton,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1982
+seniorm2014,senior,m,2014,Costa Rica,19,DF,Roy Miller (footballer),Q2568828,Roy Miller,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1984
+seniorm2014,senior,m,2014,Costa Rica,20,MF,Diego Calvo,Q3707147,Diego Calvo,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1991
+seniorm2014,senior,m,2014,Costa Rica,21,FW,Marco Ureña,Q1511793,Marco Ureña,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1990
+seniorm2014,senior,m,2014,Costa Rica,22,MF,José Miguel Cubero,Q957219,José Miguel Cubero,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1987
+seniorm2014,senior,m,2014,Costa Rica,23,GK,Daniel Cambronero,Q5216740,Daniel Cambronero,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1986
+seniorm2014,senior,m,2014,England,1,GK,Joe Hart,Q187184,Joe Hart,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1987
+seniorm2014,senior,m,2014,England,2,DF,Glen Johnson,Q185208,Glen Johnson,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1984
+seniorm2014,senior,m,2014,England,3,DF,Leighton Baines,Q187989,Leighton Baines,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1984
+seniorm2014,senior,m,2014,England,4,MF,Steven Gerrard,Q459830,Steven Gerrard,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1980
+seniorm2014,senior,m,2014,England,5,DF,Gary Cahill,Q223827,Gary Cahill,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1985
+seniorm2014,senior,m,2014,England,6,DF,Phil Jagielka,Q208933,Phil Jagielka,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1982
+seniorm2014,senior,m,2014,England,7,MF,Jack Wilshere,Q15199,Jack Wilshere,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1992
+seniorm2014,senior,m,2014,England,8,MF,Frank Lampard,Q41533,Frank Lampard,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1978
+seniorm2014,senior,m,2014,England,9,FW,Daniel Sturridge,Q222231,Daniel Sturridge,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1989
+seniorm2014,senior,m,2014,England,10,FW,Wayne Rooney,Q266613,Wayne Rooney,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1985
+seniorm2014,senior,m,2014,England,11,FW,Danny Welbeck,Q188457,Danny Welbeck,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1990
+seniorm2014,senior,m,2014,England,12,DF,Chris Smalling,Q29491,Chris Smalling,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1989
+seniorm2014,senior,m,2014,England,13,GK,Ben Foster (footballer),Q10585,Ben Foster,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1983
+seniorm2014,senior,m,2014,England,14,MF,Jordan Henderson,Q273715,Jordan Henderson,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1990
+seniorm2014,senior,m,2014,England,15,MF,Alex Oxlade-Chamberlain,Q194149,Alex Oxlade-Chamberlain,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1993
+seniorm2014,senior,m,2014,England,16,DF,"Phil Jones (footballer, born 1992)",Q206641,Phil Jones,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1992
+seniorm2014,senior,m,2014,England,17,MF,James Milner,Q191136,James Milner,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1986
+seniorm2014,senior,m,2014,England,18,FW,Rickie Lambert,Q511720,Rickie Lambert,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1982
+seniorm2014,senior,m,2014,England,19,MF,Raheem Sterling,Q312157,Raheem Sterling,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1994
+seniorm2014,senior,m,2014,England,20,MF,Adam Lallana,Q59719,Adam Lallana,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1988
+seniorm2014,senior,m,2014,England,21,MF,Ross Barkley,Q326240,Ross Barkley,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1993
+seniorm2014,senior,m,2014,England,22,GK,Fraser Forster,Q348813,Fraser Forster,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1988
+seniorm2014,senior,m,2014,England,23,DF,Luke Shaw,Q93563,Luke Shaw,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1995
+seniorm2014,senior,m,2014,Italy,1,GK,Gianluigi Buffon,Q68060,Gianluigi Buffon,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1978
+seniorm2014,senior,m,2014,Italy,2,DF,Mattia De Sciglio,Q379805,Mattia De Sciglio,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1992
+seniorm2014,senior,m,2014,Italy,3,DF,Giorgio Chiellini,Q80306,Giorgio Chiellini,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1984
+seniorm2014,senior,m,2014,Italy,4,DF,Matteo Darmian,Q44788,Matteo Darmian,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1989
+seniorm2014,senior,m,2014,Italy,5,MF,Thiago Motta,Q191885,Thiago Motta,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1982
+seniorm2014,senior,m,2014,Italy,6,MF,Antonio Candreva,Q32556,Antonio Candreva,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1987
+seniorm2014,senior,m,2014,Italy,7,DF,Ignazio Abate,Q213007,Ignazio Abate,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1986
+seniorm2014,senior,m,2014,Italy,8,MF,Claudio Marchisio,Q179995,Claudio Marchisio,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1986
+seniorm2014,senior,m,2014,Italy,9,FW,Mario Balotelli,Q129700,Mario Balotelli,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1990
+seniorm2014,senior,m,2014,Italy,10,FW,Antonio Cassano,Q180993,Antonio Cassano,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1982
+seniorm2014,senior,m,2014,Italy,11,FW,Alessio Cerci,Q456365,Alessio Cerci,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1987
+seniorm2014,senior,m,2014,Italy,12,GK,Salvatore Sirigu,Q299779,Salvatore Sirigu,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1987
+seniorm2014,senior,m,2014,Italy,13,GK,Mattia Perin,Q861615,Mattia Perin,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1992
+seniorm2014,senior,m,2014,Italy,14,MF,Alberto Aquilani,Q191151,Alberto Aquilani,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1984
+seniorm2014,senior,m,2014,Italy,15,DF,Andrea Barzagli,Q107051,Andrea Barzagli,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1981
+seniorm2014,senior,m,2014,Italy,16,MF,Daniele De Rossi,Q168497,Daniele De Rossi,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1983
+seniorm2014,senior,m,2014,Italy,17,FW,Ciro Immobile,Q458101,Ciro Immobile,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1990
+seniorm2014,senior,m,2014,Italy,18,MF,Marco Parolo,Q949938,Marco Parolo,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1985
+seniorm2014,senior,m,2014,Italy,19,DF,Leonardo Bonucci,Q208050,Leonardo Bonucci,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1987
+seniorm2014,senior,m,2014,Italy,20,DF,Gabriel Paletta,Q342342,Gabriel Paletta,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1986
+seniorm2014,senior,m,2014,Italy,21,MF,Andrea Pirlo,Q43926,Andrea Pirlo,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1979
+seniorm2014,senior,m,2014,Italy,22,FW,Lorenzo Insigne,Q1756086,Lorenzo Insigne,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1991
+seniorm2014,senior,m,2014,Italy,23,MF,Marco Verratti,Q337623,Marco Verratti,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1992
+seniorm2014,senior,m,2014,Uruguay,1,GK,Fernando Muslera,Q203749,Fernando Muslera,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1986
+seniorm2014,senior,m,2014,Uruguay,2,DF,Diego Lugano,Q373547,Diego Lugano,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1980
+seniorm2014,senior,m,2014,Uruguay,3,DF,Diego Godín,Q214903,Diego Godín,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1986
+seniorm2014,senior,m,2014,Uruguay,4,DF,Jorge Fucile,Q178599,Jorge Fucile,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1984
+seniorm2014,senior,m,2014,Uruguay,5,MF,Walter Gargano,Q208680,Walter Gargano,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1984
+seniorm2014,senior,m,2014,Uruguay,6,DF,Álvaro Pereira,Q214898,Álvaro Pereira,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1985
+seniorm2014,senior,m,2014,Uruguay,7,MF,Cristian Rodríguez,Q314376,Cristian Rodríguez,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1985
+seniorm2014,senior,m,2014,Uruguay,8,FW,Abel Hernández,Q318456,Abel Hernández,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1990
+seniorm2014,senior,m,2014,Uruguay,9,FW,Luis Suárez,Q26517,Luis Suárez,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1987
+seniorm2014,senior,m,2014,Uruguay,10,FW,Diego Forlán,Q261534,Diego Forlán,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1979
+seniorm2014,senior,m,2014,Uruguay,11,FW,Cristhian Stuani,Q2608851,Cristhian Stuani,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1986
+seniorm2014,senior,m,2014,Uruguay,12,GK,Rodrigo Muñoz,Q542417,Rodrigo Muñoz,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1982
+seniorm2014,senior,m,2014,Uruguay,13,DF,José María Giménez,Q13634114,José María Giménez,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1995
+seniorm2014,senior,m,2014,Uruguay,14,MF,Nicolás Lodeiro,Q309808,Nicolás Lodeiro,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1989
+seniorm2014,senior,m,2014,Uruguay,15,MF,Diego Pérez (footballer),Q309662,Diego Pérez,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1980
+seniorm2014,senior,m,2014,Uruguay,16,DF,Maxi Pereira,Q214886,Maxi Pereira,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1984
+seniorm2014,senior,m,2014,Uruguay,17,MF,Egidio Arévalo,Q315674,Egidio Arévalo Ríos,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1982
+seniorm2014,senior,m,2014,Uruguay,18,MF,Gastón Ramírez,Q437673,Gastón Ramírez,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1990
+seniorm2014,senior,m,2014,Uruguay,19,DF,Sebastián Coates,Q311941,Sebastián Coates,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1990
+seniorm2014,senior,m,2014,Uruguay,20,MF,"Álvaro González (footballer, born 1984)",Q1380874,Álvaro González,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1984
+seniorm2014,senior,m,2014,Uruguay,21,FW,Edinson Cavani,Q167790,Edinson Cavani,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1987
+seniorm2014,senior,m,2014,Uruguay,22,DF,Martín Cáceres,Q194107,Martín Cáceres,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1987
+seniorm2014,senior,m,2014,Uruguay,23,GK,Martín Silva,Q329545,Martín Silva,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1983
+seniorm2014,senior,m,2014,Ecuador,1,GK,Máximo Banguera,Q2778294,Máximo Banguera,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1985
+seniorm2014,senior,m,2014,Ecuador,2,DF,Jorge Guagua,Q725258,Jorge Guagua,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1981
+seniorm2014,senior,m,2014,Ecuador,3,DF,Frickson Erazo,Q429023,Frickson Erazo,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1988
+seniorm2014,senior,m,2014,Ecuador,4,DF,Juan Carlos Paredes,Q383669,Juan Carlos Paredes,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1987
+seniorm2014,senior,m,2014,Ecuador,5,MF,Renato Ibarra,Q654903,Renato Ibarra,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1991
+seniorm2014,senior,m,2014,Ecuador,6,MF,Christian Noboa,Q468083,Christian Noboa,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1985
+seniorm2014,senior,m,2014,Ecuador,7,MF,Jefferson Montero,Q2300455,Jefferson Montero,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1989
+seniorm2014,senior,m,2014,Ecuador,8,FW,Édison Méndez,Q346789,Édison Méndez,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1979
+seniorm2014,senior,m,2014,Ecuador,9,FW,"Joao Rojas (footballer, born 1989)",Q2759294,Joao Rojas,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1989
+seniorm2014,senior,m,2014,Ecuador,10,DF,Walter Ayoví,Q2562953,Walter Ayoví,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1979
+seniorm2014,senior,m,2014,Ecuador,11,FW,Felipe Caicedo,Q351473,Felipe Caicedo,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1988
+seniorm2014,senior,m,2014,Ecuador,12,GK,Adrián Bone,Q4685756,Adrián Bone,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1988
+seniorm2014,senior,m,2014,Ecuador,13,FW,Enner Valencia,Q2843080,Enner Valencia,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1989
+seniorm2014,senior,m,2014,Ecuador,14,MF,Oswaldo Minda,Q2011540,Oswaldo Minda,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1983
+seniorm2014,senior,m,2014,Ecuador,15,MF,Michael Arroyo,Q2468273,Michael Arroyo,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1987
+seniorm2014,senior,m,2014,Ecuador,16,MF,Antonio Valencia,Q174486,Antonio Valencia,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1985
+seniorm2014,senior,m,2014,Ecuador,17,FW,Jaime Ayoví,Q953173,Jaime Ayoví,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1988
+seniorm2014,senior,m,2014,Ecuador,18,DF,Óscar Bagüí,Q2778257,Óscar Bagüí,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1982
+seniorm2014,senior,m,2014,Ecuador,19,MF,Luis Saritama,Q1384764,Luis Saritama,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1983
+seniorm2014,senior,m,2014,Ecuador,20,MF,Fidel Martínez,Q887406,Fidel Martínez,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1990
+seniorm2014,senior,m,2014,Ecuador,21,DF,Gabriel Achilier,Q2007275,Gabriel Achilier,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1985
+seniorm2014,senior,m,2014,Ecuador,22,GK,Alexander Domínguez,Q2667325,Alexander Domínguez,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1987
+seniorm2014,senior,m,2014,Ecuador,23,DF,"Carlos Gruezo (footballer, born 1995)",Q12156405,Carlos Gruezo,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1995
+seniorm2014,senior,m,2014,France,1,GK,Hugo Lloris,Q1907,Hugo Lloris,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1986
+seniorm2014,senior,m,2014,France,2,DF,Mathieu Debuchy,Q1908,Mathieu Debuchy,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1985
+seniorm2014,senior,m,2014,France,3,DF,Patrice Evra,Q1916,Patrice Evra,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1981
+seniorm2014,senior,m,2014,France,4,DF,Raphaël Varane,Q489039,Raphaël Varane,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1993
+seniorm2014,senior,m,2014,France,5,DF,Mamadou Sakho,Q312183,Mamadou Sakho,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1990
+seniorm2014,senior,m,2014,France,6,MF,Yohan Cabaye,Q1910,Yohan Cabaye,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1986
+seniorm2014,senior,m,2014,France,7,MF,Rémy Cabella,Q716134,Rémy Cabella,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1990
+seniorm2014,senior,m,2014,France,8,MF,Mathieu Valbuena,Q1919,Mathieu Valbuena,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1984
+seniorm2014,senior,m,2014,France,9,FW,Olivier Giroud,Q1911,Olivier Giroud,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1986
+seniorm2014,senior,m,2014,France,10,FW,Karim Benzema,Q1912,Karim Benzema,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1987
+seniorm2014,senior,m,2014,France,11,FW,Antoine Griezmann,Q455462,Antoine Griezmann,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1991
+seniorm2014,senior,m,2014,France,12,MF,Rio Mavuba,Q314541,Rio Mavuba,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1984
+seniorm2014,senior,m,2014,France,13,DF,Eliaquim Mangala,Q579231,Eliaquim Mangala,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1991
+seniorm2014,senior,m,2014,France,14,MF,Blaise Matuidi,Q1921,Blaise Matuidi,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1987
+seniorm2014,senior,m,2014,France,15,DF,Bacary Sagna,Q1938,Bacary Sagna,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1983
+seniorm2014,senior,m,2014,France,16,GK,Stéphane Ruffier,Q439185,Stéphane Ruffier,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1986
+seniorm2014,senior,m,2014,France,17,DF,Lucas Digne,Q72648,Lucas Digne,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1993
+seniorm2014,senior,m,2014,France,18,MF,Moussa Sissoko,Q60545,Moussa Sissoko,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1989
+seniorm2014,senior,m,2014,France,19,MF,Paul Pogba,Q129027,Paul Pogba,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1993
+seniorm2014,senior,m,2014,France,20,FW,Loïc Rémy,Q114859,Loïc Rémy,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1987
+seniorm2014,senior,m,2014,France,21,DF,Laurent Koscielny,Q1915,Laurent Koscielny,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1985
+seniorm2014,senior,m,2014,France,22,MF,Morgan Schneiderlin,Q1361462,Morgan Schneiderlin,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1989
+seniorm2014,senior,m,2014,France,23,GK,Mickaël Landreau,Q149933,Mickaël Landreau,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1979
+seniorm2014,senior,m,2014,Honduras,1,GK,"Luis López (footballer, born September 1993)",Q16301232,Luis López,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1993
+seniorm2014,senior,m,2014,Honduras,2,DF,Osman Chávez,Q552821,Osman Chávez,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1984
+seniorm2014,senior,m,2014,Honduras,3,DF,Maynor Figueroa,Q312064,Maynor Figueroa,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1983
+seniorm2014,senior,m,2014,Honduras,4,DF,Juan Pablo Montes,Q3607491,Juan Pablo Montes,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1985
+seniorm2014,senior,m,2014,Honduras,5,DF,Víctor Bernárdez,Q462522,Víctor Bernárdez,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1982
+seniorm2014,senior,m,2014,Honduras,6,DF,Juan Carlos García (Honduran footballer),Q3699363,Juan Carlos García,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1988
+seniorm2014,senior,m,2014,Honduras,7,DF,Emilio Izaguirre,Q350415,Emilio Izaguirre,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1986
+seniorm2014,senior,m,2014,Honduras,8,MF,Wilson Palacios,Q299503,Wilson Palacios,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1984
+seniorm2014,senior,m,2014,Honduras,9,FW,Jerry Palacios,Q511565,Jerry Palacios,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1981
+seniorm2014,senior,m,2014,Honduras,10,MF,"Mario Martínez (footballer, born 1989)",Q1367612,Mario Martínez,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1989
+seniorm2014,senior,m,2014,Honduras,11,FW,Jerry Bengtson,Q1356186,Jerry Bengtson,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1987
+seniorm2014,senior,m,2014,Honduras,12,MF,Edder Delgado,Q304507,Edder Delgado,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1986
+seniorm2014,senior,m,2014,Honduras,13,FW,Carlo Costly,Q922706,Carlo Costly,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1982
+seniorm2014,senior,m,2014,Honduras,14,MF,Boniek García,Q618646,Boniek García,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1984
+seniorm2014,senior,m,2014,Honduras,15,MF,Roger Espinoza,Q510862,Roger Espinoza,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1986
+seniorm2014,senior,m,2014,Honduras,16,FW,Rony Martínez,Q13848103,Rony Martínez,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1987
+seniorm2014,senior,m,2014,Honduras,17,MF,Andy Najar,Q526854,Andy Najar,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1993
+seniorm2014,senior,m,2014,Honduras,18,GK,Noel Valladares,Q439899,Noel Valladares,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1977
+seniorm2014,senior,m,2014,Honduras,19,MF,Luis Garrido,Q3699218,Luis Garrido,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1990
+seniorm2014,senior,m,2014,Honduras,20,MF,Jorge Claros,Q43953,Jorge Claros,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1986
+seniorm2014,senior,m,2014,Honduras,21,DF,Brayan Beckeles,Q4958539,Brayan Beckeles,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1985
+seniorm2014,senior,m,2014,Honduras,22,GK,Donis Escober,Q716011,Donis Escober,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1980
+seniorm2014,senior,m,2014,Honduras,23,MF,Marvin Chávez,Q978728,Marvin Chávez,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1983
+seniorm2014,senior,m,2014,Switzerland,1,GK,Diego Benaglio,Q122354,Diego Benaglio,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1983
+seniorm2014,senior,m,2014,Switzerland,2,DF,Stephan Lichtsteiner,Q208586,Stephan Lichtsteiner,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1984
+seniorm2014,senior,m,2014,Switzerland,3,DF,Reto Ziegler,Q31664,Reto Ziegler,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1986
+seniorm2014,senior,m,2014,Switzerland,4,DF,Philippe Senderos,Q187450,Philippe Senderos,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1985
+seniorm2014,senior,m,2014,Switzerland,5,DF,Steve von Bergen,Q316591,Steve von Bergen,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1983
+seniorm2014,senior,m,2014,Switzerland,6,DF,"Michael Lang (footballer, born 1991)",Q679530,Michael Lang,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1991
+seniorm2014,senior,m,2014,Switzerland,7,MF,Tranquillo Barnetta,Q207949,Tranquillo Barnetta,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1985
+seniorm2014,senior,m,2014,Switzerland,8,MF,Gökhan Inler,Q298448,Gökhan Inler,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1984
+seniorm2014,senior,m,2014,Switzerland,9,FW,Haris Seferovic,Q283762,Haris Seferovic,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1992
+seniorm2014,senior,m,2014,Switzerland,10,MF,Granit Xhaka,Q514427,Granit Xhaka,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1992
+seniorm2014,senior,m,2014,Switzerland,11,MF,Valon Behrami,Q217389,Valon Behrami,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1985
+seniorm2014,senior,m,2014,Switzerland,12,GK,Yann Sommer,Q667596,Yann Sommer,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1988
+seniorm2014,senior,m,2014,Switzerland,13,DF,Ricardo Rodriguez (footballer),Q666506,Ricardo Rodríguez,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1992
+seniorm2014,senior,m,2014,Switzerland,14,MF,Valentin Stocker,Q557694,Valentin Stocker,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1989
+seniorm2014,senior,m,2014,Switzerland,15,MF,Blerim Džemaili,Q253348,Blerim Džemaili,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1986
+seniorm2014,senior,m,2014,Switzerland,16,MF,Gelson Fernandes,Q213095,Gelson Fernandes,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1986
+seniorm2014,senior,m,2014,Switzerland,17,FW,Mario Gavranović,Q459184,Mario Gavranović,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1989
+seniorm2014,senior,m,2014,Switzerland,18,FW,Admir Mehmedi,Q358862,Admir Mehmedi,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1991
+seniorm2014,senior,m,2014,Switzerland,19,FW,Josip Drmić,Q2420047,Josip Drmić,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1992
+seniorm2014,senior,m,2014,Switzerland,20,DF,Johan Djourou,Q215770,Johan Djourou,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1987
+seniorm2014,senior,m,2014,Switzerland,21,GK,Roman Bürki,Q524870,Roman Bürki,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1990
+seniorm2014,senior,m,2014,Switzerland,22,DF,Fabian Schär,Q673691,Fabian Schär,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1991
+seniorm2014,senior,m,2014,Switzerland,23,MF,Xherdan Shaqiri,Q252190,Xherdan Shaqiri,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1991
+seniorm2014,senior,m,2014,Argentina,1,GK,Sergio Romero,Q215463,Sergio Romero,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1987
+seniorm2014,senior,m,2014,Argentina,2,DF,Ezequiel Garay,Q296684,Ezequiel Garay,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1986
+seniorm2014,senior,m,2014,Argentina,3,DF,Hugo Campagnaro,Q508010,Hugo Campagnaro,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1980
+seniorm2014,senior,m,2014,Argentina,4,DF,Pablo Zabaleta,Q244790,Pablo Zabaleta,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1985
+seniorm2014,senior,m,2014,Argentina,5,MF,Fernando Gago,Q187426,Fernando Gago,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1986
+seniorm2014,senior,m,2014,Argentina,6,MF,Lucas Biglia,Q436230,Lucas Biglia,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1986
+seniorm2014,senior,m,2014,Argentina,7,MF,Ángel Di María,Q251683,Ángel Di María,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1988
+seniorm2014,senior,m,2014,Argentina,8,MF,Enzo Pérez,Q926353,Enzo Pérez,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1986
+seniorm2014,senior,m,2014,Argentina,9,FW,Gonzalo Higuaín,Q483846,Gonzalo Higuaín,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1987
+seniorm2014,senior,m,2014,Argentina,10,FW,Lionel Messi,Q615,Lionel Messi,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1987
+seniorm2014,senior,m,2014,Argentina,11,MF,Maxi Rodríguez,Q190929,Maxi Rodríguez,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1981
+seniorm2014,senior,m,2014,Argentina,12,GK,Agustín Orión,Q399379,Agustín Orión,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1981
+seniorm2014,senior,m,2014,Argentina,13,MF,Augusto Fernández,Q545665,Augusto Fernández,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1986
+seniorm2014,senior,m,2014,Argentina,14,MF,Javier Mascherano,Q161571,Javier Mascherano,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1984
+seniorm2014,senior,m,2014,Argentina,15,DF,Martín Demichelis,Q150947,Martín Demichelis,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1980
+seniorm2014,senior,m,2014,Argentina,16,DF,Marcos Rojo,Q507890,Marcos Rojo,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1990
+seniorm2014,senior,m,2014,Argentina,17,DF,Federico Fernández (footballer),Q713501,Federico Fernández,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1989
+seniorm2014,senior,m,2014,Argentina,18,FW,Rodrigo Palacio,Q310635,Rodrigo Palacio,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1982
+seniorm2014,senior,m,2014,Argentina,19,MF,Ricky Álvarez,Q333793,Ricky Álvarez,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1988
+seniorm2014,senior,m,2014,Argentina,20,FW,Sergio Agüero,Q119562,Sergio Agüero,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1988
+seniorm2014,senior,m,2014,Argentina,21,GK,Mariano Andújar,Q321321,Mariano Andújar,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1983
+seniorm2014,senior,m,2014,Argentina,22,FW,Ezequiel Lavezzi,Q275415,Ezequiel Lavezzi,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1985
+seniorm2014,senior,m,2014,Argentina,23,DF,José María Basanta,Q2012626,José María Basanta,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1984
+seniorm2014,senior,m,2014,Bosnia and Herzegovina,1,GK,Asmir Begović,Q431368,Asmir Begović,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1987
+seniorm2014,senior,m,2014,Bosnia and Herzegovina,2,DF,Avdija Vršajević,Q678797,Avdija Vršajević,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1986
+seniorm2014,senior,m,2014,Bosnia and Herzegovina,3,DF,Ermin Bičakčić,Q75993,Ermin Bičakčić,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1990
+seniorm2014,senior,m,2014,Bosnia and Herzegovina,4,DF,Emir Spahić,Q253163,Emir Spahić,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1980
+seniorm2014,senior,m,2014,Bosnia and Herzegovina,5,DF,Sead Kolašinac,Q127914,Sead Kolašinac,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1993
+seniorm2014,senior,m,2014,Bosnia and Herzegovina,6,DF,Ognjen Vranješ,Q651967,Ognjen Vranješ,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1989
+seniorm2014,senior,m,2014,Bosnia and Herzegovina,7,DF,Muhamed Bešić,Q369771,Muhamed Bešić,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1992
+seniorm2014,senior,m,2014,Bosnia and Herzegovina,8,MF,Miralem Pjanić,Q146907,Miralem Pjanić,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1990
+seniorm2014,senior,m,2014,Bosnia and Herzegovina,9,FW,Vedad Ibišević,Q155604,Vedad Ibišević,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1984
+seniorm2014,senior,m,2014,Bosnia and Herzegovina,10,MF,Zvjezdan Misimović,Q158243,Zvjezdan Misimović,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1982
+seniorm2014,senior,m,2014,Bosnia and Herzegovina,11,FW,Edin Džeko,Q153786,Edin Džeko,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1986
+seniorm2014,senior,m,2014,Bosnia and Herzegovina,12,GK,Jasmin Fejzić,Q1683804,Jasmin Fejzić,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1986
+seniorm2014,senior,m,2014,Bosnia and Herzegovina,13,DF,Mensur Mujdža,Q129045,Mensur Mujdža,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1984
+seniorm2014,senior,m,2014,Bosnia and Herzegovina,14,MF,Tino-Sven Sušić,Q2913173,Tino-Sven Sušić,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1992
+seniorm2014,senior,m,2014,Bosnia and Herzegovina,15,DF,Toni Šunjić,Q2319654,Toni Šunjić,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1988
+seniorm2014,senior,m,2014,Bosnia and Herzegovina,16,MF,Senad Lulić,Q453512,Senad Lulić,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1986
+seniorm2014,senior,m,2014,Bosnia and Herzegovina,17,MF,Senijad Ibričić,Q715775,Senijad Ibričić,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1985
+seniorm2014,senior,m,2014,Bosnia and Herzegovina,18,MF,Haris Medunjanin,Q361153,Haris Medunjanin,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1985
+seniorm2014,senior,m,2014,Bosnia and Herzegovina,19,FW,Edin Višća,Q550742,Edin Višća,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1990
+seniorm2014,senior,m,2014,Bosnia and Herzegovina,20,MF,Izet Hajrović,Q679318,Izet Hajrović,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1991
+seniorm2014,senior,m,2014,Bosnia and Herzegovina,21,MF,Anel Hadžić,Q528973,Anel Hadžić,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1989
+seniorm2014,senior,m,2014,Bosnia and Herzegovina,22,GK,Asmir Avdukić,Q733202,Asmir Avdukić,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1981
+seniorm2014,senior,m,2014,Bosnia and Herzegovina,23,MF,Sejad Salihović,Q361199,Sejad Salihović,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1984
+seniorm2014,senior,m,2014,Iran,1,GK,Rahman Ahmadi,Q7283479,Rahman Ahmadi,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1980
+seniorm2014,senior,m,2014,Iran,2,DF,Khosro Heydari,Q6402540,Khosro Heydari,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1983
+seniorm2014,senior,m,2014,Iran,3,DF,Ehsan Hajsafi,Q2762113,Ehsan Hajsafi,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1990
+seniorm2014,senior,m,2014,Iran,4,DF,Jalal Hosseini,Q1189661,Jalal Hosseini,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1982
+seniorm2014,senior,m,2014,Iran,5,DF,Amir Hossein Sadeghi,Q472035,Amir Hossein Sadeghi,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1981
+seniorm2014,senior,m,2014,Iran,6,MF,Javad Nekounam,Q315008,Javad Nekounam,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1980
+seniorm2014,senior,m,2014,Iran,7,FW,Masoud Shojaei,Q350867,Masoud Shojaei,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1984
+seniorm2014,senior,m,2014,Iran,8,DF,Reza Haghighi,Q7319742,Reza Haghighi,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1989
+seniorm2014,senior,m,2014,Iran,9,FW,Alireza Jahanbakhsh,Q4406552,Alireza Jahanbakhsh,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1993
+seniorm2014,senior,m,2014,Iran,10,FW,Karim Ansarifard,Q1367592,Karim Ansarifard,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1990
+seniorm2014,senior,m,2014,Iran,11,MF,Ghasem Haddadifar,Q5555828,Ghasem Haddadifar,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1983
+seniorm2014,senior,m,2014,Iran,12,GK,Alireza Haghighi,Q2612247,Alireza Haghighi,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1988
+seniorm2014,senior,m,2014,Iran,13,DF,Hossein Mahini,Q5909088,Hossein Mahini,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1986
+seniorm2014,senior,m,2014,Iran,14,MF,Andranik Teymourian,Q314996,Andranik Teymourian,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1983
+seniorm2014,senior,m,2014,Iran,15,DF,Pejman Montazeri,Q7161009,Pejman Montazeri,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1983
+seniorm2014,senior,m,2014,Iran,16,FW,Reza Ghoochannejhad,Q2119310,Reza Ghoochannejhad,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1987
+seniorm2014,senior,m,2014,Iran,17,DF,Ahmad Alenemeh,Q4695254,Ahmad Alenemeh,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1982
+seniorm2014,senior,m,2014,Iran,18,MF,Bakhtiar Rahmani,Q4849410,Bakhtiar Rahmani,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1991
+seniorm2014,senior,m,2014,Iran,19,DF,Hashem Beikzadeh,Q5678913,Hashem Beikzadeh,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1984
+seniorm2014,senior,m,2014,Iran,20,DF,Steven Beitashour,Q528337,Steven Beitashour,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1987
+seniorm2014,senior,m,2014,Iran,21,MF,Ashkan Dejagah,Q434136,Ashkan Dejagah,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1986
+seniorm2014,senior,m,2014,Iran,22,GK,Daniel Davari,Q577804,Daniel Davari,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1988
+seniorm2014,senior,m,2014,Iran,23,DF,Mehrdad Pooladi,Q6809832,Mehrdad Pooladi,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1987
+seniorm2014,senior,m,2014,Nigeria,1,GK,Vincent Enyeama,Q147172,Vincent Enyeama,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1982
+seniorm2014,senior,m,2014,Nigeria,2,DF,Joseph Yobo,Q147896,Joseph Yobo,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1980
+seniorm2014,senior,m,2014,Nigeria,3,MF,Ejike Uzoenyi,Q3078237,Ejike Uzoenyi,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1992
+seniorm2014,senior,m,2014,Nigeria,4,MF,Reuben Gabriel,Q3177131,Reuben Gabriel,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1990
+seniorm2014,senior,m,2014,Nigeria,5,DF,Efe Ambrose,Q2110494,Efe Ambrose,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1988
+seniorm2014,senior,m,2014,Nigeria,6,DF,Azubuike Egwuekwe,Q794244,Azubuike Egwuekwe,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1989
+seniorm2014,senior,m,2014,Nigeria,7,FW,Ahmed Musa,Q401418,Ahmed Musa,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1992
+seniorm2014,senior,m,2014,Nigeria,8,FW,Peter Odemwingie,Q311329,Peter Odemwingie,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1981
+seniorm2014,senior,m,2014,Nigeria,9,FW,Emmanuel Emenike,Q918473,Emmanuel Emenike,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1987
+seniorm2014,senior,m,2014,Nigeria,10,MF,Mikel John Obi,Q166984,John Obi Mikel,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1987
+seniorm2014,senior,m,2014,Nigeria,11,MF,Victor Moses,Q295637,Victor Moses,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1990
+seniorm2014,senior,m,2014,Nigeria,12,DF,Kunle Odunlami,Q15901357,Kunle Odunlami,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1991
+seniorm2014,senior,m,2014,Nigeria,13,DF,Juwon Oshaniwa,Q3078601,Juwon Oshaniwa,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1990
+seniorm2014,senior,m,2014,Nigeria,14,DF,Godfrey Oboabona,Q3177363,Godfrey Oboabona,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1990
+seniorm2014,senior,m,2014,Nigeria,15,MF,Ramon Azeez,Q3418515,Ramon Azeez,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1992
+seniorm2014,senior,m,2014,Nigeria,16,GK,Austin Ejide,Q147133,Austin Ejide,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1984
+seniorm2014,senior,m,2014,Nigeria,17,MF,Ogenyi Onazi,Q115879,Ogenyi Onazi,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1992
+seniorm2014,senior,m,2014,Nigeria,18,MF,Michael Babatunde,Q2477110,Michael Babatunde,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1992
+seniorm2014,senior,m,2014,Nigeria,19,FW,Uche Nwofor,Q862977,Uche Nwofor,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1991
+seniorm2014,senior,m,2014,Nigeria,20,FW,Michael Uchebo,Q736457,Michael Uchebo,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1990
+seniorm2014,senior,m,2014,Nigeria,21,GK,Chigozie Agbim,Q3177055,Chigozie Agbim,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1984
+seniorm2014,senior,m,2014,Nigeria,22,DF,Kenneth Omeruo,Q182041,Kenneth Omeruo,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1993
+seniorm2014,senior,m,2014,Nigeria,23,FW,Shola Ameobi,Q313085,Shola Ameobi,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1981
+seniorm2014,senior,m,2014,Germany,1,GK,Manuel Neuer,Q107365,Manuel Neuer,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1986
+seniorm2014,senior,m,2014,Germany,2,DF,Kevin Großkreutz,Q158367,Kevin Großkreutz,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1988
+seniorm2014,senior,m,2014,Germany,3,DF,Matthias Ginter,Q129109,Matthias Ginter,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1994
+seniorm2014,senior,m,2014,Germany,4,DF,Benedikt Höwedes,Q152897,Benedikt Höwedes,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1988
+seniorm2014,senior,m,2014,Germany,5,DF,Mats Hummels,Q110053,Mats Hummels,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1988
+seniorm2014,senior,m,2014,Germany,6,MF,Sami Khedira,Q54094,Sami Khedira,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1987
+seniorm2014,senior,m,2014,Germany,7,MF,Bastian Schweinsteiger,Q44298,Bastian Schweinsteiger,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1984
+seniorm2014,senior,m,2014,Germany,8,MF,Mesut Özil,Q83488,Mesut Özil,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1988
+seniorm2014,senior,m,2014,Germany,9,FW,André Schürrle,Q58377,André Schürrle,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1990
+seniorm2014,senior,m,2014,Germany,10,FW,Lukas Podolski,Q134976,Lukas Podolski,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1985
+seniorm2014,senior,m,2014,Germany,11,FW,Miroslav Klose,Q80471,Miroslav Klose,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1978
+seniorm2014,senior,m,2014,Germany,12,GK,Ron-Robert Zieler,Q155049,Ron-Robert Zieler,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1989
+seniorm2014,senior,m,2014,Germany,13,FW,Thomas Müller,Q43666,Thomas Müller,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1989
+seniorm2014,senior,m,2014,Germany,14,MF,Julian Draxler,Q315697,Julian Draxler,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1993
+seniorm2014,senior,m,2014,Germany,15,DF,Erik Durm,Q823064,Erik Durm,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1992
+seniorm2014,senior,m,2014,Germany,16,DF,Philipp Lahm,Q43682,Philipp Lahm,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1983
+seniorm2014,senior,m,2014,Germany,17,DF,Per Mertesacker,Q70550,Per Mertesacker,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1984
+seniorm2014,senior,m,2014,Germany,18,MF,Toni Kroos,Q131234,Toni Kroos,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1990
+seniorm2014,senior,m,2014,Germany,19,MF,Mario Götze,Q104454,Mario Götze,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1992
+seniorm2014,senior,m,2014,Germany,20,DF,Jérôme Boateng,Q151260,Jérôme Boateng,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1988
+seniorm2014,senior,m,2014,Germany,21,DF,Shkodran Mustafi,Q694014,Shkodran Mustafi,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1992
+seniorm2014,senior,m,2014,Germany,22,GK,Roman Weidenfeller,Q154397,Roman Weidenfeller,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1980
+seniorm2014,senior,m,2014,Germany,23,MF,Christoph Kramer,Q1085348,Christoph Kramer,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1991
+seniorm2014,senior,m,2014,Ghana,1,GK,Stephen Adams (footballer),Q10374201,Stephen Adams,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1989
+seniorm2014,senior,m,2014,Ghana,2,DF,Samuel Inkoom,Q350168,Samuel Inkoom,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1989
+seniorm2014,senior,m,2014,Ghana,3,FW,Asamoah Gyan,Q222746,Asamoah Gyan,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1985
+seniorm2014,senior,m,2014,Ghana,4,DF,Daniel Opare,Q932907,Daniel Opare,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1990
+seniorm2014,senior,m,2014,Ghana,5,MF,Michael Essien,Q969520,Michael Essien,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1982
+seniorm2014,senior,m,2014,Ghana,6,MF,Afriyie Acquah,Q2707160,Afriyie Acquah,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1992
+seniorm2014,senior,m,2014,Ghana,7,MF,Christian Atsu,Q919182,Christian Atsu,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1992
+seniorm2014,senior,m,2014,Ghana,8,MF,Emmanuel Agyemang-Badu,Q511220,Emmanuel Agyemang-Badu,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1990
+seniorm2014,senior,m,2014,Ghana,9,FW,Kevin-Prince Boateng,Q151034,Kevin-Prince Boateng,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1987
+seniorm2014,senior,m,2014,Ghana,10,MF,André Ayew,Q516921,André Ayew,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1989
+seniorm2014,senior,m,2014,Ghana,11,MF,Sulley Muntari,Q193768,Sulley Muntari,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1984
+seniorm2014,senior,m,2014,Ghana,12,GK,Adam Larsen Kwarasey,Q350277,Adam Larsen Kwarasey,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1987
+seniorm2014,senior,m,2014,Ghana,13,FW,Jordan Ayew,Q367861,Jordan Ayew,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1991
+seniorm2014,senior,m,2014,Ghana,14,MF,Albert Adomah,Q2673319,Albert Adomah,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1987
+seniorm2014,senior,m,2014,Ghana,15,DF,Rashid Sumaila,Q2944024,Rashid Sumaila,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1992
+seniorm2014,senior,m,2014,Ghana,16,GK,Fatau Dauda,Q612337,Fatau Dauda,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1985
+seniorm2014,senior,m,2014,Ghana,17,MF,Mohammed Rabiu,Q44748,Mohammed Rabiu,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1989
+seniorm2014,senior,m,2014,Ghana,18,FW,Abdul Majeed Waris,Q317347,Abdul Majeed Waris,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1991
+seniorm2014,senior,m,2014,Ghana,19,DF,Jonathan Mensah,Q44878,Jonathan Mensah,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1990
+seniorm2014,senior,m,2014,Ghana,20,MF,Kwadwo Asamoah,Q298466,Kwadwo Asamoah,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1988
+seniorm2014,senior,m,2014,Ghana,21,DF,John Boye,Q716118,John Boye,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1987
+seniorm2014,senior,m,2014,Ghana,22,MF,Mubarak Wakaso,Q980653,Mubarak Wakaso,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1990
+seniorm2014,senior,m,2014,Ghana,23,DF,Harrison Afful,Q577537,Harrison Afful,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1986
+seniorm2014,senior,m,2014,Portugal,1,GK,Eduardo Carvalho,Q299768,Eduardo,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1982
+seniorm2014,senior,m,2014,Portugal,2,DF,Bruno Alves,Q193000,Bruno Alves,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1981
+seniorm2014,senior,m,2014,Portugal,3,DF,"Pepe (footballer, born February 1983)",Q485697,Pepe,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1983
+seniorm2014,senior,m,2014,Portugal,4,MF,Miguel Veloso,Q244363,Miguel Veloso,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1986
+seniorm2014,senior,m,2014,Portugal,5,DF,Fábio Coentrão,Q484384,Fábio Coentrão,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1988
+seniorm2014,senior,m,2014,Portugal,6,MF,William Carvalho,Q304416,William Carvalho,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1992
+seniorm2014,senior,m,2014,Portugal,7,FW,Cristiano Ronaldo,Q11571,Cristiano Ronaldo,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1985
+seniorm2014,senior,m,2014,Portugal,8,MF,João Moutinho,Q222151,João Moutinho,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1986
+seniorm2014,senior,m,2014,Portugal,9,FW,Hugo Almeida,Q105887,Hugo Almeida,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1984
+seniorm2014,senior,m,2014,Portugal,10,MF,Vieirinha,Q355193,Vieirinha,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1986
+seniorm2014,senior,m,2014,Portugal,11,FW,"Eder (footballer, born 1987)",Q273776,Eder,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1987
+seniorm2014,senior,m,2014,Portugal,12,GK,Rui Patrício,Q294980,Rui Patrício,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1988
+seniorm2014,senior,m,2014,Portugal,13,DF,"Ricardo Costa (footballer, born 1981)",Q154390,Ricardo Costa,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1981
+seniorm2014,senior,m,2014,Portugal,14,DF,Luís Neto,Q428603,Luís Neto,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1988
+seniorm2014,senior,m,2014,Portugal,15,MF,Rafa Silva,Q15907851,Rafa Silva,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1993
+seniorm2014,senior,m,2014,Portugal,16,MF,Raul Meireles,Q175296,Raul Meireles,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1983
+seniorm2014,senior,m,2014,Portugal,17,MF,Nani (footballer),Q482947,Nani,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1986
+seniorm2014,senior,m,2014,Portugal,18,MF,Silvestre Varela,Q276402,Silvestre Varela,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1985
+seniorm2014,senior,m,2014,Portugal,19,DF,"André Almeida (footballer, born 1990)",Q1496559,André Almeida,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1990
+seniorm2014,senior,m,2014,Portugal,20,MF,Ruben Amorim,Q368682,Ruben Amorim,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1985
+seniorm2014,senior,m,2014,Portugal,21,DF,"João Pereira (footballer, born 1984)",Q192565,João Pereira,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1984
+seniorm2014,senior,m,2014,Portugal,22,GK,"Beto (footballer, born 1982)",Q313955,Beto,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1982
+seniorm2014,senior,m,2014,Portugal,23,FW,Hélder Postiga,Q214117,Hélder Postiga,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1982
+seniorm2014,senior,m,2014,United States,1,GK,Tim Howard,Q200785,Tim Howard,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1979
+seniorm2014,senior,m,2014,United States,2,DF,DeAndre Yedlin,Q6381120,DeAndre Yedlin,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1993
+seniorm2014,senior,m,2014,United States,3,DF,Omar Gonzalez,Q571693,Omar Gonzalez,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1988
+seniorm2014,senior,m,2014,United States,4,MF,Michael Bradley (soccer),Q208425,Michael Bradley,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1987
+seniorm2014,senior,m,2014,United States,5,DF,Matt Besler,Q166558,Matt Besler,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1987
+seniorm2014,senior,m,2014,United States,6,DF,"John Brooks (soccer, born 1993)",Q821211,John Brooks,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1993
+seniorm2014,senior,m,2014,United States,7,DF,DaMarcus Beasley,Q313035,DaMarcus Beasley,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1982
+seniorm2014,senior,m,2014,United States,8,FW,Clint Dempsey,Q201860,Clint Dempsey,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1983
+seniorm2014,senior,m,2014,United States,9,FW,Aron Jóhannsson,Q48554,Aron Jóhannsson,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1990
+seniorm2014,senior,m,2014,United States,10,MF,Mix Diskerud,Q225583,Mix Diskerud,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1990
+seniorm2014,senior,m,2014,United States,11,MF,Alejandro Bedoya,Q1362545,Alejandro Bedoya,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1987
+seniorm2014,senior,m,2014,United States,12,GK,Brad Guzan,Q219167,Brad Guzan,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1984
+seniorm2014,senior,m,2014,United States,13,MF,Jermaine Jones,Q280829,Jermaine Jones,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1981
+seniorm2014,senior,m,2014,United States,14,MF,Brad Davis (soccer),Q890635,Brad Davis,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1981
+seniorm2014,senior,m,2014,United States,15,MF,Kyle Beckerman,Q1763892,Kyle Beckerman,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1982
+seniorm2014,senior,m,2014,United States,16,MF,Julian Green,Q15241424,Julian Green,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1995
+seniorm2014,senior,m,2014,United States,17,FW,Jozy Altidore,Q208619,Jozy Altidore,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1989
+seniorm2014,senior,m,2014,United States,18,FW,Chris Wondolowski,Q1077877,Chris Wondolowski,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1983
+seniorm2014,senior,m,2014,United States,19,MF,Graham Zusi,Q29708,Graham Zusi,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1986
+seniorm2014,senior,m,2014,United States,20,DF,Geoff Cameron,Q1362010,Geoff Cameron,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1985
+seniorm2014,senior,m,2014,United States,21,DF,Timothy Chandler,Q65297,Timothy Chandler,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1990
+seniorm2014,senior,m,2014,United States,22,GK,Nick Rimando,Q1356730,Nick Rimando,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1979
+seniorm2014,senior,m,2014,United States,23,DF,Fabian Johnson,Q529815,Fabian Johnson,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1987
+seniorm2014,senior,m,2014,Algeria,1,GK,Cédric Si Mohamed,Q3009954,Cédric Si Mohamed,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1985
+seniorm2014,senior,m,2014,Algeria,2,DF,Madjid Bougherra,Q350377,Madjid Bougherra,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1982
+seniorm2014,senior,m,2014,Algeria,3,DF,Faouzi Ghoulam,Q2484011,Faouzi Ghoulam,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1991
+seniorm2014,senior,m,2014,Algeria,4,DF,Essaïd Belkalem,Q2113669,Essaïd Belkalem,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1989
+seniorm2014,senior,m,2014,Algeria,5,DF,Rafik Halliche,Q314722,Rafik Halliche,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1986
+seniorm2014,senior,m,2014,Algeria,6,DF,Djamel Mesbah,Q316479,Djamel Mesbah,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1984
+seniorm2014,senior,m,2014,Algeria,7,MF,Hassan Yebda,Q329501,Hassan Yebda,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1984
+seniorm2014,senior,m,2014,Algeria,8,MF,Medhi Lacen,Q431562,Mehdi Lacen,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1984
+seniorm2014,senior,m,2014,Algeria,9,FW,Nabil Ghilas,Q8314759,Nabil Ghilas,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1990
+seniorm2014,senior,m,2014,Algeria,10,MF,Sofiane Feghouli,Q334890,Sofiane Feghouli,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1989
+seniorm2014,senior,m,2014,Algeria,11,MF,Yacine Brahimi,Q767469,Yacine Brahimi,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1990
+seniorm2014,senior,m,2014,Algeria,12,DF,Carl Medjani,Q368416,Carl Medjani,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1985
+seniorm2014,senior,m,2014,Algeria,13,FW,Islam Slimani,Q1347269,Islam Slimani,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1988
+seniorm2014,senior,m,2014,Algeria,14,MF,Nabil Bentaleb,Q15410320,Nabil Bentaleb,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1994
+seniorm2014,senior,m,2014,Algeria,15,FW,Hillal Soudani,Q922291,Hillal Soudani,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1987
+seniorm2014,senior,m,2014,Algeria,16,GK,Mohamed Lamine Zemmamouche,Q2618042,Mohamed Lamine Zemmamouche,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1985
+seniorm2014,senior,m,2014,Algeria,17,DF,Liassine Cadamuro,Q2526070,Liassine Cadamuro-Bentaïba,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1988
+seniorm2014,senior,m,2014,Algeria,18,MF,Abdelmoumene Djabou,Q2821193,Abdelmoumene Djabou,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1987
+seniorm2014,senior,m,2014,Algeria,19,MF,Saphir Taïder,Q867245,Saphir Taïder,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1992
+seniorm2014,senior,m,2014,Algeria,20,DF,Aïssa Mandi,Q2876432,Aïssa Mandi,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1991
+seniorm2014,senior,m,2014,Algeria,21,MF,Riyad Mahrez,Q8338725,Riyad Mahrez,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1991
+seniorm2014,senior,m,2014,Algeria,22,MF,Mehdi Mostefa,Q27523,Mehdi Mostefa,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1983
+seniorm2014,senior,m,2014,Algeria,23,GK,Raïs M'Bolhi,Q321552,Raïs M'Bolhi,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1986
+seniorm2014,senior,m,2014,Belgium,1,GK,Thibaut Courtois,Q73360,Thibaut Courtois,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1992
+seniorm2014,senior,m,2014,Belgium,2,DF,Toby Alderweireld,Q128840,Toby Alderweireld,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1989
+seniorm2014,senior,m,2014,Belgium,3,DF,Thomas Vermaelen,Q184177,Thomas Vermaelen,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1985
+seniorm2014,senior,m,2014,Belgium,4,DF,Vincent Kompany,Q201381,Vincent Kompany,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1986
+seniorm2014,senior,m,2014,Belgium,5,DF,Jan Vertonghen,Q313170,Jan Vertonghen,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1987
+seniorm2014,senior,m,2014,Belgium,6,MF,Axel Witsel,Q151838,Axel Witsel,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1989
+seniorm2014,senior,m,2014,Belgium,7,MF,Kevin De Bruyne,Q357984,Kevin De Bruyne,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1991
+seniorm2014,senior,m,2014,Belgium,8,MF,Marouane Fellaini,Q275169,Marouane Fellaini,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1987
+seniorm2014,senior,m,2014,Belgium,9,FW,Romelu Lukaku,Q313316,Romelu Lukaku,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1993
+seniorm2014,senior,m,2014,Belgium,10,MF,Eden Hazard,Q214204,Eden Hazard,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1991
+seniorm2014,senior,m,2014,Belgium,11,MF,Kevin Mirallas,Q316917,Kevin Mirallas,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1987
+seniorm2014,senior,m,2014,Belgium,12,GK,Simon Mignolet,Q125460,Simon Mignolet,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1988
+seniorm2014,senior,m,2014,Belgium,13,GK,Sammy Bossut,Q519844,Sammy Bossut,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1985
+seniorm2014,senior,m,2014,Belgium,14,FW,Dries Mertens,Q11954,Dries Mertens,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1987
+seniorm2014,senior,m,2014,Belgium,15,DF,Daniel Van Buyten,Q44309,Daniel Van Buyten,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1978
+seniorm2014,senior,m,2014,Belgium,16,MF,Steven Defour,Q430865,Steven Defour,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1988
+seniorm2014,senior,m,2014,Belgium,17,FW,Divock Origi,Q4254043,Divock Origi,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1995
+seniorm2014,senior,m,2014,Belgium,18,DF,Nicolas Lombaerts,Q437457,Nicolas Lombaerts,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1985
+seniorm2014,senior,m,2014,Belgium,19,MF,Mousa Dembélé (Belgian footballer),Q59194,Mousa Dembélé,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1987
+seniorm2014,senior,m,2014,Belgium,20,MF,Adnan Januzaj,Q14558450,Adnan Januzaj,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1995
+seniorm2014,senior,m,2014,Belgium,21,DF,Anthony Vanden Borre,Q363303,Anthony Vanden Borre,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1987
+seniorm2014,senior,m,2014,Belgium,22,MF,Nacer Chadli,Q795451,Nacer Chadli,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1989
+seniorm2014,senior,m,2014,Belgium,23,DF,Laurent Ciman,Q1100297,Laurent Ciman,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1985
+seniorm2014,senior,m,2014,Russia,1,GK,Igor Akinfeev,Q203002,Igor Akinfeev,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1986
+seniorm2014,senior,m,2014,Russia,2,DF,"Aleksei Kozlov (footballer, born 1986)",Q2889443,Aleksei Kozlov,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1986
+seniorm2014,senior,m,2014,Russia,3,DF,Georgi Shchennikov,Q246680,Georgi Shchennikov,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1991
+seniorm2014,senior,m,2014,Russia,4,DF,Sergei Ignashevich,Q213980,Sergei Ignashevich,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1979
+seniorm2014,senior,m,2014,Russia,5,DF,"Andrei Semyonov (footballer, born 1989)",Q4415787,Andrei Semyonov,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1989
+seniorm2014,senior,m,2014,Russia,6,FW,Maksim Kanunnikov,Q1343661,Maksim Kanunnikov,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1991
+seniorm2014,senior,m,2014,Russia,7,MF,Igor Denisov,Q188921,Igor Denisov,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1984
+seniorm2014,senior,m,2014,Russia,8,MF,Denis Glushakov,Q314386,Denis Glushakov,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1987
+seniorm2014,senior,m,2014,Russia,9,FW,Aleksandr Kokorin,Q39233,Aleksandr Kokorin,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1991
+seniorm2014,senior,m,2014,Russia,10,MF,Alan Dzagoev,Q20469,Alan Dzagoev,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1990
+seniorm2014,senior,m,2014,Russia,11,FW,Aleksandr Kerzhakov,Q201866,Aleksandr Kerzhakov,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1982
+seniorm2014,senior,m,2014,Russia,12,GK,Yuri Lodygin,Q12875294,Yuri Lodygin,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1990
+seniorm2014,senior,m,2014,Russia,13,DF,Vladimir Granat,Q316929,Vladimir Granat,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1987
+seniorm2014,senior,m,2014,Russia,14,DF,Vasili Berezutski,Q311349,Vasili Berezutski,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1982
+seniorm2014,senior,m,2014,Russia,15,MF,Pavel Mogilevets,Q14658697,Pavel Mogilevets,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1993
+seniorm2014,senior,m,2014,Russia,16,GK,Sergey Ryzhikov (footballer),Q714070,Sergey Ryzhikov,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1980
+seniorm2014,senior,m,2014,Russia,17,MF,Oleg Shatov,Q2037238,Oleg Shatov,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1990
+seniorm2014,senior,m,2014,Russia,18,DF,Yuri Zhirkov,Q184261,Yuri Zhirkov,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1983
+seniorm2014,senior,m,2014,Russia,19,FW,Aleksandr Samedov,Q2416149,Aleksandr Samedov,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1984
+seniorm2014,senior,m,2014,Russia,20,MF,Viktor Fayzulin,Q559154,Viktor Fayzulin,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1986
+seniorm2014,senior,m,2014,Russia,21,FW,Aleksei Ionov,Q2310004,Aleksei Ionov,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1989
+seniorm2014,senior,m,2014,Russia,22,DF,Andrey Yeshchenko,Q2628580,Andrey Yeshchenko,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1984
+seniorm2014,senior,m,2014,Russia,23,DF,Dmitri Kombarov,Q275512,Dmitri Kombarov,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1987
+seniorm2014,senior,m,2014,South Korea,1,GK,Jung Sung-ryong,Q350199,Jung Sung-ryong,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1985
+seniorm2014,senior,m,2014,South Korea,2,DF,Kim Chang-soo,Q497337,Kim Chang-soo,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1985
+seniorm2014,senior,m,2014,South Korea,3,DF,Yun Suk-young,Q485775,Yun Suk-young,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1990
+seniorm2014,senior,m,2014,South Korea,4,DF,Kwak Tae-hwi,Q483471,Kwak Tae-hwi,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1981
+seniorm2014,senior,m,2014,South Korea,5,DF,Kim Young-gwon,Q168530,Kim Young-gwon,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1990
+seniorm2014,senior,m,2014,South Korea,6,DF,Hwang Seok-ho,Q623387,Hwang Seok-ho,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1989
+seniorm2014,senior,m,2014,South Korea,7,MF,Kim Bo-kyung,Q368408,Kim Bo-kyung,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1989
+seniorm2014,senior,m,2014,South Korea,8,MF,Ha Dae-sung,Q626249,Ha Dae-sung,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1985
+seniorm2014,senior,m,2014,South Korea,9,FW,Son Heung-min,Q439722,Son Heung-min,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1992
+seniorm2014,senior,m,2014,South Korea,10,FW,Park Chu-young,Q210928,Park Chu-young,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1985
+seniorm2014,senior,m,2014,South Korea,11,FW,"Lee Keun-ho (footballer, born 1985)",Q494266,Lee Keun-ho,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1985
+seniorm2014,senior,m,2014,South Korea,12,DF,"Lee Yong (footballer, born 1986)",Q6515614,Lee Yong,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1986
+seniorm2014,senior,m,2014,South Korea,13,MF,Koo Ja-cheol,Q348543,Koo Ja-cheol,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1989
+seniorm2014,senior,m,2014,South Korea,14,MF,Han Kook-young,Q492572,Han Kook-young,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1990
+seniorm2014,senior,m,2014,South Korea,15,MF,Park Jong-woo,Q485436,Park Jong-woo,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1989
+seniorm2014,senior,m,2014,South Korea,16,MF,Ki Sung-yueng,Q313083,Ki Sung-yueng,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1989
+seniorm2014,senior,m,2014,South Korea,17,MF,Lee Chung-yong,Q217104,Lee Chung-yong,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1988
+seniorm2014,senior,m,2014,South Korea,18,FW,Kim Shin-wook,Q488717,Kim Shin-wook,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1988
+seniorm2014,senior,m,2014,South Korea,19,FW,Ji Dong-won,Q371788,Ji Dong-won,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1991
+seniorm2014,senior,m,2014,South Korea,20,DF,Hong Jeong-ho,Q488923,Hong Jeong-ho,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1989
+seniorm2014,senior,m,2014,South Korea,21,GK,Kim Seung-gyu,Q6409355,Kim Seung-gyu,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1990
+seniorm2014,senior,m,2014,South Korea,22,DF,Park Joo-ho,Q211698,Park Joo-ho,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1987
+seniorm2014,senior,m,2014,South Korea,23,GK,Lee Bum-young,Q497633,Lee Bum-young,https://en.wikipedia.org/wiki/2014_FIFA_World_Cup_squads,1989
