@@ -18,9 +18,17 @@ The headline metric is squad overlap, not title-to-title correlation. Title-to-t
 
 `scripts/ingest.py` fetches each edition once and extracts every federation from it, windowing through `editions_in_window()`. It is not `phase1.py` extended — `phase1.py` still applies the retired any-prior-edition rule, which is correct for the window-exempt validation and wrong for measurement, and it stays as the parser/join regression check. The two scripts no longer share output paths: `ingest.py` owns `data/squads.csv` and the other unprefixed data files, `phase1.py` writes only `phase1_`-prefixed ones, so the regression check is now free to run. See Schema.
 
-**Phase 2 overlap — not started.** `data/overlap.csv` is still unwritten. Everything it needs is now on disk; the coverage columns (`n_youth_pool`, `n_youth_pool_linked`, `youth_coverage_rate`, `n_editions_in_window`, `n_editions_held_in_window`) are already computed in `window_coverage_rates.csv` and can be carried across.
+**Phase 2 overlap — computed as a diagnostic (2026-08-03).** `scripts/overlap.py` writes `data/overlap.csv`, 184 rows, full documented column set, coverage columns carried from `window_coverage_rates.csv` and cross-checked against a recomputation. 152 squads have a defined share; the other 32 have an empty in-window youth pool and carry a null share with `n_youth_alumni` still written as 0. `finish` is empty on 181 rows because `results.csv` is a stub — see below.
 
-Read "Coverage bias" before scoping that work. The full corpus reverses the assumption this project has been carrying about which gender is better covered, and that bears directly on which senior editions can support a finding.
+**These shares are coverage statistics, not findings.** Nothing in `overlap.csv` may be reported as a result yet, and no ranked table of federations by overlap share may be produced. `scripts/diagnose_coverage.py` writes `reports/coverage_diagnostic.md`, which is what the shares were computed for.
+
+**What the diagnostic found.** Three things, all of which constrain what can be reported later:
+
+1. *Dispersion inverts the level story.* Men's per-federation windowed redlink rate is far lower (mean 18.8–22.4%) but far more dispersed (CV 0.85–0.99) than women's (mean 44.3–45.1%, CV 0.41–0.43). Women's coverage is uniformly bad; men's is bimodal, ranging 0% to 71% inside a single edition. On dispersion — which is what wrecks ranking — the men's side is the worse of the two. Do not restate "women's coverage is 2.3× worse" as if it settled which side supports a cross-federation comparison. It settles the level only.
+2. *The redlink correlation is real but moderate and concentrated in the tail.* Within-edition rank correlation between redlink rate and measured share runs −0.06 to −0.60; the pooled edition-fixed-effects figure is −0.30. It is a cliff, not a gradient: below a 30% redlink rate the correlation is near zero (men −0.05, women −0.16), above it the relationship bites (men −0.27, women −0.43). The naive pooled correlation across all six editions is +0.01 — a Simpson reversal, because women have both higher redlink rates and higher shares. Never quote the unpooled figure.
+3. *The dominant driver of measured overlap is neither coverage nor conversion.* `n_editions_ingested` — how many of its 8 in-window youth editions the federation actually appeared in — correlates +0.58 to +0.87 with share, several times the coverage effect. A federation that reached 1 youth edition has a 21-player pool and mechanically almost no chance of a high share. **`share_youth_alumni` is therefore substantially a measure of youth-tournament qualification frequency, not of youth-to-senior conversion.** This is a definitional problem with the metric, independent of the redlink gap, and it is not fixed by RSSSF or any other source. Address it before treating overlap as an answer to the project's question.
+
+Read "Coverage bias" before scoping any further work. The full corpus reverses the assumption this project carried about which gender is better covered.
 
 Phase 1 is a parser and join test, **not a measurement**, and is deliberately exempt from the age window. Its cases are Spain women's 2023 senior squad against U-20 women 2018/2022 and U-17 women 2018, and Nigeria men's 2014 and 2018 senior squads against U-17 men 2013/2015. Several of those pairings fall outside the window. This is intentional. Do not amend Phase 1 into window compliance; that would cost a cheap regression check and buy nothing.
 
@@ -72,7 +80,7 @@ Persist everything as CSV under `data/` so it stays diffable and reviewable from
 `data/overlap.csv`, derived, one row per (senior tournament, team):
 `team, gender, year, squad_size, n_youth_alumni, share_youth_alumni, n_from_u20, n_from_u17, finish, n_youth_pool, n_youth_pool_linked, youth_coverage_rate, n_editions_in_window, n_editions_held_in_window`
 
-`overlap.csv` is produced by Phase 2 only and does not exist yet. Nothing window-exempt may be written to that path — see `phase1_validation.csv` below.
+`overlap.csv` is produced by `scripts/overlap.py` only. Nothing window-exempt may be written to that path — see `phase1_validation.csv` below. `share_youth_alumni` is empty, never `0.0`, when `n_editions_held_in_window` is 0 (cannot occur in the v1 scope, guard retained) or when `n_youth_pool` is 0 (32 of 184 squads). `n_youth_alumni` is still written as 0 for those — the count is real, the share is undefined, and reading the two together is what separates "measured, nobody came through" from "no denominator". `n_from_u20 + n_from_u17` can exceed `n_youth_alumni`: a player at both a U-17 and a U-20 in the window is one alumnus and appears in both level columns.
 
 `data/window_coverage.csv`, one row per (senior squad, in-window youth edition):
 `team, gender, senior_year, youth_level, youth_year, status`
@@ -82,6 +90,8 @@ Persist everything as CSV under `data/` so it stays diffable and reviewable from
 **Two different `status` columns exist, with different value sets. Do not conflate them.** `editions.csv.status` is `exists | not_held | failed` and describes the *page*: whether a squad-list article is retrievable for that edition at all, independent of any federation. `window_coverage.csv.status` is `ingested | not_qualified | not_held | failed` and describes one *federation's relationship* to one edition. Only the latter feeds the denominator rule.
 
 **`scripts/ingest.py` is the sole writer of `data/squads.csv`**, and of `redlinks.csv`, `parse_failures.csv`, `integrity_flags.csv`, `format_variants.csv`, `window_coverage.csv` and `window_coverage_rates.csv`. No other script may write any of those paths.
+
+**`scripts/overlap.py` is the sole writer of `data/overlap.csv`**, and writes nothing else. It reads `squads.csv`, `window_coverage_rates.csv` and `results.csv` and touches no network. **`scripts/diagnose_coverage.py` is the sole writer of `reports/coverage_diagnostic.md`** and writes nothing under `data/`. Both are pure functions of what is already on disk, so either can be re-run at any time without an ingest.
 
 Everything `scripts/phase1.py` produces is prefixed `phase1_` and is owned by it alone:
 `data/phase1_squads.csv`, `data/phase1_results.csv`, `data/phase1_redlinks.csv`, `data/phase1_parse_failures.csv`, `data/phase1_validation.csv`.
