@@ -72,3 +72,7 @@ u20m2007,u20,m,2007,2007 FIFA U-20 World Cup squads,header_code_needs_expansion,
 u20m2007,u20,m,2007,2007 FIFA U-20 World Cup squads,name_wrapped_in_bold,236,player name wrapped in ''' bold '''
 u20m2007,u20,m,2007,2007 FIFA U-20 World Cup squads,no_wikidata_item,1,article carries no Wikidata item; joined on title instead
 u20m2007,u20,m,2007,2007 FIFA U-20 World Cup squads,redirect_resolved,21,article title was a redirect; canonical title used
+u20m2009,u20,m,2009,2009 FIFA U-20 World Cup squads,bluelink_to_missing_page,2,name linked to a page that does not exist; treated as a redlink
+u20m2009,u20,m,2009,2009 FIFA U-20 World Cup squads,header_code_needs_expansion,5,team header is a country code COUNTRY_CODES does not know; resolved via expandtemplates
+u20m2009,u20,m,2009,2009 FIFA U-20 World Cup squads,name_wrapped_in_bold,219,player name wrapped in ''' bold '''
+u20m2009,u20,m,2009,2009 FIFA U-20 World Cup squads,redirect_resolved,18,article title was a redirect; canonical title used
