@@ -80,3 +80,7 @@ u20m2011,u20,m,2011,2011 FIFA U-20 World Cup squads,bluelink_to_missing_page,2,n
 u20m2011,u20,m,2011,2011 FIFA U-20 World Cup squads,header_code_needs_expansion,4,team header is a country code COUNTRY_CODES does not know; resolved via expandtemplates
 u20m2011,u20,m,2011,2011 FIFA U-20 World Cup squads,name_wrapped_in_bold,197,player name wrapped in ''' bold '''
 u20m2011,u20,m,2011,2011 FIFA U-20 World Cup squads,redirect_resolved,24,article title was a redirect; canonical title used
+u20m2013,u20,m,2013,2013 FIFA U-20 World Cup squads,bluelink_to_missing_page,73,name linked to a page that does not exist; treated as a redlink
+u20m2013,u20,m,2013,2013 FIFA U-20 World Cup squads,header_code_needs_expansion,6,team header is a country code COUNTRY_CODES does not know; resolved via expandtemplates
+u20m2013,u20,m,2013,2013 FIFA U-20 World Cup squads,name_wrapped_in_bold,217,player name wrapped in ''' bold '''
+u20m2013,u20,m,2013,2013 FIFA U-20 World Cup squads,redirect_resolved,22,article title was a redirect; canonical title used
